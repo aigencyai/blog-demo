@@ -1,0 +1,36 @@
+{
+  "gpt-5": {
+    "mechanism": "implicit (automatic)",
+    "calls": [
+      {
+        "call": 1,
+        "latency_s": 1.776,
+        "prompt_tokens": 9655,
+        "cached_tokens": 0
+      },
+      {
+        "call": 2,
+        "latency_s": 1.36,
+        "prompt_tokens": 9655,
+        "cached_tokens": 9600
+      }
+    ]
+  },
+  "gpt-5-mini": {
+    "mechanism": "implicit (automatic)",
+    "calls": [
+      {
+        "call": 1,
+        "latency_s": 1.182,
+        "prompt_tokens": 9655,
+        "cached_tokens": 0
+      },
+      {
+        "call": 2,
+        "latency_s": 2.382,
+        "prompt_tokens": 9655,
+        "cached_tokens": 9600
+      }
+    ]
+  }
+}
