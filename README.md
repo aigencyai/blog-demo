@@ -49,7 +49,7 @@ numbers — datacenter accelerators are far faster; the *shape* of the curves is
 
 ### Notes
 
-- The API scripts read keys from Google Secret Manager via `gcloud`. Swap `secret()` for
-  `os.environ[...]` to run them with plain environment variables.
+- The API scripts read credentials from the environment (`OPENAI_API_KEY`, `ANTHROPIC_API_KEY`,
+  `GEMINI_API_KEY`). Set `GCP_PROJECT` instead to pull them from Google Secret Manager.
 - `bench_vision.py` expects a product-page screenshot; point `shot` at any image.
 - No credentials are stored in this repo — only the names of the secrets.

@@ -17,7 +17,6 @@ import os
 import subprocess
 import time
 
-PROJECT = "agent-ari-a63af"
 PREFIX_TARGET_TOKENS = 12000
 UNIT = ("You are a shopping assistant for an eyewear catalog. Only answer questions about products, "
         "orders, and store policy. Never invent a product that is not in the catalog. When the user asks "
@@ -25,9 +24,17 @@ UNIT = ("You are a shopping assistant for an eyewear catalog. Only answer questi
 QUESTION = "In one word, what do you help with?"
 
 
-def secret(name):
+def secret(name: str) -> str:
+    """Read a credential from the environment, falling back to Google Secret
+    Manager when GCP_PROJECT is set (how we run it internally)."""
+    val = os.environ.get(name)
+    if val:
+        return val
+    project = os.environ.get("GCP_PROJECT")
+    if not project:
+        raise RuntimeError(f"set {name} in the environment (or GCP_PROJECT to use Secret Manager)")
     return subprocess.run(
-        ["gcloud", "secrets", "versions", "access", "latest", "--secret", name, "--project", PROJECT],
+        ["gcloud", "secrets", "versions", "access", "latest", "--secret", name, "--project", project],
         capture_output=True, text=True, check=True).stdout.strip()
 
 
