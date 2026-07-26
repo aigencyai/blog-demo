@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "prefix_target_tokens": 12000,
+    "question": "In one word, what do you help with?"
+  },
+  "providers": {
+    "openai": {
+      "model": "gpt-4.1-mini",
+      "calls": [
+        {
+          "call": "miss",
+          "latency_s": 1.023,
+          "prompt_tokens": 9656,
+          "cached_tokens": 0
+        },
+        {
+          "call": "hit",
+          "latency_s": 0.875,
+          "prompt_tokens": 9656,
+          "cached_tokens": 9600
+        }
+      ]
+    },
+    "anthropic": {
+      "model": "claude-sonnet-4-5",
+      "calls": [
+        {
+          "call": "miss",
+          "latency_s": 1.413,
+          "input_tokens": 16,
+          "cache_creation_input_tokens": 9974,
+          "cache_read_input_tokens": 0
+        },
+        {
+          "call": "hit",
+          "latency_s": 1.045,
+          "input_tokens": 16,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 9974
+        }
+      ]
+    },
+    "gemini": {
+      "model": "gemini-2.5-flash",
+      "calls": [
+        {
+          "call": "miss",
+          "latency_s": 0.825,
+          "prompt_tokens": 9478,
+          "cached_tokens": 0
+        },
+        {
+          "call": "hit",
+          "latency_s": 0.56,
+          "prompt_tokens": 9478,
+          "cached_tokens": 0
+        }
+      ]
+    }
+  }
+}

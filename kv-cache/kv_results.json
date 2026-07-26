@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "model": "ibm-granite/granite-3.2-2b-instruct",
+    "device": "mps",
+    "dtype": "float16",
+    "layers": 40,
+    "attn_heads": 32,
+    "kv_heads": 8,
+    "head_dim": 64,
+    "kv_bytes_per_token": 81920
+  },
+  "cache_on_off": {
+    "prompt_tokens": 512,
+    "generated_tokens": 48,
+    "with_cache_s": 3.474,
+    "without_cache_s": 26.741,
+    "speedup": 7.7,
+    "with_cache_ms_per_token": 72.4,
+    "without_cache_ms_per_token": 557.1
+  },
+  "prefill_scaling": [
+    {
+      "prompt_tokens": 256,
+      "prefill_s": 0.302,
+      "ms_per_token": 1.18,
+      "kv_mb": 20.0
+    },
+    {
+      "prompt_tokens": 512,
+      "prefill_s": 0.319,
+      "ms_per_token": 0.624,
+      "kv_mb": 40.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "prefill_s": 1.294,
+      "ms_per_token": 1.264,
+      "kv_mb": 80.0
+    },
+    {
+      "prompt_tokens": 2048,
+      "prefill_s": 2.607,
+      "ms_per_token": 1.273,
+      "kv_mb": 160.0
+    },
+    {
+      "prompt_tokens": 4096,
+      "prefill_s": 6.304,
+      "ms_per_token": 1.539,
+      "kv_mb": 320.0
+    },
+    {
+      "prompt_tokens": 8192,
+      "prefill_s": 21.036,
+      "ms_per_token": 2.568,
+      "kv_mb": 640.0
+    },
+    {
+      "prompt_tokens": 12000,
+      "prefill_s": 39.145,
+      "ms_per_token": 3.262,
+      "kv_mb": 937.5
+    }
+  ],
+  "prefix_reuse": {
+    "prefix_tokens": 12000,
+    "prefix_build_s": 33.211,
+    "prefix_kv_mb": 937.5,
+    "n_queries": 4,
+    "recompute_total_s": 159.646,
+    "reuse_total_s": 2.304,
+    "total_speedup": 69.3,
+    "per_query": [
+      {
+        "query": "Do you have polarized aviators under $200?",
+        "query_tokens": 14,
+        "recompute_s": 43.52,
+        "reuse_s": 0.793,
+        "speedup": 54.9
+      },
+      {
+        "query": "What is your return window?",
+        "query_tokens": 6,
+        "recompute_s": 34.692,
+        "reuse_s": 0.94,
+        "speedup": 36.9
+      },
+      {
+        "query": "Show me something similar to RB3025 but cheaper.",
+        "query_tokens": 14,
+        "recompute_s": 37.546,
+        "reuse_s": 0.307,
+        "speedup": 122.1
+      },
+      {
+        "query": "Do these ship to Germany?",
+        "query_tokens": 6,
+        "recompute_s": 43.889,
+        "reuse_s": 0.263,
+        "speedup": 167.0
+      }
+    ]
+  }
+}

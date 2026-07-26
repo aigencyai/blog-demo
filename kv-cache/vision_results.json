@@ -1,0 +1,16 @@
+{
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "device": "mps",
+  "image": "Ray-Ban PDP screenshot, top crop, 672x672",
+  "prompt_tokens_with_image": 597,
+  "image_tokens": 576,
+  "kb_per_token": 28.0,
+  "image_kv_mb": 16.3,
+  "image_encode_s": 1.291,
+  "n_queries": 4,
+  "recompute_total_s": 4.949,
+  "reuse_total_s": 0.866,
+  "speedup": 5.7,
+  "recompute_per_query_s": 1.237,
+  "reuse_per_query_s": 0.217
+}

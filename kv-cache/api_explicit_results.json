@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "prefix_chars": 48000,
+    "question": "In one word, what do you help with?"
+  },
+  "providers": {
+    "gemini_explicit": {
+      "model": "gemini-2.5-flash",
+      "mechanism": "explicit CachedContent (TTL set by caller)",
+      "cache_create_s": 1.809,
+      "cached_token_count": 9467,
+      "cache_name": "cachedContents/vsyvw0cl7617pvfuxyvuz275gmc4l6ey4z5ouo9v",
+      "calls": [
+        {
+          "call": 1,
+          "latency_s": 0.574,
+          "prompt_tokens": 9478,
+          "cached_tokens": 9467
+        },
+        {
+          "call": 2,
+          "latency_s": 0.629,
+          "prompt_tokens": 9478,
+          "cached_tokens": 9467
+        }
+      ],
+      "cleaned_up": true
+    },
+    "anthropic_explicit": {
+      "mechanism": "explicit cache_control breakpoint",
+      "models": {
+        "claude-sonnet-5 ttl=5m (default)": {
+          "calls": [
+            {
+              "call": 1,
+              "latency_s": 1.599,
+              "input_tokens": 14,
+              "cache_creation_input_tokens": 13525,
+              "cache_read_input_tokens": 0
+            },
+            {
+              "call": 2,
+              "latency_s": 1.451,
+              "input_tokens": 14,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 13525
+            }
+          ]
+        },
+        "claude-sonnet-5 ttl=1h": {
+          "calls": [
+            {
+              "call": 1,
+              "latency_s": 1.365,
+              "input_tokens": 14,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 13525
+            },
+            {
+              "call": 2,
+              "latency_s": 1.407,
+              "input_tokens": 14,
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 13525
+            }
+          ]
+        }
+      }
+    }
+  }
+}

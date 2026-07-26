@@ -1,0 +1,7 @@
+torch>=2.7
+transformers>=4.57
+torchvision
+pillow
+openai
+anthropic
+google-genai

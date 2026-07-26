@@ -1,0 +1,112 @@
+{
+  "Qwen/Qwen2.5-0.5B-Instruct": {
+    "layers": 24,
+    "heads": 14,
+    "kv_heads": 2,
+    "head_dim": 64,
+    "bytes_per_token": 12288,
+    "kb_per_token": 12.0,
+    "gqa_ratio": 7.0,
+    "mb_at_12k": 140.6,
+    "gb_at_128k": 1.5
+  },
+  "Qwen/Qwen2.5-1.5B-Instruct": {
+    "layers": 28,
+    "heads": 12,
+    "kv_heads": 2,
+    "head_dim": 128,
+    "bytes_per_token": 28672,
+    "kb_per_token": 28.0,
+    "gqa_ratio": 6.0,
+    "mb_at_12k": 328.1,
+    "gb_at_128k": 3.5
+  },
+  "Qwen/Qwen2.5-7B-Instruct": {
+    "layers": 28,
+    "heads": 28,
+    "kv_heads": 4,
+    "head_dim": 128,
+    "bytes_per_token": 57344,
+    "kb_per_token": 56.0,
+    "gqa_ratio": 7.0,
+    "mb_at_12k": 656.2,
+    "gb_at_128k": 7.0
+  },
+  "Qwen/Qwen2.5-72B-Instruct": {
+    "layers": 80,
+    "heads": 64,
+    "kv_heads": 8,
+    "head_dim": 128,
+    "bytes_per_token": 327680,
+    "kb_per_token": 320.0,
+    "gqa_ratio": 8.0,
+    "mb_at_12k": 3750.0,
+    "gb_at_128k": 40.0
+  },
+  "mistralai/Mistral-7B-Instruct-v0.3": {
+    "layers": 32,
+    "heads": 32,
+    "kv_heads": 8,
+    "head_dim": 128,
+    "bytes_per_token": 131072,
+    "kb_per_token": 128.0,
+    "gqa_ratio": 4.0,
+    "mb_at_12k": 1500.0,
+    "gb_at_128k": 16.0
+  },
+  "ibm-granite/granite-3.2-2b-instruct": {
+    "layers": 40,
+    "heads": 32,
+    "kv_heads": 8,
+    "head_dim": 64,
+    "bytes_per_token": 81920,
+    "kb_per_token": 80.0,
+    "gqa_ratio": 4.0,
+    "mb_at_12k": 937.5,
+    "gb_at_128k": 10.0
+  },
+  "ibm-granite/granite-3.2-8b-instruct": {
+    "layers": 40,
+    "heads": 32,
+    "kv_heads": 8,
+    "head_dim": 128,
+    "bytes_per_token": 163840,
+    "kb_per_token": 160.0,
+    "gqa_ratio": 4.0,
+    "mb_at_12k": 1875.0,
+    "gb_at_128k": 20.0
+  },
+  "Qwen/Qwen2-VL-2B-Instruct": {
+    "layers": 28,
+    "heads": 12,
+    "kv_heads": 2,
+    "head_dim": 128,
+    "bytes_per_token": 28672,
+    "kb_per_token": 28.0,
+    "gqa_ratio": 6.0,
+    "mb_at_12k": 328.1,
+    "gb_at_128k": 3.5
+  },
+  "Qwen/Qwen2-VL-7B-Instruct": {
+    "layers": 28,
+    "heads": 28,
+    "kv_heads": 4,
+    "head_dim": 128,
+    "bytes_per_token": 57344,
+    "kb_per_token": 56.0,
+    "gqa_ratio": 7.0,
+    "mb_at_12k": 656.2,
+    "gb_at_128k": 7.0
+  },
+  "deepseek-ai/DeepSeek-V2-Lite": {
+    "layers": 27,
+    "heads": 16,
+    "kv_heads": 16,
+    "head_dim": 128,
+    "bytes_per_token": 221184,
+    "kb_per_token": 216.0,
+    "gqa_ratio": 1.0,
+    "mb_at_12k": 2531.2,
+    "gb_at_128k": 27.0
+  }
+}

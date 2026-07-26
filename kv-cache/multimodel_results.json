@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "device": "mps",
+    "dtype": "float16",
+    "prefix_tokens": 4096,
+    "n_queries": 4
+  },
+  "text_models": {
+    "Qwen/Qwen2.5-0.5B-Instruct": {
+      "layers": 24,
+      "kv_heads": 2,
+      "head_dim": 64,
+      "kb_per_token": 12.0,
+      "prefix_kv_mb": 48.0,
+      "prefix_build_s": 1.67,
+      "recompute_total_s": 5.753,
+      "reuse_total_s": 1.79,
+      "speedup": 3.2,
+      "breakeven_queries": 1.69
+    },
+    "Qwen/Qwen2.5-1.5B-Instruct": {
+      "layers": 28,
+      "kv_heads": 2,
+      "head_dim": 128,
+      "kb_per_token": 28.0,
+      "prefix_kv_mb": 112.0,
+      "prefix_build_s": 3.24,
+      "recompute_total_s": 12.883,
+      "reuse_total_s": 1.174,
+      "speedup": 11.0,
+      "breakeven_queries": 1.11
+    },
+    "ibm-granite/granite-3.2-2b-instruct": {
+      "layers": 40,
+      "kv_heads": 8,
+      "head_dim": 64,
+      "kb_per_token": 80.0,
+      "prefix_kv_mb": 320.0,
+      "prefix_build_s": 5.592,
+      "recompute_total_s": 24.062,
+      "reuse_total_s": 0.647,
+      "speedup": 37.2,
+      "breakeven_queries": 0.96
+    }
+  },
+  "vision": {
+    "error": "ImportError: \nAutoVideoProcessor requires the Torchvision library but it was not found in your environment. Check out the instructions on the\ninstallation page: https://pytorch.org/get-started/locally/ and follow "
+  }
+}
