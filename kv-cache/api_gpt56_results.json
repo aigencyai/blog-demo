@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "endpoint": "/v1/responses",
+    "prefix_chars": 48000,
+    "question": "In one word, what do you help with?"
+  },
+  "models": {
+    "gpt-5.6-sol": {
+      "mechanism": "implicit (automatic)",
+      "calls": [
+        {
+          "call": 1,
+          "latency_s": 1.83,
+          "input_tokens": 9655,
+          "cached_tokens": 0,
+          "output_tokens": 8
+        },
+        {
+          "call": 2,
+          "latency_s": 1.437,
+          "input_tokens": 9655,
+          "cached_tokens": 9652,
+          "output_tokens": 8
+        }
+      ]
+    },
+    "gpt-5.6-luna": {
+      "mechanism": "implicit (automatic)",
+      "calls": [
+        {
+          "call": 1,
+          "latency_s": 2.372,
+          "input_tokens": 9655,
+          "cached_tokens": 0,
+          "output_tokens": 7
+        },
+        {
+          "call": 2,
+          "latency_s": 1.311,
+          "input_tokens": 9655,
+          "cached_tokens": 9652,
+          "output_tokens": 7
+        }
+      ]
+    },
+    "gpt-5.6-terra": {
+      "mechanism": "implicit (automatic)",
+      "calls": [
+        {
+          "call": 1,
+          "latency_s": 1.534,
+          "input_tokens": 9655,
+          "cached_tokens": 0,
+          "output_tokens": 7
+        },
+        {
+          "call": 2,
+          "latency_s": 1.374,
+          "input_tokens": 9655,
+          "cached_tokens": 9652,
+          "output_tokens": 7
+        }
+      ]
+    }
+  }
+}
