@@ -1,0 +1,6 @@
+{
+  "model": "anthropic:claude-opus-5",
+  "pairs": 3525,
+  "errors": 0,
+  "fires": []
+}

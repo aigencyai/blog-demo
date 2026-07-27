@@ -1,0 +1,17 @@
+{
+  "model": "anthropic:claude-opus-5",
+  "pairs": 2250,
+  "errors": 0,
+  "fires": [
+    {
+      "query": "CONVERSATION\nUser (latest): Sunglasses for my 14 year old who plays tennis.",
+      "distractor": "d_tennis",
+      "condition": "The user mentions tennis or racquet sports."
+    },
+    {
+      "query": "CONVERSATION\nUser (latest): Do you ship to Canada?",
+      "distractor": "d_international_ship",
+      "condition": "The user asks about shipping outside the United States."
+    }
+  ]
+}

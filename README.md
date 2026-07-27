@@ -53,3 +53,53 @@ numbers — datacenter accelerators are far faster; the *shape* of the curves is
   `GEMINI_API_KEY`). Set `GCP_PROJECT` instead to pull them from Google Secret Manager.
 - `bench_vision.py` expects a product-page screenshot; point `shot` at any image.
 - No credentials are stored in this repo — only the names of the secrets.
+
+## `policy-following/` — How many policies can a model follow?
+
+Measures how much of a brand's policy set (pin / boost / filter / exclude / response
+conditions) survives a single prompt, across four models and four hosted APIs.
+
+| Script | What it measures |
+| --- | --- |
+| `dataset.py` | 25 policies + 47 labelled shopper messages (easy tier) |
+| `dataset_hard.py` | 20 compositional policies over 30 multi-turn conversations (hard tier) |
+| `distractors.py` / `screen_distractors.py` | 73 irrelevant padding policies, empirically screened to zero false triggers |
+| `rules.py` | 24 mechanically-checkable response rules (tone, formatting, brand voice) |
+| `bench_gating.py` | Gating strategies: one prompt (free list / forced boolean), sharded, one-call-per-policy, contrastive |
+| `bench_scaling.py` | Policy-count scaling (25→100) and position sensitivity within the list |
+| `bench_hard.py` | The hard tier under the same gating strategies |
+| `bench_rules.py` | Response-rule compliance as rule count grows, plus self-audit / checker-repair / checker-loop arms |
+| `bench_retrieval_gate.py` | Embedding prefilter over the policy list — recall ceiling vs LLM calls saved |
+| `bench_judge.py` | Is LLM-as-judge reliable? Independent-judge recall vs self-audit, inter-judge and self-consistency agreement on uncheckable semantic rules |
+| `verify_policy.py` | Recomputes every headline number from the result JSON; exits non-zero on drift |
+
+### Headline results
+
+- 25 policies, one prompt: **F1 0.955–0.985** on every model — the simple case is solved.
+- 100 policies, small models: recall drops to **79.7%** in the last third of the list (not the
+  middle — the classic "lost in the middle" effect doesn't appear here).
+- 24 response rules: per-rule compliance stays **~95%**, but **0 of 12** replies satisfied every
+  rule at once for 3 of 4 models — until a deterministic checker + repair loop reached **92–100%**.
+- Self-audit recall on real violations: **0.00–0.23**. An independent judge: **0.66–0.71**. A
+  deterministic checker: **1.00**.
+- Two independent judges agreed **96.9%** of the time on 8 semantic (uncheckable) rules — but
+  split on the one rule that actually required judgment.
+
+### Running it
+
+```bash
+pip install -r requirements.txt
+cd policy-following
+
+# needs OPENAI_API_KEY / ANTHROPIC_API_KEY / GEMINI_API_KEY (or GCP_PROJECT)
+python3 screen_distractors.py anthropic:claude-opus-5
+python3 bench_gating.py
+python3 bench_scaling.py
+python3 bench_hard.py
+python3 bench_rules.py
+python3 bench_judge.py
+python3 bench_retrieval_gate.py anthropic:claude-opus-5   # needs OPENAI_API_KEY for embeddings
+
+# check the numbers the post quotes
+python3 verify_policy.py
+```

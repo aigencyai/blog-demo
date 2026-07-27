@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "embed_model": "text-embedding-3-small",
+    "pool_size": 100,
+    "decisions_from": "anthropic:claude-opus-5",
+    "gold_positives": 67
+  },
+  "by_M": {
+    "3": {
+      "gate_recall": 0.6567,
+      "llm_calls_per_turn": 3,
+      "precision": 1.0,
+      "recall": 0.6567,
+      "f1": 0.7928,
+      "tp": 44,
+      "fp": 0,
+      "fn": 23
+    },
+    "5": {
+      "gate_recall": 0.791,
+      "llm_calls_per_turn": 5,
+      "precision": 0.9636,
+      "recall": 0.791,
+      "f1": 0.8689,
+      "tp": 53,
+      "fp": 2,
+      "fn": 14
+    },
+    "8": {
+      "gate_recall": 0.8358,
+      "llm_calls_per_turn": 8,
+      "precision": 0.9492,
+      "recall": 0.8358,
+      "f1": 0.8889,
+      "tp": 56,
+      "fp": 3,
+      "fn": 11
+    },
+    "10": {
+      "gate_recall": 0.8358,
+      "llm_calls_per_turn": 10,
+      "precision": 0.9492,
+      "recall": 0.8358,
+      "f1": 0.8889,
+      "tp": 56,
+      "fp": 3,
+      "fn": 11
+    },
+    "15": {
+      "gate_recall": 0.8955,
+      "llm_calls_per_turn": 15,
+      "precision": 0.9524,
+      "recall": 0.8955,
+      "f1": 0.9231,
+      "tp": 60,
+      "fp": 3,
+      "fn": 7
+    },
+    "20": {
+      "gate_recall": 0.8955,
+      "llm_calls_per_turn": 20,
+      "precision": 0.9524,
+      "recall": 0.8955,
+      "f1": 0.9231,
+      "tp": 60,
+      "fp": 3,
+      "fn": 7
+    },
+    "30": {
+      "gate_recall": 0.9552,
+      "llm_calls_per_turn": 30,
+      "precision": 0.9412,
+      "recall": 0.9552,
+      "f1": 0.9481,
+      "tp": 64,
+      "fp": 4,
+      "fn": 3
+    },
+    "100": {
+      "gate_recall": 1.0,
+      "llm_calls_per_turn": 100,
+      "precision": 0.9437,
+      "recall": 1.0,
+      "f1": 0.971,
+      "tp": 67,
+      "fp": 4,
+      "fn": 0
+    }
+  },
+  "worst_ranked_gold": [
+    {
+      "rank": 38,
+      "query": "I need wraparound glasses for cycling",
+      "policy": "boost_sports_wrap"
+    },
+    {
+      "rank": 37,
+      "query": "do you have RB3025?",
+      "policy": "exclude_discontinued"
+    },
+    {
+      "rank": 35,
+      "query": "cheap polarized sunglasses for my son for the beach",
+      "policy": "filter_budget"
+    },
+    {
+      "rank": 28,
+      "query": "can I try on RB2140 in your NYC store?",
+      "policy": "exclude_discontinued"
+    },
+    {
+      "rank": 24,
+      "query": "ski goggles under $80",
+      "policy": "boost_sports_wrap"
+    },
+    {
+      "rank": 24,
+      "query": "my son is 15 and needs new frames",
+      "policy": "filter_mens_fit"
+    },
+    {
+      "rank": 22,
+      "query": "cheap polarized sunglasses for my son for the beach",
+      "policy": "filter_mens_fit"
+    },
+    {
+      "rank": 13,
+      "query": "cheap polarized sunglasses for my son for the beach",
+      "policy": "pin_summer_campaign"
+    },
+    {
+      "rank": 12,
+      "query": "premium frames my mother would like, she's 70",
+      "policy": "filter_womens_fit"
+    },
+    {
+      "rank": 12,
+      "query": "glasses for gaming, my eyes hurt after long sessions",
+      "policy": "resp_no_medical"
+    },
+    {
+      "rank": 10,
+      "query": "sunglasses for my wife",
+      "policy": "filter_womens_fit"
+    },
+    {
+      "rank": 7,
+      "query": "premium frames my mother would like, she's 70",
+      "policy": "pin_designer_collab"
+    }
+  ]
+}

@@ -1,0 +1,5670 @@
+{
+  "meta": {
+    "n_policies": 25,
+    "n_queries": 47,
+    "pairs": 1175,
+    "context_tokens": 16000,
+    "gold_positives": 67,
+    "prompt_caching": true
+  },
+  "runs": {
+    "anthropic:claude-opus-5": {
+      "monolithic": {
+        "score": {
+          "precision": 0.9853,
+          "recall": 1.0,
+          "f1": 0.9926,
+          "exact_set_match": 0.9787,
+          "tp": 67,
+          "fp": 1,
+          "fn": 0,
+          "pairs": 1175
+        },
+        "stats": {
+          "calls": 47,
+          "errors": 0,
+          "unparsed": 0,
+          "in_tok": 9848,
+          "out_tok": 2510,
+          "cached_tok": 1089270,
+          "latency_sum": 131.95783741620835,
+          "wall_s": 14.1,
+          "missing_fields": 0
+        },
+        "per_policy": {
+          "pin_new_arrivals": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_summer_campaign": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_designer_collab": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_house_brand": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_polarized": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sale_items": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sports_wrap": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_kids_safety": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_prescription": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_budget": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_mens_fit": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_womens_fit": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_blue_light": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_discontinued": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_non_uv": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_warranty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_shipping": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_returns": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_no_medical": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_tryon": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "resp_store_locator": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_loyalty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_alternative_fit": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_query": [
+          {
+            "query": "show me your newest sunglasses",
+            "gold": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's new this week?",
+            "gold": [
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need sunglasses for a beach vacation in July",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "looking for luxury designer frames",
+            "gold": [
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "polarized sunglasses for driving",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "anything on sale right now?",
+            "gold": [
+              "boost_sale_items"
+            ],
+            "pred": [
+              "boost_sale_items"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need wraparound glasses for cycling",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my 8 year old",
+            "gold": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have a prescription from my eye doctor, can you fit these with my Rx?",
+            "gold": [
+              "filter_prescription"
+            ],
+            "pred": [
+              "filter_prescription"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "something affordable please",
+            "gold": [
+              "filter_budget"
+            ],
+            "pred": [
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for staring at a computer all day",
+            "gold": [
+              "filter_blue_light"
+            ],
+            "pred": [
+              "filter_blue_light"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have RB3025?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is OO9484D-0949 still available?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I want frames that block UV and protect my eyes from the sun",
+            "gold": [
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's your warranty if the frame snaps?",
+            "gold": [
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how long does shipping take to Chicago?",
+            "gold": [
+              "resp_shipping"
+            ],
+            "pred": [
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I return these if they don't fit?",
+            "gold": [
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my eyes water and go blurry after an hour of reading",
+            "gold": [
+              "resp_no_medical"
+            ],
+            "pred": [
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what frame shape suits a round face?",
+            "gold": [
+              "resp_tryon"
+            ],
+            "pred": [
+              "resp_tryon"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have a store in Boston I can visit?",
+            "gold": [
+              "resp_store_locator"
+            ],
+            "pred": [
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how many points do I earn on a purchase?",
+            "gold": [
+              "resp_loyalty"
+            ],
+            "pred": [
+              "resp_loyalty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have low vision, do you carry high-contrast lenses?",
+            "gold": [
+              "resp_accessibility"
+            ],
+            "pred": [
+              "resp_accessibility"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have Asian fit frames?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap polarized sunglasses for my son for the beach",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a luxury gift for my wife, and how long is shipping?",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what are your returns and warranty policies?",
+            "gold": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "any new arrivals on sale?",
+            "gold": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a gift for my husband's birthday",
+            "gold": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "an anniversary present for my girlfriend",
+            "gold": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap sunglasses under $50",
+            "gold": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "ski goggles under $80",
+            "gold": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for gaming, my eyes hurt after long sessions",
+            "gold": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "pred": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "does the loyalty program cover returns?",
+            "gold": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "premium frames my mother would like, she's 70",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need something for hiking that blocks UV",
+            "gold": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I try on RB2140 in your NYC store?",
+            "gold": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "pred": [
+              "exclude_discontinued",
+              "resp_store_locator",
+              "resp_tryon"
+            ],
+            "missed": [],
+            "spurious": [
+              "resp_tryon"
+            ]
+          },
+          {
+            "query": "is the summer sale over?",
+            "gold": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my nose bridge is low so frames always slide down \u2014 what do you suggest?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my wife",
+            "gold": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "heading to the pool with the kids, need shades for myself",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my son is 15 and needs new frames",
+            "gold": [
+              "filter_mens_fit"
+            ],
+            "pred": [
+              "filter_mens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I'm a runner but I want these for everyday wear",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you sell cleaning cloths?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what colours do you stock?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "hi",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "tell me about your company",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need new tires for my car",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_query": 1.0
+      },
+      "k25": {
+        "score": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "exact_set_match": 1.0,
+          "tp": 67,
+          "fp": 0,
+          "fn": 0,
+          "pairs": 1175
+        },
+        "stats": {
+          "calls": 47,
+          "errors": 0,
+          "unparsed": 0,
+          "in_tok": 9848,
+          "out_tok": 32383,
+          "cached_tok": 1050911,
+          "latency_sum": 317.72264466888737,
+          "wall_s": 33.7,
+          "missing_fields": 0
+        },
+        "per_policy": {
+          "pin_new_arrivals": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_summer_campaign": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_designer_collab": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_house_brand": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_polarized": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sale_items": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sports_wrap": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_kids_safety": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_prescription": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_budget": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_mens_fit": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_womens_fit": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_blue_light": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_discontinued": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_non_uv": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_warranty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_shipping": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_returns": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_no_medical": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_tryon": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_store_locator": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_loyalty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_alternative_fit": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_query": [
+          {
+            "query": "show me your newest sunglasses",
+            "gold": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's new this week?",
+            "gold": [
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need sunglasses for a beach vacation in July",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "looking for luxury designer frames",
+            "gold": [
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "polarized sunglasses for driving",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "anything on sale right now?",
+            "gold": [
+              "boost_sale_items"
+            ],
+            "pred": [
+              "boost_sale_items"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need wraparound glasses for cycling",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my 8 year old",
+            "gold": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have a prescription from my eye doctor, can you fit these with my Rx?",
+            "gold": [
+              "filter_prescription"
+            ],
+            "pred": [
+              "filter_prescription"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "something affordable please",
+            "gold": [
+              "filter_budget"
+            ],
+            "pred": [
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for staring at a computer all day",
+            "gold": [
+              "filter_blue_light"
+            ],
+            "pred": [
+              "filter_blue_light"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have RB3025?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is OO9484D-0949 still available?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I want frames that block UV and protect my eyes from the sun",
+            "gold": [
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's your warranty if the frame snaps?",
+            "gold": [
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how long does shipping take to Chicago?",
+            "gold": [
+              "resp_shipping"
+            ],
+            "pred": [
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I return these if they don't fit?",
+            "gold": [
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my eyes water and go blurry after an hour of reading",
+            "gold": [
+              "resp_no_medical"
+            ],
+            "pred": [
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what frame shape suits a round face?",
+            "gold": [
+              "resp_tryon"
+            ],
+            "pred": [
+              "resp_tryon"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have a store in Boston I can visit?",
+            "gold": [
+              "resp_store_locator"
+            ],
+            "pred": [
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how many points do I earn on a purchase?",
+            "gold": [
+              "resp_loyalty"
+            ],
+            "pred": [
+              "resp_loyalty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have low vision, do you carry high-contrast lenses?",
+            "gold": [
+              "resp_accessibility"
+            ],
+            "pred": [
+              "resp_accessibility"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have Asian fit frames?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap polarized sunglasses for my son for the beach",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a luxury gift for my wife, and how long is shipping?",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what are your returns and warranty policies?",
+            "gold": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "any new arrivals on sale?",
+            "gold": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a gift for my husband's birthday",
+            "gold": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "an anniversary present for my girlfriend",
+            "gold": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap sunglasses under $50",
+            "gold": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "ski goggles under $80",
+            "gold": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for gaming, my eyes hurt after long sessions",
+            "gold": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "pred": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "does the loyalty program cover returns?",
+            "gold": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "premium frames my mother would like, she's 70",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need something for hiking that blocks UV",
+            "gold": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I try on RB2140 in your NYC store?",
+            "gold": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "pred": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is the summer sale over?",
+            "gold": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my nose bridge is low so frames always slide down \u2014 what do you suggest?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my wife",
+            "gold": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "heading to the pool with the kids, need shades for myself",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my son is 15 and needs new frames",
+            "gold": [
+              "filter_mens_fit"
+            ],
+            "pred": [
+              "filter_mens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I'm a runner but I want these for everyday wear",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you sell cleaning cloths?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what colours do you stock?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "hi",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "tell me about your company",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need new tires for my car",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_query": 1.0
+      }
+    },
+    "anthropic:claude-haiku-4-5-20251001": {
+      "monolithic": {
+        "score": {
+          "precision": 0.9846,
+          "recall": 0.9552,
+          "f1": 0.9697,
+          "exact_set_match": 0.9362,
+          "tp": 64,
+          "fp": 1,
+          "fn": 3,
+          "pairs": 1175
+        },
+        "stats": {
+          "calls": 47,
+          "errors": 0,
+          "unparsed": 0,
+          "in_tok": 20067,
+          "out_tok": 2128,
+          "cached_tok": 721093,
+          "latency_sum": 69.06116370577365,
+          "wall_s": 7.7,
+          "missing_fields": 0
+        },
+        "per_policy": {
+          "pin_new_arrivals": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_summer_campaign": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_designer_collab": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_house_brand": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 2
+          },
+          "boost_polarized": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sale_items": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0
+          },
+          "boost_sports_wrap": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_kids_safety": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_prescription": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_budget": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_mens_fit": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_womens_fit": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1
+          },
+          "filter_blue_light": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_discontinued": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_non_uv": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_warranty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_shipping": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_returns": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_no_medical": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_tryon": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_store_locator": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_loyalty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_alternative_fit": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_query": [
+          {
+            "query": "show me your newest sunglasses",
+            "gold": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's new this week?",
+            "gold": [
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need sunglasses for a beach vacation in July",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "looking for luxury designer frames",
+            "gold": [
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "polarized sunglasses for driving",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "anything on sale right now?",
+            "gold": [
+              "boost_sale_items"
+            ],
+            "pred": [
+              "boost_sale_items"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need wraparound glasses for cycling",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my 8 year old",
+            "gold": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "pred": [
+              "filter_kids_safety"
+            ],
+            "missed": [
+              "boost_house_brand"
+            ],
+            "spurious": []
+          },
+          {
+            "query": "I have a prescription from my eye doctor, can you fit these with my Rx?",
+            "gold": [
+              "filter_prescription"
+            ],
+            "pred": [
+              "filter_prescription"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "something affordable please",
+            "gold": [
+              "filter_budget"
+            ],
+            "pred": [
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for staring at a computer all day",
+            "gold": [
+              "filter_blue_light"
+            ],
+            "pred": [
+              "filter_blue_light"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have RB3025?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is OO9484D-0949 still available?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I want frames that block UV and protect my eyes from the sun",
+            "gold": [
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's your warranty if the frame snaps?",
+            "gold": [
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how long does shipping take to Chicago?",
+            "gold": [
+              "resp_shipping"
+            ],
+            "pred": [
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I return these if they don't fit?",
+            "gold": [
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my eyes water and go blurry after an hour of reading",
+            "gold": [
+              "resp_no_medical"
+            ],
+            "pred": [
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what frame shape suits a round face?",
+            "gold": [
+              "resp_tryon"
+            ],
+            "pred": [
+              "resp_tryon"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have a store in Boston I can visit?",
+            "gold": [
+              "resp_store_locator"
+            ],
+            "pred": [
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how many points do I earn on a purchase?",
+            "gold": [
+              "resp_loyalty"
+            ],
+            "pred": [
+              "resp_loyalty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have low vision, do you carry high-contrast lenses?",
+            "gold": [
+              "resp_accessibility"
+            ],
+            "pred": [
+              "resp_accessibility"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have Asian fit frames?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap polarized sunglasses for my son for the beach",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_polarized",
+              "boost_sale_items",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "missed": [
+              "boost_house_brand"
+            ],
+            "spurious": [
+              "boost_sale_items"
+            ]
+          },
+          {
+            "query": "a luxury gift for my wife, and how long is shipping?",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "pred": [
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "missed": [
+              "filter_womens_fit"
+            ],
+            "spurious": []
+          },
+          {
+            "query": "what are your returns and warranty policies?",
+            "gold": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "any new arrivals on sale?",
+            "gold": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a gift for my husband's birthday",
+            "gold": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "an anniversary present for my girlfriend",
+            "gold": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap sunglasses under $50",
+            "gold": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "ski goggles under $80",
+            "gold": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for gaming, my eyes hurt after long sessions",
+            "gold": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "pred": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "does the loyalty program cover returns?",
+            "gold": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "premium frames my mother would like, she's 70",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need something for hiking that blocks UV",
+            "gold": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I try on RB2140 in your NYC store?",
+            "gold": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "pred": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is the summer sale over?",
+            "gold": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my nose bridge is low so frames always slide down \u2014 what do you suggest?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my wife",
+            "gold": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "heading to the pool with the kids, need shades for myself",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my son is 15 and needs new frames",
+            "gold": [
+              "filter_mens_fit"
+            ],
+            "pred": [
+              "filter_mens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I'm a runner but I want these for everyday wear",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you sell cleaning cloths?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what colours do you stock?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "hi",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "tell me about your company",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need new tires for my car",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_query": 1.0
+      },
+      "k25": {
+        "score": {
+          "precision": 0.9429,
+          "recall": 0.9851,
+          "f1": 0.9635,
+          "exact_set_match": 0.8936,
+          "tp": 66,
+          "fp": 4,
+          "fn": 1,
+          "pairs": 1175
+        },
+        "stats": {
+          "calls": 47,
+          "errors": 0,
+          "unparsed": 0,
+          "in_tok": 20067,
+          "out_tok": 24722,
+          "cached_tok": 732637,
+          "latency_sum": 162.11130292050075,
+          "wall_s": 17.4,
+          "missing_fields": 0
+        },
+        "per_policy": {
+          "pin_new_arrivals": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_summer_campaign": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_designer_collab": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_house_brand": {
+            "tp": 7,
+            "fp": 2,
+            "fn": 1
+          },
+          "boost_polarized": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sale_items": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sports_wrap": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_kids_safety": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "filter_prescription": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_budget": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_mens_fit": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_womens_fit": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_blue_light": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_discontinued": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_non_uv": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_warranty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_shipping": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_returns": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_no_medical": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_tryon": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "resp_store_locator": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_loyalty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_alternative_fit": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_query": [
+          {
+            "query": "show me your newest sunglasses",
+            "gold": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's new this week?",
+            "gold": [
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need sunglasses for a beach vacation in July",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "looking for luxury designer frames",
+            "gold": [
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "polarized sunglasses for driving",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "anything on sale right now?",
+            "gold": [
+              "boost_sale_items"
+            ],
+            "pred": [
+              "boost_sale_items"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need wraparound glasses for cycling",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my 8 year old",
+            "gold": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "pred": [
+              "filter_kids_safety"
+            ],
+            "missed": [
+              "boost_house_brand"
+            ],
+            "spurious": []
+          },
+          {
+            "query": "I have a prescription from my eye doctor, can you fit these with my Rx?",
+            "gold": [
+              "filter_prescription"
+            ],
+            "pred": [
+              "filter_prescription"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "something affordable please",
+            "gold": [
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": [
+              "boost_house_brand"
+            ]
+          },
+          {
+            "query": "glasses for staring at a computer all day",
+            "gold": [
+              "filter_blue_light"
+            ],
+            "pred": [
+              "filter_blue_light"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have RB3025?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is OO9484D-0949 still available?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I want frames that block UV and protect my eyes from the sun",
+            "gold": [
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's your warranty if the frame snaps?",
+            "gold": [
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how long does shipping take to Chicago?",
+            "gold": [
+              "resp_shipping"
+            ],
+            "pred": [
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I return these if they don't fit?",
+            "gold": [
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my eyes water and go blurry after an hour of reading",
+            "gold": [
+              "resp_no_medical"
+            ],
+            "pred": [
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what frame shape suits a round face?",
+            "gold": [
+              "resp_tryon"
+            ],
+            "pred": [
+              "resp_tryon"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have a store in Boston I can visit?",
+            "gold": [
+              "resp_store_locator"
+            ],
+            "pred": [
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how many points do I earn on a purchase?",
+            "gold": [
+              "resp_loyalty"
+            ],
+            "pred": [
+              "resp_loyalty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have low vision, do you carry high-contrast lenses?",
+            "gold": [
+              "resp_accessibility"
+            ],
+            "pred": [
+              "resp_accessibility"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have Asian fit frames?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap polarized sunglasses for my son for the beach",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_kids_safety",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": [
+              "filter_kids_safety"
+            ]
+          },
+          {
+            "query": "a luxury gift for my wife, and how long is shipping?",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what are your returns and warranty policies?",
+            "gold": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "any new arrivals on sale?",
+            "gold": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a gift for my husband's birthday",
+            "gold": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "an anniversary present for my girlfriend",
+            "gold": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap sunglasses under $50",
+            "gold": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "ski goggles under $80",
+            "gold": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for gaming, my eyes hurt after long sessions",
+            "gold": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": [
+              "boost_house_brand"
+            ]
+          },
+          {
+            "query": "does the loyalty program cover returns?",
+            "gold": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "premium frames my mother would like, she's 70",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need something for hiking that blocks UV",
+            "gold": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I try on RB2140 in your NYC store?",
+            "gold": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "pred": [
+              "exclude_discontinued",
+              "resp_store_locator",
+              "resp_tryon"
+            ],
+            "missed": [],
+            "spurious": [
+              "resp_tryon"
+            ]
+          },
+          {
+            "query": "is the summer sale over?",
+            "gold": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my nose bridge is low so frames always slide down \u2014 what do you suggest?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my wife",
+            "gold": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "heading to the pool with the kids, need shades for myself",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my son is 15 and needs new frames",
+            "gold": [
+              "filter_mens_fit"
+            ],
+            "pred": [
+              "filter_mens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I'm a runner but I want these for everyday wear",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you sell cleaning cloths?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what colours do you stock?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "hi",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "tell me about your company",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need new tires for my car",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_query": 1.0
+      }
+    },
+    "openai:gpt-5.6-sol": {
+      "monolithic": {
+        "score": {
+          "precision": 0.9853,
+          "recall": 1.0,
+          "f1": 0.9926,
+          "exact_set_match": 0.9787,
+          "tp": 67,
+          "fp": 1,
+          "fn": 0,
+          "pairs": 1175
+        },
+        "stats": {
+          "calls": 47,
+          "errors": 0,
+          "unparsed": 0,
+          "in_tok": 793702,
+          "out_tok": 1809,
+          "cached_tok": 742368,
+          "latency_sum": 108.31066995742731,
+          "wall_s": 12.4,
+          "missing_fields": 0
+        },
+        "per_policy": {
+          "pin_new_arrivals": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_summer_campaign": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_designer_collab": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_house_brand": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_polarized": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sale_items": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sports_wrap": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_kids_safety": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_prescription": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_budget": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_mens_fit": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_womens_fit": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_blue_light": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_discontinued": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_non_uv": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_warranty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_shipping": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_returns": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_no_medical": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 0
+          },
+          "resp_gift": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_tryon": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_store_locator": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_loyalty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_alternative_fit": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_query": [
+          {
+            "query": "show me your newest sunglasses",
+            "gold": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's new this week?",
+            "gold": [
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need sunglasses for a beach vacation in July",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "looking for luxury designer frames",
+            "gold": [
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "polarized sunglasses for driving",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "anything on sale right now?",
+            "gold": [
+              "boost_sale_items"
+            ],
+            "pred": [
+              "boost_sale_items"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need wraparound glasses for cycling",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my 8 year old",
+            "gold": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have a prescription from my eye doctor, can you fit these with my Rx?",
+            "gold": [
+              "filter_prescription"
+            ],
+            "pred": [
+              "filter_prescription"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "something affordable please",
+            "gold": [
+              "filter_budget"
+            ],
+            "pred": [
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for staring at a computer all day",
+            "gold": [
+              "filter_blue_light"
+            ],
+            "pred": [
+              "filter_blue_light"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have RB3025?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is OO9484D-0949 still available?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I want frames that block UV and protect my eyes from the sun",
+            "gold": [
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's your warranty if the frame snaps?",
+            "gold": [
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how long does shipping take to Chicago?",
+            "gold": [
+              "resp_shipping"
+            ],
+            "pred": [
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I return these if they don't fit?",
+            "gold": [
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my eyes water and go blurry after an hour of reading",
+            "gold": [
+              "resp_no_medical"
+            ],
+            "pred": [
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what frame shape suits a round face?",
+            "gold": [
+              "resp_tryon"
+            ],
+            "pred": [
+              "resp_tryon"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have a store in Boston I can visit?",
+            "gold": [
+              "resp_store_locator"
+            ],
+            "pred": [
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how many points do I earn on a purchase?",
+            "gold": [
+              "resp_loyalty"
+            ],
+            "pred": [
+              "resp_loyalty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have low vision, do you carry high-contrast lenses?",
+            "gold": [
+              "resp_accessibility"
+            ],
+            "pred": [
+              "resp_accessibility",
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": [
+              "resp_no_medical"
+            ]
+          },
+          {
+            "query": "do you have Asian fit frames?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap polarized sunglasses for my son for the beach",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a luxury gift for my wife, and how long is shipping?",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what are your returns and warranty policies?",
+            "gold": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "any new arrivals on sale?",
+            "gold": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a gift for my husband's birthday",
+            "gold": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "an anniversary present for my girlfriend",
+            "gold": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap sunglasses under $50",
+            "gold": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "ski goggles under $80",
+            "gold": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for gaming, my eyes hurt after long sessions",
+            "gold": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "pred": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "does the loyalty program cover returns?",
+            "gold": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "premium frames my mother would like, she's 70",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need something for hiking that blocks UV",
+            "gold": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I try on RB2140 in your NYC store?",
+            "gold": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "pred": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is the summer sale over?",
+            "gold": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my nose bridge is low so frames always slide down \u2014 what do you suggest?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my wife",
+            "gold": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "heading to the pool with the kids, need shades for myself",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my son is 15 and needs new frames",
+            "gold": [
+              "filter_mens_fit"
+            ],
+            "pred": [
+              "filter_mens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I'm a runner but I want these for everyday wear",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you sell cleaning cloths?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what colours do you stock?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "hi",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "tell me about your company",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need new tires for my car",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_query": 1.0
+      },
+      "k25": {
+        "score": {
+          "precision": 0.9853,
+          "recall": 1.0,
+          "f1": 0.9926,
+          "exact_set_match": 0.9787,
+          "tp": 67,
+          "fp": 1,
+          "fn": 0,
+          "pairs": 1175
+        },
+        "stats": {
+          "calls": 47,
+          "errors": 0,
+          "unparsed": 0,
+          "in_tok": 799248,
+          "out_tok": 9344,
+          "cached_tok": 764550,
+          "latency_sum": 163.4569140394451,
+          "wall_s": 17.3,
+          "missing_fields": 0
+        },
+        "per_policy": {
+          "pin_new_arrivals": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_summer_campaign": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_designer_collab": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_house_brand": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_polarized": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sale_items": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sports_wrap": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_kids_safety": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_prescription": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_budget": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_mens_fit": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_womens_fit": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_blue_light": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_discontinued": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_non_uv": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_warranty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_shipping": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_returns": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_no_medical": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 0
+          },
+          "resp_gift": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_tryon": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_store_locator": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_loyalty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_alternative_fit": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_query": [
+          {
+            "query": "show me your newest sunglasses",
+            "gold": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's new this week?",
+            "gold": [
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need sunglasses for a beach vacation in July",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "looking for luxury designer frames",
+            "gold": [
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "polarized sunglasses for driving",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "anything on sale right now?",
+            "gold": [
+              "boost_sale_items"
+            ],
+            "pred": [
+              "boost_sale_items"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need wraparound glasses for cycling",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my 8 year old",
+            "gold": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have a prescription from my eye doctor, can you fit these with my Rx?",
+            "gold": [
+              "filter_prescription"
+            ],
+            "pred": [
+              "filter_prescription"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "something affordable please",
+            "gold": [
+              "filter_budget"
+            ],
+            "pred": [
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for staring at a computer all day",
+            "gold": [
+              "filter_blue_light"
+            ],
+            "pred": [
+              "filter_blue_light"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have RB3025?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is OO9484D-0949 still available?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I want frames that block UV and protect my eyes from the sun",
+            "gold": [
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's your warranty if the frame snaps?",
+            "gold": [
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how long does shipping take to Chicago?",
+            "gold": [
+              "resp_shipping"
+            ],
+            "pred": [
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I return these if they don't fit?",
+            "gold": [
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my eyes water and go blurry after an hour of reading",
+            "gold": [
+              "resp_no_medical"
+            ],
+            "pred": [
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what frame shape suits a round face?",
+            "gold": [
+              "resp_tryon"
+            ],
+            "pred": [
+              "resp_tryon"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have a store in Boston I can visit?",
+            "gold": [
+              "resp_store_locator"
+            ],
+            "pred": [
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how many points do I earn on a purchase?",
+            "gold": [
+              "resp_loyalty"
+            ],
+            "pred": [
+              "resp_loyalty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have low vision, do you carry high-contrast lenses?",
+            "gold": [
+              "resp_accessibility"
+            ],
+            "pred": [
+              "resp_accessibility",
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": [
+              "resp_no_medical"
+            ]
+          },
+          {
+            "query": "do you have Asian fit frames?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap polarized sunglasses for my son for the beach",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a luxury gift for my wife, and how long is shipping?",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what are your returns and warranty policies?",
+            "gold": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "any new arrivals on sale?",
+            "gold": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a gift for my husband's birthday",
+            "gold": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "an anniversary present for my girlfriend",
+            "gold": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap sunglasses under $50",
+            "gold": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "ski goggles under $80",
+            "gold": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for gaming, my eyes hurt after long sessions",
+            "gold": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "pred": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "does the loyalty program cover returns?",
+            "gold": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "premium frames my mother would like, she's 70",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need something for hiking that blocks UV",
+            "gold": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I try on RB2140 in your NYC store?",
+            "gold": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "pred": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is the summer sale over?",
+            "gold": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my nose bridge is low so frames always slide down \u2014 what do you suggest?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my wife",
+            "gold": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "heading to the pool with the kids, need shades for myself",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my son is 15 and needs new frames",
+            "gold": [
+              "filter_mens_fit"
+            ],
+            "pred": [
+              "filter_mens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I'm a runner but I want these for everyday wear",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you sell cleaning cloths?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what colours do you stock?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "hi",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "tell me about your company",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need new tires for my car",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_query": 1.0
+      }
+    },
+    "google:gemini-2.5-flash": {
+      "monolithic": {
+        "score": {
+          "precision": 0.9667,
+          "recall": 0.8657,
+          "f1": 0.9134,
+          "exact_set_match": 0.8085,
+          "tp": 58,
+          "fp": 2,
+          "fn": 9,
+          "pairs": 1175
+        },
+        "stats": {
+          "calls": 47,
+          "errors": 0,
+          "unparsed": 0,
+          "in_tok": 861680,
+          "out_tok": 722,
+          "cached_tok": 311435,
+          "latency_sum": 75.93915841798298,
+          "wall_s": 9.2,
+          "missing_fields": 0
+        },
+        "per_policy": {
+          "pin_new_arrivals": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_summer_campaign": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_designer_collab": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_house_brand": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 6
+          },
+          "boost_polarized": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sale_items": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sports_wrap": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1
+          },
+          "filter_kids_safety": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "filter_prescription": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_budget": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_mens_fit": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_womens_fit": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_blue_light": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_discontinued": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1
+          },
+          "exclude_non_uv": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_warranty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_shipping": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_returns": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_no_medical": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1
+          },
+          "resp_gift": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_tryon": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "resp_store_locator": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_loyalty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_alternative_fit": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_query": [
+          {
+            "query": "show me your newest sunglasses",
+            "gold": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "pin_new_arrivals"
+            ],
+            "missed": [
+              "boost_house_brand"
+            ],
+            "spurious": []
+          },
+          {
+            "query": "what's new this week?",
+            "gold": [
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need sunglasses for a beach vacation in July",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "pin_summer_campaign"
+            ],
+            "missed": [
+              "boost_house_brand"
+            ],
+            "spurious": []
+          },
+          {
+            "query": "looking for luxury designer frames",
+            "gold": [
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "polarized sunglasses for driving",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "pred": [
+              "boost_polarized"
+            ],
+            "missed": [
+              "boost_house_brand"
+            ],
+            "spurious": []
+          },
+          {
+            "query": "anything on sale right now?",
+            "gold": [
+              "boost_sale_items"
+            ],
+            "pred": [
+              "boost_sale_items"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need wraparound glasses for cycling",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my 8 year old",
+            "gold": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have a prescription from my eye doctor, can you fit these with my Rx?",
+            "gold": [
+              "filter_prescription"
+            ],
+            "pred": [
+              "filter_prescription"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "something affordable please",
+            "gold": [
+              "filter_budget"
+            ],
+            "pred": [
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for staring at a computer all day",
+            "gold": [
+              "filter_blue_light"
+            ],
+            "pred": [
+              "filter_blue_light"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have RB3025?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is OO9484D-0949 still available?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I want frames that block UV and protect my eyes from the sun",
+            "gold": [
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's your warranty if the frame snaps?",
+            "gold": [
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how long does shipping take to Chicago?",
+            "gold": [
+              "resp_shipping"
+            ],
+            "pred": [
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I return these if they don't fit?",
+            "gold": [
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my eyes water and go blurry after an hour of reading",
+            "gold": [
+              "resp_no_medical"
+            ],
+            "pred": [
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what frame shape suits a round face?",
+            "gold": [
+              "resp_tryon"
+            ],
+            "pred": [
+              "resp_tryon"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have a store in Boston I can visit?",
+            "gold": [
+              "resp_store_locator"
+            ],
+            "pred": [
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how many points do I earn on a purchase?",
+            "gold": [
+              "resp_loyalty"
+            ],
+            "pred": [
+              "resp_loyalty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have low vision, do you carry high-contrast lenses?",
+            "gold": [
+              "resp_accessibility"
+            ],
+            "pred": [
+              "resp_accessibility"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have Asian fit frames?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap polarized sunglasses for my son for the beach",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "missed": [
+              "boost_house_brand"
+            ],
+            "spurious": []
+          },
+          {
+            "query": "a luxury gift for my wife, and how long is shipping?",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what are your returns and warranty policies?",
+            "gold": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "any new arrivals on sale?",
+            "gold": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a gift for my husband's birthday",
+            "gold": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "an anniversary present for my girlfriend",
+            "gold": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap sunglasses under $50",
+            "gold": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "pred": [
+              "filter_budget"
+            ],
+            "missed": [
+              "boost_house_brand"
+            ],
+            "spurious": []
+          },
+          {
+            "query": "ski goggles under $80",
+            "gold": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for gaming, my eyes hurt after long sessions",
+            "gold": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "pred": [
+              "filter_blue_light"
+            ],
+            "missed": [
+              "resp_no_medical"
+            ],
+            "spurious": []
+          },
+          {
+            "query": "does the loyalty program cover returns?",
+            "gold": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "premium frames my mother would like, she's 70",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need something for hiking that blocks UV",
+            "gold": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I try on RB2140 in your NYC store?",
+            "gold": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "pred": [
+              "resp_store_locator",
+              "resp_tryon"
+            ],
+            "missed": [
+              "exclude_discontinued"
+            ],
+            "spurious": [
+              "resp_tryon"
+            ]
+          },
+          {
+            "query": "is the summer sale over?",
+            "gold": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my nose bridge is low so frames always slide down \u2014 what do you suggest?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my wife",
+            "gold": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "heading to the pool with the kids, need shades for myself",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "filter_kids_safety",
+              "pin_summer_campaign"
+            ],
+            "missed": [
+              "boost_house_brand"
+            ],
+            "spurious": [
+              "filter_kids_safety"
+            ]
+          },
+          {
+            "query": "my son is 15 and needs new frames",
+            "gold": [
+              "filter_mens_fit"
+            ],
+            "pred": [
+              "filter_mens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I'm a runner but I want these for everyday wear",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [],
+            "missed": [
+              "boost_sports_wrap"
+            ],
+            "spurious": []
+          },
+          {
+            "query": "do you sell cleaning cloths?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what colours do you stock?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "hi",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "tell me about your company",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need new tires for my car",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_query": 1.0
+      },
+      "k25": {
+        "score": {
+          "precision": 0.9701,
+          "recall": 0.9701,
+          "f1": 0.9701,
+          "exact_set_match": 0.9362,
+          "tp": 65,
+          "fp": 2,
+          "fn": 2,
+          "pairs": 1175
+        },
+        "stats": {
+          "calls": 47,
+          "errors": 0,
+          "unparsed": 0,
+          "in_tok": 862197,
+          "out_tok": 9729,
+          "cached_tok": 693554,
+          "latency_sum": 139.8009490428958,
+          "wall_s": 16.2,
+          "missing_fields": 0
+        },
+        "per_policy": {
+          "pin_new_arrivals": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_summer_campaign": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_designer_collab": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_house_brand": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 2
+          },
+          "boost_polarized": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sale_items": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sports_wrap": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_kids_safety": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "filter_prescription": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_budget": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_mens_fit": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_womens_fit": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_blue_light": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_discontinued": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_non_uv": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_warranty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_shipping": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_returns": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_no_medical": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_tryon": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "resp_store_locator": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_loyalty": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_alternative_fit": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_query": [
+          {
+            "query": "show me your newest sunglasses",
+            "gold": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's new this week?",
+            "gold": [
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need sunglasses for a beach vacation in July",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "looking for luxury designer frames",
+            "gold": [
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "polarized sunglasses for driving",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized"
+            ],
+            "pred": [
+              "boost_polarized"
+            ],
+            "missed": [
+              "boost_house_brand"
+            ],
+            "spurious": []
+          },
+          {
+            "query": "anything on sale right now?",
+            "gold": [
+              "boost_sale_items"
+            ],
+            "pred": [
+              "boost_sale_items"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need wraparound glasses for cycling",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my 8 year old",
+            "gold": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_kids_safety"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have a prescription from my eye doctor, can you fit these with my Rx?",
+            "gold": [
+              "filter_prescription"
+            ],
+            "pred": [
+              "filter_prescription"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "something affordable please",
+            "gold": [
+              "filter_budget"
+            ],
+            "pred": [
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for staring at a computer all day",
+            "gold": [
+              "filter_blue_light"
+            ],
+            "pred": [
+              "filter_blue_light"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have RB3025?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "is OO9484D-0949 still available?",
+            "gold": [
+              "exclude_discontinued"
+            ],
+            "pred": [
+              "exclude_discontinued"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I want frames that block UV and protect my eyes from the sun",
+            "gold": [
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what's your warranty if the frame snaps?",
+            "gold": [
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how long does shipping take to Chicago?",
+            "gold": [
+              "resp_shipping"
+            ],
+            "pred": [
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I return these if they don't fit?",
+            "gold": [
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my eyes water and go blurry after an hour of reading",
+            "gold": [
+              "resp_no_medical"
+            ],
+            "pred": [
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what frame shape suits a round face?",
+            "gold": [
+              "resp_tryon"
+            ],
+            "pred": [
+              "resp_tryon"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have a store in Boston I can visit?",
+            "gold": [
+              "resp_store_locator"
+            ],
+            "pred": [
+              "resp_store_locator"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "how many points do I earn on a purchase?",
+            "gold": [
+              "resp_loyalty"
+            ],
+            "pred": [
+              "resp_loyalty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I have low vision, do you carry high-contrast lenses?",
+            "gold": [
+              "resp_accessibility"
+            ],
+            "pred": [
+              "resp_accessibility"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you have Asian fit frames?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap polarized sunglasses for my son for the beach",
+            "gold": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "boost_polarized",
+              "filter_budget",
+              "filter_mens_fit",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a luxury gift for my wife, and how long is shipping?",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab",
+              "resp_gift",
+              "resp_shipping"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what are your returns and warranty policies?",
+            "gold": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "pred": [
+              "resp_returns",
+              "resp_warranty"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "any new arrivals on sale?",
+            "gold": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_new_arrivals"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "a gift for my husband's birthday",
+            "gold": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_mens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "an anniversary present for my girlfriend",
+            "gold": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "resp_gift"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "cheap sunglasses under $50",
+            "gold": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "ski goggles under $80",
+            "gold": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "filter_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "glasses for gaming, my eyes hurt after long sessions",
+            "gold": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "pred": [
+              "filter_blue_light",
+              "resp_no_medical"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "does the loyalty program cover returns?",
+            "gold": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "pred": [
+              "resp_loyalty",
+              "resp_returns"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "premium frames my mother would like, she's 70",
+            "gold": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "pred": [
+              "filter_womens_fit",
+              "pin_designer_collab"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need something for hiking that blocks UV",
+            "gold": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "pred": [
+              "boost_sports_wrap",
+              "exclude_non_uv"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "can I try on RB2140 in your NYC store?",
+            "gold": [
+              "exclude_discontinued",
+              "resp_store_locator"
+            ],
+            "pred": [
+              "exclude_discontinued",
+              "resp_store_locator",
+              "resp_tryon"
+            ],
+            "missed": [],
+            "spurious": [
+              "resp_tryon"
+            ]
+          },
+          {
+            "query": "is the summer sale over?",
+            "gold": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "boost_sale_items",
+              "pin_summer_campaign"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "my nose bridge is low so frames always slide down \u2014 what do you suggest?",
+            "gold": [
+              "resp_alternative_fit"
+            ],
+            "pred": [
+              "resp_alternative_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "sunglasses for my wife",
+            "gold": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "pred": [
+              "boost_house_brand",
+              "filter_womens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "heading to the pool with the kids, need shades for myself",
+            "gold": [
+              "boost_house_brand",
+              "pin_summer_campaign"
+            ],
+            "pred": [
+              "filter_kids_safety",
+              "pin_summer_campaign"
+            ],
+            "missed": [
+              "boost_house_brand"
+            ],
+            "spurious": [
+              "filter_kids_safety"
+            ]
+          },
+          {
+            "query": "my son is 15 and needs new frames",
+            "gold": [
+              "filter_mens_fit"
+            ],
+            "pred": [
+              "filter_mens_fit"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I'm a runner but I want these for everyday wear",
+            "gold": [
+              "boost_sports_wrap"
+            ],
+            "pred": [
+              "boost_sports_wrap"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "do you sell cleaning cloths?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "what colours do you stock?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "hi",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "tell me about your company",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "query": "I need new tires for my car",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_query": 1.0
+      }
+    }
+  }
+}

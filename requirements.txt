@@ -5,3 +5,4 @@ pillow
 openai
 anthropic
 google-genai
+tiktoken

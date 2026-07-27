@@ -1,0 +1,3545 @@
+{
+  "meta": {
+    "n_conversations": 30,
+    "labelled_policies": 20,
+    "pool_size": 93,
+    "gold_positives": 27,
+    "context_tokens": 2000,
+    "multi_turn": 10
+  },
+  "runs": {
+    "anthropic:claude-opus-5": {
+      "monolithic": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_set_match": 1.0,
+        "tp": 27,
+        "fp": 0,
+        "fn": 0,
+        "padding_false_positives": 0,
+        "stats": {
+          "calls": 30,
+          "errors": 0,
+          "in_tok": 7210,
+          "out_tok": 1505,
+          "cached_tok": 180884,
+          "pad_fp": 0,
+          "wall_s": 15.4
+        },
+        "per_policy": {
+          "pin_gift_no_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_premium_upsell": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_stock_region": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_budget_narrowed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_rejected_brand": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sport_adult": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_repeat_interest": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_bundle_offer": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_rx_ready": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_price_sensitive_switch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_returning_customer": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_indecision": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_kids_marketing": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility_priority": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_multi_constraint": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_frustration": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_seasonal_local": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_fast_ship": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift_fit_unknown": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_over_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_conversation": [
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday.",
+            "gold": [
+              "pin_gift_no_budget"
+            ],
+            "pred": [
+              "pin_gift_no_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday, budget around $150.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me sunglasses under $80.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): These look a bit basic \u2014 do you have something nicer?",
+            "gold": [
+              "boost_premium_upsell"
+            ],
+            "pred": [
+              "boost_premium_upsell"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me a cheap pair.\nAssistant: The Solstice Dune at $45.00.\nUser (latest): Anything nicer?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me budget sunglasses.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): Do these come in blue?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want frames under $300.\nAssistant: Here are several in that range.\nUser (latest): Actually, let's keep it under $150.",
+            "gold": [
+              "resp_budget_narrowed"
+            ],
+            "pred": [
+              "resp_budget_narrowed"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your designer collection.\nAssistant: Here is our designer range.\nUser (latest): Hmm, these are pricey. Something more affordable?",
+            "gold": [
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I really don't like Oakley. What else do you have?",
+            "gold": [
+              "exclude_rejected_brand"
+            ],
+            "pred": [
+              "exclude_rejected_brand"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for trail running, please.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 9 year old, who runs cross country.",
+            "gold": [
+              "exclude_kids_marketing"
+            ],
+            "pred": [
+              "exclude_kids_marketing"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 14 year old who plays tennis.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Tell me about the Solstice Meridian.\nAssistant: It is a polarised driver's frame at $129.00.\nUser: What about the Solstice Cove?\nAssistant: That one is $89.00.\nUser (latest): Can you tell me more about the Solstice Meridian again?",
+            "gold": [
+              "resp_repeat_interest"
+            ],
+            "pred": [
+              "resp_repeat_interest"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm in Canada. Is the Solstice Meridian available?",
+            "gold": [
+              "filter_stock_region"
+            ],
+            "pred": [
+              "filter_stock_region"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Do you ship to Canada?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I need these made up with my prescription \u2014 how fast can they arrive?",
+            "gold": [
+              "filter_rx_ready"
+            ],
+            "pred": [
+              "filter_rx_ready"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's Tuesday and I need a pair before Friday.",
+            "gold": [
+              "boost_fast_ship"
+            ],
+            "pred": [
+              "boost_fast_ship"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I bought a pair from you last year and loved them. Looking for another.",
+            "gold": [
+              "boost_returning_customer"
+            ],
+            "pred": [
+              "boost_returning_customer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me aviators.\nAssistant: Three aviator styles for you.\nUser: Show me a few more.\nAssistant: Three more aviators.\nUser (latest): I really can't decide between all of these.",
+            "gold": [
+              "resp_indecision"
+            ],
+            "pred": [
+              "resp_indecision"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me something for cycling.\nAssistant: Here are three wrap styles.\nUser (latest): None of these are what I asked for. This isn't helpful.",
+            "gold": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "pred": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I have limited peripheral vision. What frames work best?",
+            "gold": [
+              "resp_accessibility_priority"
+            ],
+            "pred": [
+              "resp_accessibility_priority"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want polarised sunglasses.\nAssistant: Here are our polarised styles.\nUser: In black, please.\nAssistant: Black polarised styles.\nUser (latest): And under $200.",
+            "gold": [
+              "filter_multi_constraint"
+            ],
+            "pred": [
+              "filter_multi_constraint"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): My absolute maximum is $120. Don't show me anything above that.",
+            "gold": [
+              "exclude_over_budget"
+            ],
+            "pred": [
+              "exclude_over_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'll take the Meridian, and I also want a pair for my wife.",
+            "gold": [
+              "pin_bundle_offer"
+            ],
+            "pred": [
+              "pin_bundle_offer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Buying for my dad \u2014 how do I work out what size fits him?",
+            "gold": [
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Buenos Aires in January and need sunglasses.",
+            "gold": [
+              "pin_seasonal_local"
+            ],
+            "pred": [
+              "pin_seasonal_local"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Madrid in January and need sunglasses.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your premium range.\nAssistant: Here is the designer collection.\nUser (latest): Too expensive. I've bought from you before \u2014 nothing over $100 this time.",
+            "gold": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's my wife's anniversary present. How do I pick the right frame width for her?",
+            "gold": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): What are your opening hours?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Hi there.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_turn": 1.0
+      },
+      "enumerated": {
+        "precision": 1.0,
+        "recall": 0.8519,
+        "f1": 0.92,
+        "exact_set_match": 0.8667,
+        "tp": 23,
+        "fp": 0,
+        "fn": 4,
+        "padding_false_positives": 0,
+        "stats": {
+          "calls": 30,
+          "errors": 0,
+          "in_tok": 7210,
+          "out_tok": 61440,
+          "cached_tok": 221012,
+          "pad_fp": 0,
+          "wall_s": 72.9
+        },
+        "per_policy": {
+          "pin_gift_no_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_premium_upsell": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_stock_region": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_budget_narrowed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_rejected_brand": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sport_adult": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "resp_repeat_interest": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_bundle_offer": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_rx_ready": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_price_sensitive_switch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_returning_customer": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_indecision": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_kids_marketing": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "resp_accessibility_priority": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_multi_constraint": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_frustration": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_seasonal_local": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_fast_ship": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift_fit_unknown": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_over_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_conversation": [
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday.",
+            "gold": [
+              "pin_gift_no_budget"
+            ],
+            "pred": [
+              "pin_gift_no_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday, budget around $150.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me sunglasses under $80.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): These look a bit basic \u2014 do you have something nicer?",
+            "gold": [
+              "boost_premium_upsell"
+            ],
+            "pred": [
+              "boost_premium_upsell"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me a cheap pair.\nAssistant: The Solstice Dune at $45.00.\nUser (latest): Anything nicer?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me budget sunglasses.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): Do these come in blue?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want frames under $300.\nAssistant: Here are several in that range.\nUser (latest): Actually, let's keep it under $150.",
+            "gold": [
+              "resp_budget_narrowed"
+            ],
+            "pred": [
+              "resp_budget_narrowed"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your designer collection.\nAssistant: Here is our designer range.\nUser (latest): Hmm, these are pricey. Something more affordable?",
+            "gold": [
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I really don't like Oakley. What else do you have?",
+            "gold": [
+              "exclude_rejected_brand"
+            ],
+            "pred": [
+              "exclude_rejected_brand"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for trail running, please.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [],
+            "missed": [
+              "boost_sport_adult"
+            ],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 9 year old, who runs cross country.",
+            "gold": [
+              "exclude_kids_marketing"
+            ],
+            "pred": [],
+            "missed": [
+              "exclude_kids_marketing"
+            ],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 14 year old who plays tennis.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [],
+            "missed": [
+              "boost_sport_adult"
+            ],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Tell me about the Solstice Meridian.\nAssistant: It is a polarised driver's frame at $129.00.\nUser: What about the Solstice Cove?\nAssistant: That one is $89.00.\nUser (latest): Can you tell me more about the Solstice Meridian again?",
+            "gold": [
+              "resp_repeat_interest"
+            ],
+            "pred": [
+              "resp_repeat_interest"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm in Canada. Is the Solstice Meridian available?",
+            "gold": [
+              "filter_stock_region"
+            ],
+            "pred": [
+              "filter_stock_region"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Do you ship to Canada?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I need these made up with my prescription \u2014 how fast can they arrive?",
+            "gold": [
+              "filter_rx_ready"
+            ],
+            "pred": [
+              "filter_rx_ready"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's Tuesday and I need a pair before Friday.",
+            "gold": [
+              "boost_fast_ship"
+            ],
+            "pred": [
+              "boost_fast_ship"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I bought a pair from you last year and loved them. Looking for another.",
+            "gold": [
+              "boost_returning_customer"
+            ],
+            "pred": [
+              "boost_returning_customer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me aviators.\nAssistant: Three aviator styles for you.\nUser: Show me a few more.\nAssistant: Three more aviators.\nUser (latest): I really can't decide between all of these.",
+            "gold": [
+              "resp_indecision"
+            ],
+            "pred": [
+              "resp_indecision"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me something for cycling.\nAssistant: Here are three wrap styles.\nUser (latest): None of these are what I asked for. This isn't helpful.",
+            "gold": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "pred": [
+              "resp_frustration"
+            ],
+            "missed": [
+              "boost_sport_adult"
+            ],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I have limited peripheral vision. What frames work best?",
+            "gold": [
+              "resp_accessibility_priority"
+            ],
+            "pred": [
+              "resp_accessibility_priority"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want polarised sunglasses.\nAssistant: Here are our polarised styles.\nUser: In black, please.\nAssistant: Black polarised styles.\nUser (latest): And under $200.",
+            "gold": [
+              "filter_multi_constraint"
+            ],
+            "pred": [
+              "filter_multi_constraint"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): My absolute maximum is $120. Don't show me anything above that.",
+            "gold": [
+              "exclude_over_budget"
+            ],
+            "pred": [
+              "exclude_over_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'll take the Meridian, and I also want a pair for my wife.",
+            "gold": [
+              "pin_bundle_offer"
+            ],
+            "pred": [
+              "pin_bundle_offer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Buying for my dad \u2014 how do I work out what size fits him?",
+            "gold": [
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Buenos Aires in January and need sunglasses.",
+            "gold": [
+              "pin_seasonal_local"
+            ],
+            "pred": [
+              "pin_seasonal_local"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Madrid in January and need sunglasses.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your premium range.\nAssistant: Here is the designer collection.\nUser (latest): Too expensive. I've bought from you before \u2014 nothing over $100 this time.",
+            "gold": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's my wife's anniversary present. How do I pick the right frame width for her?",
+            "gold": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): What are your opening hours?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Hi there.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_turn": 1.0
+      }
+    },
+    "anthropic:claude-haiku-4-5-20251001": {
+      "monolithic": {
+        "precision": 0.8889,
+        "recall": 0.8889,
+        "f1": 0.8889,
+        "exact_set_match": 0.8,
+        "tp": 24,
+        "fp": 3,
+        "fn": 3,
+        "padding_false_positives": 0,
+        "stats": {
+          "calls": 30,
+          "errors": 0,
+          "in_tok": 13441,
+          "out_tok": 1286,
+          "cached_tok": 132176,
+          "pad_fp": 0,
+          "wall_s": 7.4
+        },
+        "per_policy": {
+          "pin_gift_no_budget": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1
+          },
+          "boost_premium_upsell": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "filter_stock_region": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_budget_narrowed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_rejected_brand": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sport_adult": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 1
+          },
+          "resp_repeat_interest": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_bundle_offer": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_rx_ready": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_price_sensitive_switch": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1
+          },
+          "boost_returning_customer": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 0
+          },
+          "resp_indecision": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_kids_marketing": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility_priority": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_multi_constraint": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_frustration": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_seasonal_local": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_fast_ship": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift_fit_unknown": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_over_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_conversation": [
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday.",
+            "gold": [
+              "pin_gift_no_budget"
+            ],
+            "pred": [
+              "pin_gift_no_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday, budget around $150.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me sunglasses under $80.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): These look a bit basic \u2014 do you have something nicer?",
+            "gold": [
+              "boost_premium_upsell"
+            ],
+            "pred": [
+              "boost_premium_upsell"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me a cheap pair.\nAssistant: The Solstice Dune at $45.00.\nUser (latest): Anything nicer?",
+            "gold": [],
+            "pred": [
+              "boost_premium_upsell"
+            ],
+            "missed": [],
+            "spurious": [
+              "boost_premium_upsell"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me budget sunglasses.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): Do these come in blue?",
+            "gold": [],
+            "pred": [
+              "boost_returning_customer"
+            ],
+            "missed": [],
+            "spurious": [
+              "boost_returning_customer"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want frames under $300.\nAssistant: Here are several in that range.\nUser (latest): Actually, let's keep it under $150.",
+            "gold": [
+              "resp_budget_narrowed"
+            ],
+            "pred": [
+              "resp_budget_narrowed"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your designer collection.\nAssistant: Here is our designer range.\nUser (latest): Hmm, these are pricey. Something more affordable?",
+            "gold": [
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I really don't like Oakley. What else do you have?",
+            "gold": [
+              "exclude_rejected_brand"
+            ],
+            "pred": [
+              "exclude_rejected_brand"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for trail running, please.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 9 year old, who runs cross country.",
+            "gold": [
+              "exclude_kids_marketing"
+            ],
+            "pred": [
+              "boost_sport_adult",
+              "exclude_kids_marketing"
+            ],
+            "missed": [],
+            "spurious": [
+              "boost_sport_adult"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 14 year old who plays tennis.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Tell me about the Solstice Meridian.\nAssistant: It is a polarised driver's frame at $129.00.\nUser: What about the Solstice Cove?\nAssistant: That one is $89.00.\nUser (latest): Can you tell me more about the Solstice Meridian again?",
+            "gold": [
+              "resp_repeat_interest"
+            ],
+            "pred": [
+              "resp_repeat_interest"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm in Canada. Is the Solstice Meridian available?",
+            "gold": [
+              "filter_stock_region"
+            ],
+            "pred": [
+              "filter_stock_region"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Do you ship to Canada?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I need these made up with my prescription \u2014 how fast can they arrive?",
+            "gold": [
+              "filter_rx_ready"
+            ],
+            "pred": [
+              "filter_rx_ready"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's Tuesday and I need a pair before Friday.",
+            "gold": [
+              "boost_fast_ship"
+            ],
+            "pred": [
+              "boost_fast_ship"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I bought a pair from you last year and loved them. Looking for another.",
+            "gold": [
+              "boost_returning_customer"
+            ],
+            "pred": [
+              "boost_returning_customer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me aviators.\nAssistant: Three aviator styles for you.\nUser: Show me a few more.\nAssistant: Three more aviators.\nUser (latest): I really can't decide between all of these.",
+            "gold": [
+              "resp_indecision"
+            ],
+            "pred": [
+              "resp_indecision"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me something for cycling.\nAssistant: Here are three wrap styles.\nUser (latest): None of these are what I asked for. This isn't helpful.",
+            "gold": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "pred": [
+              "resp_frustration"
+            ],
+            "missed": [
+              "boost_sport_adult"
+            ],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I have limited peripheral vision. What frames work best?",
+            "gold": [
+              "resp_accessibility_priority"
+            ],
+            "pred": [
+              "resp_accessibility_priority"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want polarised sunglasses.\nAssistant: Here are our polarised styles.\nUser: In black, please.\nAssistant: Black polarised styles.\nUser (latest): And under $200.",
+            "gold": [
+              "filter_multi_constraint"
+            ],
+            "pred": [
+              "filter_multi_constraint"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): My absolute maximum is $120. Don't show me anything above that.",
+            "gold": [
+              "exclude_over_budget"
+            ],
+            "pred": [
+              "exclude_over_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'll take the Meridian, and I also want a pair for my wife.",
+            "gold": [
+              "pin_bundle_offer"
+            ],
+            "pred": [
+              "pin_bundle_offer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Buying for my dad \u2014 how do I work out what size fits him?",
+            "gold": [
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Buenos Aires in January and need sunglasses.",
+            "gold": [
+              "pin_seasonal_local"
+            ],
+            "pred": [
+              "pin_seasonal_local"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Madrid in January and need sunglasses.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your premium range.\nAssistant: Here is the designer collection.\nUser (latest): Too expensive. I've bought from you before \u2014 nothing over $100 this time.",
+            "gold": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "boost_returning_customer",
+              "exclude_over_budget"
+            ],
+            "missed": [
+              "resp_price_sensitive_switch"
+            ],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's my wife's anniversary present. How do I pick the right frame width for her?",
+            "gold": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [
+              "pin_gift_no_budget"
+            ],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): What are your opening hours?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Hi there.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_turn": 1.0
+      },
+      "enumerated": {
+        "precision": 0.8889,
+        "recall": 0.8889,
+        "f1": 0.8889,
+        "exact_set_match": 0.8333,
+        "tp": 24,
+        "fp": 3,
+        "fn": 3,
+        "padding_false_positives": 3,
+        "stats": {
+          "calls": 30,
+          "errors": 0,
+          "in_tok": 13441,
+          "out_tok": 59040,
+          "cached_tok": 160050,
+          "pad_fp": 3,
+          "wall_s": 48.1
+        },
+        "per_policy": {
+          "pin_gift_no_budget": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1
+          },
+          "boost_premium_upsell": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "filter_stock_region": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_budget_narrowed": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "exclude_rejected_brand": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sport_adult": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 2
+          },
+          "resp_repeat_interest": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_bundle_offer": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_rx_ready": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_price_sensitive_switch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_returning_customer": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_indecision": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_kids_marketing": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "resp_accessibility_priority": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_multi_constraint": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_frustration": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_seasonal_local": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_fast_ship": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift_fit_unknown": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_over_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_conversation": [
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday.",
+            "gold": [
+              "pin_gift_no_budget"
+            ],
+            "pred": [
+              "pin_gift_no_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday, budget around $150.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me sunglasses under $80.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): These look a bit basic \u2014 do you have something nicer?",
+            "gold": [
+              "boost_premium_upsell"
+            ],
+            "pred": [
+              "boost_premium_upsell"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me a cheap pair.\nAssistant: The Solstice Dune at $45.00.\nUser (latest): Anything nicer?",
+            "gold": [],
+            "pred": [
+              "boost_premium_upsell"
+            ],
+            "missed": [],
+            "spurious": [
+              "boost_premium_upsell"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me budget sunglasses.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): Do these come in blue?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want frames under $300.\nAssistant: Here are several in that range.\nUser (latest): Actually, let's keep it under $150.",
+            "gold": [
+              "resp_budget_narrowed"
+            ],
+            "pred": [
+              "resp_budget_narrowed"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your designer collection.\nAssistant: Here is our designer range.\nUser (latest): Hmm, these are pricey. Something more affordable?",
+            "gold": [
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I really don't like Oakley. What else do you have?",
+            "gold": [
+              "exclude_rejected_brand"
+            ],
+            "pred": [
+              "exclude_rejected_brand"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for trail running, please.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 9 year old, who runs cross country.",
+            "gold": [
+              "exclude_kids_marketing"
+            ],
+            "pred": [
+              "exclude_kids_marketing"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 14 year old who plays tennis.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "exclude_kids_marketing"
+            ],
+            "missed": [
+              "boost_sport_adult"
+            ],
+            "spurious": [
+              "exclude_kids_marketing"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Tell me about the Solstice Meridian.\nAssistant: It is a polarised driver's frame at $129.00.\nUser: What about the Solstice Cove?\nAssistant: That one is $89.00.\nUser (latest): Can you tell me more about the Solstice Meridian again?",
+            "gold": [
+              "resp_repeat_interest"
+            ],
+            "pred": [
+              "resp_repeat_interest"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm in Canada. Is the Solstice Meridian available?",
+            "gold": [
+              "filter_stock_region"
+            ],
+            "pred": [
+              "filter_stock_region"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Do you ship to Canada?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I need these made up with my prescription \u2014 how fast can they arrive?",
+            "gold": [
+              "filter_rx_ready"
+            ],
+            "pred": [
+              "filter_rx_ready"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's Tuesday and I need a pair before Friday.",
+            "gold": [
+              "boost_fast_ship"
+            ],
+            "pred": [
+              "boost_fast_ship"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I bought a pair from you last year and loved them. Looking for another.",
+            "gold": [
+              "boost_returning_customer"
+            ],
+            "pred": [
+              "boost_returning_customer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me aviators.\nAssistant: Three aviator styles for you.\nUser: Show me a few more.\nAssistant: Three more aviators.\nUser (latest): I really can't decide between all of these.",
+            "gold": [
+              "resp_indecision"
+            ],
+            "pred": [
+              "resp_indecision"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me something for cycling.\nAssistant: Here are three wrap styles.\nUser (latest): None of these are what I asked for. This isn't helpful.",
+            "gold": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "pred": [
+              "resp_frustration"
+            ],
+            "missed": [
+              "boost_sport_adult"
+            ],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I have limited peripheral vision. What frames work best?",
+            "gold": [
+              "resp_accessibility_priority"
+            ],
+            "pred": [
+              "resp_accessibility_priority"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want polarised sunglasses.\nAssistant: Here are our polarised styles.\nUser: In black, please.\nAssistant: Black polarised styles.\nUser (latest): And under $200.",
+            "gold": [
+              "filter_multi_constraint"
+            ],
+            "pred": [
+              "filter_multi_constraint"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): My absolute maximum is $120. Don't show me anything above that.",
+            "gold": [
+              "exclude_over_budget"
+            ],
+            "pred": [
+              "exclude_over_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'll take the Meridian, and I also want a pair for my wife.",
+            "gold": [
+              "pin_bundle_offer"
+            ],
+            "pred": [
+              "pin_bundle_offer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Buying for my dad \u2014 how do I work out what size fits him?",
+            "gold": [
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Buenos Aires in January and need sunglasses.",
+            "gold": [
+              "pin_seasonal_local"
+            ],
+            "pred": [
+              "pin_seasonal_local"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Madrid in January and need sunglasses.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your premium range.\nAssistant: Here is the designer collection.\nUser (latest): Too expensive. I've bought from you before \u2014 nothing over $100 this time.",
+            "gold": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_budget_narrowed",
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": [
+              "resp_budget_narrowed"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's my wife's anniversary present. How do I pick the right frame width for her?",
+            "gold": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [
+              "pin_gift_no_budget"
+            ],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): What are your opening hours?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Hi there.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_turn": 1.0
+      }
+    },
+    "openai:gpt-5.6-sol": {
+      "monolithic": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_set_match": 1.0,
+        "tp": 27,
+        "fp": 0,
+        "fn": 0,
+        "padding_false_positives": 0,
+        "stats": {
+          "calls": 30,
+          "errors": 0,
+          "in_tok": 151216,
+          "out_tok": 1723,
+          "cached_tok": 140168,
+          "pad_fp": 0,
+          "wall_s": 11.2
+        },
+        "per_policy": {
+          "pin_gift_no_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_premium_upsell": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_stock_region": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_budget_narrowed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_rejected_brand": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sport_adult": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_repeat_interest": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_bundle_offer": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_rx_ready": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_price_sensitive_switch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_returning_customer": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_indecision": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_kids_marketing": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility_priority": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_multi_constraint": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_frustration": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_seasonal_local": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_fast_ship": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift_fit_unknown": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_over_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_conversation": [
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday.",
+            "gold": [
+              "pin_gift_no_budget"
+            ],
+            "pred": [
+              "pin_gift_no_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday, budget around $150.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me sunglasses under $80.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): These look a bit basic \u2014 do you have something nicer?",
+            "gold": [
+              "boost_premium_upsell"
+            ],
+            "pred": [
+              "boost_premium_upsell"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me a cheap pair.\nAssistant: The Solstice Dune at $45.00.\nUser (latest): Anything nicer?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me budget sunglasses.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): Do these come in blue?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want frames under $300.\nAssistant: Here are several in that range.\nUser (latest): Actually, let's keep it under $150.",
+            "gold": [
+              "resp_budget_narrowed"
+            ],
+            "pred": [
+              "resp_budget_narrowed"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your designer collection.\nAssistant: Here is our designer range.\nUser (latest): Hmm, these are pricey. Something more affordable?",
+            "gold": [
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I really don't like Oakley. What else do you have?",
+            "gold": [
+              "exclude_rejected_brand"
+            ],
+            "pred": [
+              "exclude_rejected_brand"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for trail running, please.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 9 year old, who runs cross country.",
+            "gold": [
+              "exclude_kids_marketing"
+            ],
+            "pred": [
+              "exclude_kids_marketing"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 14 year old who plays tennis.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Tell me about the Solstice Meridian.\nAssistant: It is a polarised driver's frame at $129.00.\nUser: What about the Solstice Cove?\nAssistant: That one is $89.00.\nUser (latest): Can you tell me more about the Solstice Meridian again?",
+            "gold": [
+              "resp_repeat_interest"
+            ],
+            "pred": [
+              "resp_repeat_interest"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm in Canada. Is the Solstice Meridian available?",
+            "gold": [
+              "filter_stock_region"
+            ],
+            "pred": [
+              "filter_stock_region"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Do you ship to Canada?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I need these made up with my prescription \u2014 how fast can they arrive?",
+            "gold": [
+              "filter_rx_ready"
+            ],
+            "pred": [
+              "filter_rx_ready"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's Tuesday and I need a pair before Friday.",
+            "gold": [
+              "boost_fast_ship"
+            ],
+            "pred": [
+              "boost_fast_ship"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I bought a pair from you last year and loved them. Looking for another.",
+            "gold": [
+              "boost_returning_customer"
+            ],
+            "pred": [
+              "boost_returning_customer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me aviators.\nAssistant: Three aviator styles for you.\nUser: Show me a few more.\nAssistant: Three more aviators.\nUser (latest): I really can't decide between all of these.",
+            "gold": [
+              "resp_indecision"
+            ],
+            "pred": [
+              "resp_indecision"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me something for cycling.\nAssistant: Here are three wrap styles.\nUser (latest): None of these are what I asked for. This isn't helpful.",
+            "gold": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "pred": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I have limited peripheral vision. What frames work best?",
+            "gold": [
+              "resp_accessibility_priority"
+            ],
+            "pred": [
+              "resp_accessibility_priority"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want polarised sunglasses.\nAssistant: Here are our polarised styles.\nUser: In black, please.\nAssistant: Black polarised styles.\nUser (latest): And under $200.",
+            "gold": [
+              "filter_multi_constraint"
+            ],
+            "pred": [
+              "filter_multi_constraint"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): My absolute maximum is $120. Don't show me anything above that.",
+            "gold": [
+              "exclude_over_budget"
+            ],
+            "pred": [
+              "exclude_over_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'll take the Meridian, and I also want a pair for my wife.",
+            "gold": [
+              "pin_bundle_offer"
+            ],
+            "pred": [
+              "pin_bundle_offer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Buying for my dad \u2014 how do I work out what size fits him?",
+            "gold": [
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Buenos Aires in January and need sunglasses.",
+            "gold": [
+              "pin_seasonal_local"
+            ],
+            "pred": [
+              "pin_seasonal_local"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Madrid in January and need sunglasses.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your premium range.\nAssistant: Here is the designer collection.\nUser (latest): Too expensive. I've bought from you before \u2014 nothing over $100 this time.",
+            "gold": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's my wife's anniversary present. How do I pick the right frame width for her?",
+            "gold": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): What are your opening hours?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Hi there.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_turn": 1.0
+      },
+      "enumerated": {
+        "precision": 0.931,
+        "recall": 1.0,
+        "f1": 0.9643,
+        "exact_set_match": 0.9333,
+        "tp": 27,
+        "fp": 2,
+        "fn": 0,
+        "padding_false_positives": 0,
+        "stats": {
+          "calls": 30,
+          "errors": 0,
+          "in_tok": 164596,
+          "out_tok": 21952,
+          "cached_tok": 147204,
+          "pad_fp": 0,
+          "wall_s": 31.9
+        },
+        "per_policy": {
+          "pin_gift_no_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_premium_upsell": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_stock_region": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_budget_narrowed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_rejected_brand": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sport_adult": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_repeat_interest": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_bundle_offer": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_rx_ready": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_price_sensitive_switch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_returning_customer": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_indecision": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_kids_marketing": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility_priority": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_multi_constraint": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 0
+          },
+          "resp_frustration": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_seasonal_local": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_fast_ship": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift_fit_unknown": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_over_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_conversation": [
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday.",
+            "gold": [
+              "pin_gift_no_budget"
+            ],
+            "pred": [
+              "pin_gift_no_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday, budget around $150.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me sunglasses under $80.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): These look a bit basic \u2014 do you have something nicer?",
+            "gold": [
+              "boost_premium_upsell"
+            ],
+            "pred": [
+              "boost_premium_upsell"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me a cheap pair.\nAssistant: The Solstice Dune at $45.00.\nUser (latest): Anything nicer?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me budget sunglasses.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): Do these come in blue?",
+            "gold": [],
+            "pred": [
+              "filter_multi_constraint"
+            ],
+            "missed": [],
+            "spurious": [
+              "filter_multi_constraint"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want frames under $300.\nAssistant: Here are several in that range.\nUser (latest): Actually, let's keep it under $150.",
+            "gold": [
+              "resp_budget_narrowed"
+            ],
+            "pred": [
+              "resp_budget_narrowed"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your designer collection.\nAssistant: Here is our designer range.\nUser (latest): Hmm, these are pricey. Something more affordable?",
+            "gold": [
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I really don't like Oakley. What else do you have?",
+            "gold": [
+              "exclude_rejected_brand"
+            ],
+            "pred": [
+              "exclude_rejected_brand"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for trail running, please.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 9 year old, who runs cross country.",
+            "gold": [
+              "exclude_kids_marketing"
+            ],
+            "pred": [
+              "exclude_kids_marketing"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 14 year old who plays tennis.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult",
+              "filter_multi_constraint"
+            ],
+            "missed": [],
+            "spurious": [
+              "filter_multi_constraint"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Tell me about the Solstice Meridian.\nAssistant: It is a polarised driver's frame at $129.00.\nUser: What about the Solstice Cove?\nAssistant: That one is $89.00.\nUser (latest): Can you tell me more about the Solstice Meridian again?",
+            "gold": [
+              "resp_repeat_interest"
+            ],
+            "pred": [
+              "resp_repeat_interest"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm in Canada. Is the Solstice Meridian available?",
+            "gold": [
+              "filter_stock_region"
+            ],
+            "pred": [
+              "filter_stock_region"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Do you ship to Canada?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I need these made up with my prescription \u2014 how fast can they arrive?",
+            "gold": [
+              "filter_rx_ready"
+            ],
+            "pred": [
+              "filter_rx_ready"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's Tuesday and I need a pair before Friday.",
+            "gold": [
+              "boost_fast_ship"
+            ],
+            "pred": [
+              "boost_fast_ship"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I bought a pair from you last year and loved them. Looking for another.",
+            "gold": [
+              "boost_returning_customer"
+            ],
+            "pred": [
+              "boost_returning_customer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me aviators.\nAssistant: Three aviator styles for you.\nUser: Show me a few more.\nAssistant: Three more aviators.\nUser (latest): I really can't decide between all of these.",
+            "gold": [
+              "resp_indecision"
+            ],
+            "pred": [
+              "resp_indecision"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me something for cycling.\nAssistant: Here are three wrap styles.\nUser (latest): None of these are what I asked for. This isn't helpful.",
+            "gold": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "pred": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I have limited peripheral vision. What frames work best?",
+            "gold": [
+              "resp_accessibility_priority"
+            ],
+            "pred": [
+              "resp_accessibility_priority"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want polarised sunglasses.\nAssistant: Here are our polarised styles.\nUser: In black, please.\nAssistant: Black polarised styles.\nUser (latest): And under $200.",
+            "gold": [
+              "filter_multi_constraint"
+            ],
+            "pred": [
+              "filter_multi_constraint"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): My absolute maximum is $120. Don't show me anything above that.",
+            "gold": [
+              "exclude_over_budget"
+            ],
+            "pred": [
+              "exclude_over_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'll take the Meridian, and I also want a pair for my wife.",
+            "gold": [
+              "pin_bundle_offer"
+            ],
+            "pred": [
+              "pin_bundle_offer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Buying for my dad \u2014 how do I work out what size fits him?",
+            "gold": [
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Buenos Aires in January and need sunglasses.",
+            "gold": [
+              "pin_seasonal_local"
+            ],
+            "pred": [
+              "pin_seasonal_local"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Madrid in January and need sunglasses.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your premium range.\nAssistant: Here is the designer collection.\nUser (latest): Too expensive. I've bought from you before \u2014 nothing over $100 this time.",
+            "gold": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's my wife's anniversary present. How do I pick the right frame width for her?",
+            "gold": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): What are your opening hours?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Hi there.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_turn": 1.0
+      }
+    },
+    "google:gemini-2.5-flash": {
+      "monolithic": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_set_match": 1.0,
+        "tp": 27,
+        "fp": 0,
+        "fn": 0,
+        "padding_false_positives": 0,
+        "stats": {
+          "calls": 30,
+          "errors": 0,
+          "in_tok": 147784,
+          "out_tok": 426,
+          "cached_tok": 32605,
+          "pad_fp": 0,
+          "wall_s": 14.7
+        },
+        "per_policy": {
+          "pin_gift_no_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_premium_upsell": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_stock_region": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_budget_narrowed": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_rejected_brand": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sport_adult": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_repeat_interest": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_bundle_offer": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_rx_ready": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_price_sensitive_switch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_returning_customer": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_indecision": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_kids_marketing": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility_priority": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_multi_constraint": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_frustration": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_seasonal_local": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_fast_ship": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift_fit_unknown": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_over_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_conversation": [
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday.",
+            "gold": [
+              "pin_gift_no_budget"
+            ],
+            "pred": [
+              "pin_gift_no_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday, budget around $150.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me sunglasses under $80.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): These look a bit basic \u2014 do you have something nicer?",
+            "gold": [
+              "boost_premium_upsell"
+            ],
+            "pred": [
+              "boost_premium_upsell"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me a cheap pair.\nAssistant: The Solstice Dune at $45.00.\nUser (latest): Anything nicer?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me budget sunglasses.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): Do these come in blue?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want frames under $300.\nAssistant: Here are several in that range.\nUser (latest): Actually, let's keep it under $150.",
+            "gold": [
+              "resp_budget_narrowed"
+            ],
+            "pred": [
+              "resp_budget_narrowed"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your designer collection.\nAssistant: Here is our designer range.\nUser (latest): Hmm, these are pricey. Something more affordable?",
+            "gold": [
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I really don't like Oakley. What else do you have?",
+            "gold": [
+              "exclude_rejected_brand"
+            ],
+            "pred": [
+              "exclude_rejected_brand"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for trail running, please.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 9 year old, who runs cross country.",
+            "gold": [
+              "exclude_kids_marketing"
+            ],
+            "pred": [
+              "exclude_kids_marketing"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 14 year old who plays tennis.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Tell me about the Solstice Meridian.\nAssistant: It is a polarised driver's frame at $129.00.\nUser: What about the Solstice Cove?\nAssistant: That one is $89.00.\nUser (latest): Can you tell me more about the Solstice Meridian again?",
+            "gold": [
+              "resp_repeat_interest"
+            ],
+            "pred": [
+              "resp_repeat_interest"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm in Canada. Is the Solstice Meridian available?",
+            "gold": [
+              "filter_stock_region"
+            ],
+            "pred": [
+              "filter_stock_region"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Do you ship to Canada?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I need these made up with my prescription \u2014 how fast can they arrive?",
+            "gold": [
+              "filter_rx_ready"
+            ],
+            "pred": [
+              "filter_rx_ready"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's Tuesday and I need a pair before Friday.",
+            "gold": [
+              "boost_fast_ship"
+            ],
+            "pred": [
+              "boost_fast_ship"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I bought a pair from you last year and loved them. Looking for another.",
+            "gold": [
+              "boost_returning_customer"
+            ],
+            "pred": [
+              "boost_returning_customer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me aviators.\nAssistant: Three aviator styles for you.\nUser: Show me a few more.\nAssistant: Three more aviators.\nUser (latest): I really can't decide between all of these.",
+            "gold": [
+              "resp_indecision"
+            ],
+            "pred": [
+              "resp_indecision"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me something for cycling.\nAssistant: Here are three wrap styles.\nUser (latest): None of these are what I asked for. This isn't helpful.",
+            "gold": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "pred": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I have limited peripheral vision. What frames work best?",
+            "gold": [
+              "resp_accessibility_priority"
+            ],
+            "pred": [
+              "resp_accessibility_priority"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want polarised sunglasses.\nAssistant: Here are our polarised styles.\nUser: In black, please.\nAssistant: Black polarised styles.\nUser (latest): And under $200.",
+            "gold": [
+              "filter_multi_constraint"
+            ],
+            "pred": [
+              "filter_multi_constraint"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): My absolute maximum is $120. Don't show me anything above that.",
+            "gold": [
+              "exclude_over_budget"
+            ],
+            "pred": [
+              "exclude_over_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'll take the Meridian, and I also want a pair for my wife.",
+            "gold": [
+              "pin_bundle_offer"
+            ],
+            "pred": [
+              "pin_bundle_offer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Buying for my dad \u2014 how do I work out what size fits him?",
+            "gold": [
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Buenos Aires in January and need sunglasses.",
+            "gold": [
+              "pin_seasonal_local"
+            ],
+            "pred": [
+              "pin_seasonal_local"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Madrid in January and need sunglasses.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your premium range.\nAssistant: Here is the designer collection.\nUser (latest): Too expensive. I've bought from you before \u2014 nothing over $100 this time.",
+            "gold": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's my wife's anniversary present. How do I pick the right frame width for her?",
+            "gold": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): What are your opening hours?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Hi there.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_turn": 1.0
+      },
+      "enumerated": {
+        "precision": 0.8182,
+        "recall": 1.0,
+        "f1": 0.9,
+        "exact_set_match": 0.8333,
+        "tp": 27,
+        "fp": 6,
+        "fn": 0,
+        "padding_false_positives": 0,
+        "stats": {
+          "calls": 30,
+          "errors": 0,
+          "in_tok": 147784,
+          "out_tok": 24780,
+          "cached_tok": 45064,
+          "pad_fp": 0,
+          "wall_s": 36.2
+        },
+        "per_policy": {
+          "pin_gift_no_budget": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 0
+          },
+          "boost_premium_upsell": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_stock_region": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_budget_narrowed": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "exclude_rejected_brand": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_sport_adult": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 0
+          },
+          "resp_repeat_interest": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_bundle_offer": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_rx_ready": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_price_sensitive_switch": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_returning_customer": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_indecision": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_kids_marketing": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_accessibility_priority": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "filter_multi_constraint": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 0
+          },
+          "resp_frustration": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "pin_seasonal_local": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "boost_fast_ship": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "resp_gift_fit_unknown": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "exclude_over_budget": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "per_conversation": [
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday.",
+            "gold": [
+              "pin_gift_no_budget"
+            ],
+            "pred": [
+              "pin_gift_no_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm looking for a gift for my brother's birthday, budget around $150.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me sunglasses under $80.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): These look a bit basic \u2014 do you have something nicer?",
+            "gold": [
+              "boost_premium_upsell"
+            ],
+            "pred": [
+              "boost_premium_upsell"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me a cheap pair.\nAssistant: The Solstice Dune at $45.00.\nUser (latest): Anything nicer?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me budget sunglasses.\nAssistant: The Solstice Dune at $45.00 and the Solstice Basecamp at $39.00.\nUser (latest): Do these come in blue?",
+            "gold": [],
+            "pred": [
+              "filter_multi_constraint"
+            ],
+            "missed": [],
+            "spurious": [
+              "filter_multi_constraint"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want frames under $300.\nAssistant: Here are several in that range.\nUser (latest): Actually, let's keep it under $150.",
+            "gold": [
+              "resp_budget_narrowed"
+            ],
+            "pred": [
+              "resp_budget_narrowed"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your designer collection.\nAssistant: Here is our designer range.\nUser (latest): Hmm, these are pricey. Something more affordable?",
+            "gold": [
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I really don't like Oakley. What else do you have?",
+            "gold": [
+              "exclude_rejected_brand"
+            ],
+            "pred": [
+              "exclude_rejected_brand"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for trail running, please.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 9 year old, who runs cross country.",
+            "gold": [
+              "exclude_kids_marketing"
+            ],
+            "pred": [
+              "exclude_kids_marketing"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Sunglasses for my 14 year old who plays tennis.",
+            "gold": [
+              "boost_sport_adult"
+            ],
+            "pred": [
+              "boost_sport_adult"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Tell me about the Solstice Meridian.\nAssistant: It is a polarised driver's frame at $129.00.\nUser: What about the Solstice Cove?\nAssistant: That one is $89.00.\nUser (latest): Can you tell me more about the Solstice Meridian again?",
+            "gold": [
+              "resp_repeat_interest"
+            ],
+            "pred": [
+              "boost_sport_adult",
+              "filter_multi_constraint",
+              "resp_repeat_interest"
+            ],
+            "missed": [],
+            "spurious": [
+              "boost_sport_adult",
+              "filter_multi_constraint"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm in Canada. Is the Solstice Meridian available?",
+            "gold": [
+              "filter_stock_region"
+            ],
+            "pred": [
+              "filter_stock_region"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Do you ship to Canada?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I need these made up with my prescription \u2014 how fast can they arrive?",
+            "gold": [
+              "filter_rx_ready"
+            ],
+            "pred": [
+              "filter_rx_ready"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's Tuesday and I need a pair before Friday.",
+            "gold": [
+              "boost_fast_ship"
+            ],
+            "pred": [
+              "boost_fast_ship"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I bought a pair from you last year and loved them. Looking for another.",
+            "gold": [
+              "boost_returning_customer"
+            ],
+            "pred": [
+              "boost_returning_customer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me aviators.\nAssistant: Three aviator styles for you.\nUser: Show me a few more.\nAssistant: Three more aviators.\nUser (latest): I really can't decide between all of these.",
+            "gold": [
+              "resp_indecision"
+            ],
+            "pred": [
+              "resp_indecision"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me something for cycling.\nAssistant: Here are three wrap styles.\nUser (latest): None of these are what I asked for. This isn't helpful.",
+            "gold": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "pred": [
+              "boost_sport_adult",
+              "resp_frustration"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I have limited peripheral vision. What frames work best?",
+            "gold": [
+              "resp_accessibility_priority"
+            ],
+            "pred": [
+              "resp_accessibility_priority"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: I want polarised sunglasses.\nAssistant: Here are our polarised styles.\nUser: In black, please.\nAssistant: Black polarised styles.\nUser (latest): And under $200.",
+            "gold": [
+              "filter_multi_constraint"
+            ],
+            "pred": [
+              "boost_sport_adult",
+              "filter_multi_constraint"
+            ],
+            "missed": [],
+            "spurious": [
+              "boost_sport_adult"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): My absolute maximum is $120. Don't show me anything above that.",
+            "gold": [
+              "exclude_over_budget"
+            ],
+            "pred": [
+              "exclude_over_budget"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'll take the Meridian, and I also want a pair for my wife.",
+            "gold": [
+              "pin_bundle_offer"
+            ],
+            "pred": [
+              "pin_bundle_offer"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Buying for my dad \u2014 how do I work out what size fits him?",
+            "gold": [
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": [
+              "pin_gift_no_budget"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Buenos Aires in January and need sunglasses.",
+            "gold": [
+              "pin_seasonal_local"
+            ],
+            "pred": [
+              "pin_seasonal_local"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): I'm going to Madrid in January and need sunglasses.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser: Show me your premium range.\nAssistant: Here is the designer collection.\nUser (latest): Too expensive. I've bought from you before \u2014 nothing over $100 this time.",
+            "gold": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_price_sensitive_switch"
+            ],
+            "pred": [
+              "boost_returning_customer",
+              "exclude_over_budget",
+              "resp_budget_narrowed",
+              "resp_price_sensitive_switch"
+            ],
+            "missed": [],
+            "spurious": [
+              "resp_budget_narrowed"
+            ]
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): It's my wife's anniversary present. How do I pick the right frame width for her?",
+            "gold": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "pred": [
+              "pin_gift_no_budget",
+              "resp_gift_fit_unknown"
+            ],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): What are your opening hours?",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          },
+          {
+            "conversation": "CONVERSATION\nUser (latest): Hi there.",
+            "gold": [],
+            "pred": [],
+            "missed": [],
+            "spurious": []
+          }
+        ],
+        "calls_per_turn": 1.0
+      }
+    }
+  }
+}
