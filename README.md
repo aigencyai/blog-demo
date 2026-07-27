@@ -61,7 +61,9 @@ conditions) survives a single prompt, across four models and four hosted APIs.
 
 | Script | What it measures |
 | --- | --- |
-| `dataset.py` | 25 policies + 47 labelled shopper messages (easy tier) |
+| `dataset_response.py` | **20 `response` policies as condition + effect + deterministic checker, 30 shopper messages** (the set the post is built on) |
+| `bench_response_e2e.py` | End to end: one prompt vs gate→inject vs gate-per-policy; scores effect precision/recall and turn-perfect |
+| `dataset.py` | 25 policies + 47 labelled shopper messages (mixed-type gating, not covered in the post) |
 | `dataset_hard.py` | 20 compositional policies over 30 multi-turn conversations (hard tier) |
 | `distractors.py` / `screen_distractors.py` | 73 irrelevant padding policies, empirically screened to zero false triggers |
 | `rules.py` | 24 mechanically-checkable response rules (tone, formatting, brand voice) |
@@ -75,7 +77,12 @@ conditions) survives a single prompt, across four models and four hosted APIs.
 
 ### Headline results
 
-- 25 policies, one prompt: **F1 0.955–0.985** on every model — the simple case is solved.
+- Response policies end to end: **effect recall 1.000 in 10 of 12 runs** — models essentially never drop
+  an instruction they were handed. Nearly every failure is *over-application*.
+- Gating (decide conditions, then inject only the fired effects) makes over-application structurally
+  impossible: **haiku 0.867 → 1.000 turn-perfect** with one extra call, matching opus.
+- One gate call *per policy* is the worst option: 21 calls/turn, precision 0.795–0.914.
+- Mixed-type gating (not in the post): 25 policies in one prompt scores **F1 0.955–0.985** on every model.
 - 100 policies, small models: recall drops to **79.7%** in the last third of the list (not the
   middle — the classic "lost in the middle" effect doesn't appear here).
 - 24 response rules: per-rule compliance stays **~95%**, but **0 of 12** replies satisfied every
@@ -93,6 +100,7 @@ cd policy-following
 
 # needs OPENAI_API_KEY / ANTHROPIC_API_KEY / GEMINI_API_KEY (or GCP_PROJECT)
 python3 screen_distractors.py anthropic:claude-opus-5
+python3 bench_response_e2e.py      # the main experiment
 python3 bench_gating.py
 python3 bench_scaling.py
 python3 bench_hard.py

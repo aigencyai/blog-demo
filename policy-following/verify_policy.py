@@ -26,6 +26,31 @@ def f1(tp, fp, fn):
     return 2 * p * r / (p + r) if p + r else 0.0
 
 
+# --- response policies, end to end ----------------------------------------
+if os.path.exists(os.path.join(HERE, "response_e2e_results.json")):
+    e = load("response_e2e_results.json")
+    m = e["meta"]
+    print(f"\nRESPONSE POLICIES END TO END: {m['n_policies']} policies (condition+effect) x "
+          f"{m['n_scenarios']} messages, {m['gold_effects']} effects that must appear")
+    for spec, arms in e["runs"].items():
+        for arm, v in arms.items():
+            check(f"e2e {spec} {arm} effect F1",
+                  round(f1(v["effect_tp"], v["effect_fp"], v["effect_fn"]), 4), v["effect_f1"])
+            gate = f"gate F1 {v['gate_f1']:.3f} -> " if "gate_f1" in v else ""
+            print(f"  {spec.split(':')[1][:24]:26} {arm:12} {gate}"
+                  f"effect P {v['effect_precision']:.3f} R {v['effect_recall']:.3f} "
+                  f"| turn-perfect {v['turn_perfect']:.3f} ({v['calls_per_turn']} calls)")
+    # claim: injecting only fired effects makes over-application impossible
+    for spec, arms in e["runs"].items():
+        gi = arms.get("gate_inject")
+        if gi and gi["effect_precision"] < 0.99:
+            print(f"  NOTE {spec} gate_inject precision {gi['effect_precision']} < 0.99")
+    # claim: the gate outperforms the execution step it feeds
+    for spec, arms in e["runs"].items():
+        gi = arms.get("gate_inject")
+        if gi and "gate_recall" in gi and gi["gate_recall"] < gi["effect_recall"]:
+            fails.append(f"{spec}: gate recall below effect recall (execution not the bottleneck)")
+
 # --- easy tier ------------------------------------------------------------
 g = load("gating_results.json")
 print(f"\nEASY TIER: {g['meta']['n_policies']} policies x {g['meta']['n_queries']} queries "
