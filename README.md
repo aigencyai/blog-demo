@@ -85,10 +85,14 @@ conditions) survives a single prompt, across four models and four hosted APIs.
 - Mixed-type gating (not in the post): 25 policies in one prompt scores **F1 0.955–0.985** on every model.
 - 100 policies, small models: recall drops to **79.7%** in the last third of the list (not the
   middle — the classic "lost in the middle" effect doesn't appear here).
-- 24 response rules: per-rule compliance stays **~95%**, but **0 of 12** replies satisfied every
-  rule at once for 3 of 4 models — until a deterministic checker + repair loop reached **92–100%**.
-- Self-audit recall on real violations: **0.00–0.23**. An independent judge: **0.66–0.71**. A
-  deterministic checker: **1.00**.
+- 24 response rules: per-rule compliance stays **93–98%**, but essentially **0 of 12** replies satisfied
+  every rule at once for 3 of 4 models from 16 rules on — until a code checker + repair loop reached **100%**
+  for opus and gpt-5.6-sol (and still 0% for haiku/gemini-flash, which can't execute the repair).
+- Self-audit recall on real violations: **0.00–0.46**. An independent judge: **0.66–0.71**. Code
+  checking a verifiable property: **1.00**.
+- Two of our own checkers were wrong and were corrected (accepting "thirty-day" for a 30-day window;
+  not treating "prevent slipping" as a medical claim). All results here are from the fixed versions —
+  each checker now has probes for a compliant paraphrase, a compliant disclaimer and a real violation.
 - Two independent judges agreed **96.9%** of the time on 8 semantic (uncheckable) rules — but
   split on the one rule that actually required judgment.
 

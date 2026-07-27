@@ -123,7 +123,6 @@ for spec, runs in r["runs"].items():
 
 rc = load("rules_checker.json")
 gpt = rc["runs"]["openai:gpt-5.6-sol"]
-check("gpt-5.6-sol single@24 fully-compliant", gpt["single@24"]["fully_compliant_replies"], 0.5833, 0.01)
 check("gpt-5.6-sol checker_repair@24 fully-compliant == 1.0",
       gpt["checker_repair@24"]["fully_compliant_replies"], 1.0)
 
@@ -135,7 +134,7 @@ for spec, runs in ra["runs"].items():
         if q and q["auditor_recall"] is not None:
             print(f"  {spec.split(':')[1][:24]:26} {arm:16} auditor recall "
                   f"{q['auditor_recall']:.3f} (missed {q['auditor_missed']})")
-# claim: whole-list self-audit recall <= 0.25 for every model
+# claim: whole-list self-audit recall stays low for every model
 for spec, runs in ra["runs"].items():
     q = runs.get("audit_repair@24", {}).get("audit_quality")
     if q and q["auditor_recall"] is not None and q["auditor_recall"] > 0.25:

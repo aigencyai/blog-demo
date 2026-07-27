@@ -34,7 +34,7 @@
   "runs": {
     "anthropic:claude-opus-5": {
       "single@24": {
-        "rule_compliance": 0.9443,
+        "rule_compliance": 0.9512,
         "core4_compliance": 1.0,
         "fully_compliant_replies": 0.0,
         "checked_rule_instances": 287,
@@ -70,8 +70,8 @@
             "na": 0
           },
           "R07_returns_window": {
-            "ok": 11,
-            "bad": 1,
+            "ok": 12,
+            "bad": 0,
             "na": 0
           },
           "R08_no_exclamation": {
@@ -125,8 +125,8 @@
             "na": 0
           },
           "R18_sentence_length": {
-            "ok": 10,
-            "bad": 2,
+            "ok": 11,
+            "bad": 1,
             "na": 0
           },
           "R19_no_recommend": {
@@ -163,91 +163,90 @@
         "stats": {
           "calls": 12,
           "in_tok": 3160,
-          "out_tok": 2509,
+          "out_tok": 2520,
           "cached_tok": 6978,
           "errors": 0,
-          "wall_s": 11.4
+          "wall_s": 10.3
         },
         "calls_per_reply": 1.0,
+        "audit_quality": null,
         "samples": [
           {
             "query": "I need polarized sunglasses for driving.",
-            "draft": "Consider the Meridian Polarised at $129.00 in matte black, a polarised lens built for bright road glare. The Cove Driver at $89.00 in grey is great value and equally suited to long drives, and both carry UV400 protection. Every pair from Solstice Optics ships with a 30-day return window. Fit tip: choose the Cove Driver if you have a narrower face, as its temples sit closer to the head. Ask us anything else about your eyewear.",
-            "final": "Consider the Meridian Polarised at $129.00 in matte black, a polarised lens built for bright road glare. The Cove Driver at $89.00 in grey is great value and equally suited to long drives, and both carry UV400 protection. Every pair from Solstice Optics ships with a 30-day return window. Fit tip: choose the Cove Driver if you have a narrower face, as its temples sit closer to the head. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Meridian Polarised at $129.00 in matte black, a polarised choice that cuts road glare on long drives. The Cove Driver at $89.00 in grey is great value, and both carry UV400 protection plus a 30-day return window. Fit tip: pick the Cove Driver if you have a narrower face, as the Meridian sits wider at the temples. Solstice Optics keeps both frames in stock in two colourways, so you can customise your look.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Meridian Polarised at $129.00 in matte black, a polarised choice that cuts road glare on long drives. The Cove Driver at $89.00 in grey is great value, and both carry UV400 protection plus a 30-day return window. Fit tip: pick the Cove Driver if you have a narrower face, as the Meridian sits wider at the temples. Solstice Optics keeps both frames in stock in two colourways, so you can customise your look.\n\nAsk us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "Looking for lightweight frames for everyday wear.",
-            "draft": "Consider the Feather Ti in gunmetal at $215.00, a titanium frame built for all-day comfort. The Aero Rim in silver at $175.00 weighs even less and offers great value from Solstice Optics. Both carry UV400 protection and ship with a 30-day return window. Fit tip: choose the Aero Rim if you have a narrower bridge, as its nose pads adjust across two positions. You can also customise the lens colour on either frame. Ask us anything else about your eyewear.",
-            "final": "Consider the Feather Ti in gunmetal at $215.00, a titanium frame built for all-day comfort. The Aero Rim in silver at $175.00 weighs even less and offers great value from Solstice Optics. Both carry UV400 protection and ship with a 30-day return window. Fit tip: choose the Aero Rim if you have a narrower bridge, as its nose pads adjust across two positions. You can also customise the lens colour on either frame. Ask us anything else about your eyewear.",
+            "draft": "Consider the Feather Ti at $215.00 in gunmetal, a titanium frame that sits lightly for all-day everyday wear. The Aero Rim at $175.00 in silver is a great value alternative, weighing very little across the two designs from Solstice Optics. Both carry UV400 protection and ship with a thirty-day return window. Fit tip: choose the Aero Rim if you have a narrower bridge, as its rimless build hugs closer to the face. Ask us anything else about your eyewear.",
+            "final": "Consider the Feather Ti at $215.00 in gunmetal, a titanium frame that sits lightly for all-day everyday wear. The Aero Rim at $175.00 in silver is a great value alternative, weighing very little across the two designs from Solstice Optics. Both carry UV400 protection and ship with a thirty-day return window. Fit tip: choose the Aero Rim if you have a narrower bridge, as its rimless build hugs closer to the face. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "Something for my wife's birthday, she likes classic styles.",
-            "draft": "Consider the Rivera Cat-Eye at $189.00 in tortoiseshell, a timeless shape that suits classic taste beautifully. The Lumen Round at $149.00 in rose gold offers a softer vintage look with a warm metal colour. Both frames from Solstice Optics carry UV400 protection and ship with a 30-day return window. Fit tip: cat-eye frames flatter rounder faces, while the round style sits best on narrower features. Either pair arrives gift-ready, so you can choose the one she will love most.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Rivera Cat-Eye at $189.00 in tortoiseshell, a timeless shape that suits classic taste beautifully. The Lumen Round at $149.00 in rose gold offers a softer vintage look with a warm metal colour. Both frames from Solstice Optics carry UV400 protection and ship with a 30-day return window. Fit tip: cat-eye frames flatter rounder faces, while the round style sits best on narrower features. Either pair arrives gift-ready, so you can choose the one she will love most.\n\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Rivera Cat-Eye at $189.00 in a warm tortoiseshell colour, a timeless shape she will likely love. Consider also the Lumen Round at $149.00 in rose gold, a great value pick with classic appeal from Solstice Optics. Both frames carry UV400 protection and ship with a 30-day return window. Fit tip: choose the Rivera if she prefers a wider frame, as the Lumen suits narrower faces with two adjustable nose pads.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Rivera Cat-Eye at $189.00 in a warm tortoiseshell colour, a timeless shape she will likely love. Consider also the Lumen Round at $149.00 in rose gold, a great value pick with classic appeal from Solstice Optics. Both frames carry UV400 protection and ship with a 30-day return window. Fit tip: choose the Rivera if she prefers a wider frame, as the Lumen suits narrower faces with two adjustable nose pads.\n\nAsk us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "What do you have for cycling?",
-            "draft": "Consider the Ridgeline Wrap at $159.00 in neon yellow, a wrap-around frame built for fast road riding. The Sprint Shield at $139.00 in black offers a lighter single-lens shield and is great value for that coverage. Both carry UV400 protection and ship with a 30-day return window from Solstice Optics. Fit tip: choose the wrap style if you wear a helmet low on the brow, as the arms sit flatter against your temples. Ask us anything else about your eyewear.",
-            "final": "Consider the Ridgeline Wrap at $159.00 in neon yellow, a wrap-around frame built for fast road riding. The Sprint Shield at $139.00 in black offers a lighter single-lens shield and is great value for that coverage. Both carry UV400 protection and ship with a 30-day return window from Solstice Optics. Fit tip: choose the wrap style if you wear a helmet low on the brow, as the arms sit flatter against your temples. Ask us anything else about your eyewear.",
+            "draft": "Consider the Ridgeline Wrap at $159.00 in neon yellow, a wraparound design that stays put on fast descents. The Sprint Shield at $139.00 in black offers a single-lens shield with UV400 protection and great value for regular riders. Both come from Solstice Optics and ship with a 30-day return window. Fit tip: choose the wrap if you wear a helmet often, since the slimmer arms sit flat under straps. The two frames suit narrow to medium face widths in a grey-toned or bright colour finish.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Ridgeline Wrap at $159.00 in neon yellow, a wraparound design that stays put on fast descents. The Sprint Shield at $139.00 in black offers a single-lens shield with UV400 protection and great value for regular riders. Both come from Solstice Optics and ship with a 30-day return window. Fit tip: choose the wrap if you wear a helmet often, since the slimmer arms sit flat under straps. The two frames suit narrow to medium face widths in a grey-toned or bright colour finish.\n\nAsk us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "I want the most affordable sunglasses you carry.",
-            "draft": "Consider the Solstice Basecamp at $39.00 in black, our lowest-priced pair and great value, with the Solstice Dune in sand at $45.00 as a close second. Both frames carry UV400 protection and ship with a thirty-day return window. Fit tip: the Basecamp suits narrower faces, so size up to the Dune if your temples feel pressed. You can also customise the lens colour on either pair at Solstice Optics, including a soft grey tint.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Basecamp at $39.00 in black, our lowest-priced pair and great value, with the Solstice Dune in sand at $45.00 as a close second. Both frames carry UV400 protection and ship with a thirty-day return window. Fit tip: the Basecamp suits narrower faces, so size up to the Dune if your temples feel pressed. You can also customise the lens colour on either pair at Solstice Optics, including a soft grey tint.\n\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Basecamp at $39.00 in black, the lowest-priced pair we carry, offering great value with UV400 protection. The Solstice Dune at $45.00 in a warm sand colour sits just above it, also with UV400 protection. Both pairs ship with a 30-day return window, so you can decide at home. Fit tip: the Basecamp runs slightly narrow, so size up if you have a wider face. Solstice Optics keeps two styles in stock in these colours for you. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Basecamp at $39.00 in black, the lowest-priced pair we carry, offering great value with UV400 protection. The Solstice Dune at $45.00 in a warm sand colour sits just above it, also with UV400 protection. Both pairs ship with a 30-day return window, so you can decide at home. Fit tip: the Basecamp runs slightly narrow, so size up if you have a wider face. Solstice Optics keeps two styles in stock in these colours for you. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
-              "R16_fit_tip",
-              "R18_sentence_length"
+              "R16_fit_tip"
             ]
           },
           {
             "query": "Show me your premium designer frames.",
-            "draft": "Consider the Solstice x Aurelio Milano in havana at $640.00, a handmade acetate frame with UV400 protection and a 30-day return window. Consider also the Atelier 01 in gold at $720.00, which carries UV400 protection and the same 30-day return window. Both frames come from the Solstice Optics premium line, with sculpted temples and a refined colour finish. Fit tip: the Atelier 01 runs slightly narrow, so size up one bridge width if you have a wider face. You can customise the lens tint on either pair at checkout.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice x Aurelio Milano in havana at $640.00, a handmade acetate frame with UV400 protection and a 30-day return window. Consider also the Atelier 01 in gold at $720.00, which carries UV400 protection and the same 30-day return window. Both frames come from the Solstice Optics premium line, with sculpted temples and a refined colour finish. Fit tip: the Atelier 01 runs slightly narrow, so size up one bridge width if you have a wider face. You can customise the lens tint on either pair at checkout.\n\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice x Aurelio Milano at $640.00 in a warm havana colour, or the Atelier 01 at $720.00 in gold. Both frames carry UV400 protection and ship with a 30-day return window, so you can try them at home. Fit tip: the gold Atelier 01 sits narrower at the temples, so choose the havana pair if you prefer a wider fit. Solstice Optics can also engrave either frame if you wish to customise them.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice x Aurelio Milano at $640.00 in a warm havana colour, or the Atelier 01 at $720.00 in gold. Both frames carry UV400 protection and ship with a 30-day return window, so you can try them at home. Fit tip: the gold Atelier 01 sits narrower at the temples, so choose the havana pair if you prefer a wider fit. Solstice Optics can also engrave either frame if you wish to customise them.\n\nAsk us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "Glasses for long days at a computer.",
-            "draft": "Consider the Solstice Focus Blue at $119.00 in a clear colour, a light frame suited to long screen sessions. The Screen Ease in grey at $99.00 is great value and offers the same all-day comfort. Both lenses carry UV400 protection, and each pair ships with a 30-day return window. Fit tip: measure the width across your temples and choose a frame that sits level without pressing behind your ears. Solstice Optics can help you customise nose pads on either pair for a steadier fit.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Focus Blue at $119.00 in a clear colour, a light frame suited to long screen sessions. The Screen Ease in grey at $99.00 is great value and offers the same all-day comfort. Both lenses carry UV400 protection, and each pair ships with a 30-day return window. Fit tip: measure the width across your temples and choose a frame that sits level without pressing behind your ears. Solstice Optics can help you customise nose pads on either pair for a steadier fit.\n\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Focus Blue at $119.00 in a clear colour, made for long screen sessions at your desk. The Solstice Screen Ease at $99.00 in grey is a great value alternative with the same everyday comfort, and both carry UV400 protection. Fit tip: choose a slightly wider frame so the lenses sit clear of your cheeks during long sitting hours. Each pair ships with a 30-day return window, and Solstice Optics can help you customise the fit. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Focus Blue at $119.00 in a clear colour, made for long screen sessions at your desk. The Solstice Screen Ease at $99.00 in grey is a great value alternative with the same everyday comfort, and both carry UV400 protection. Fit tip: choose a slightly wider frame so the lenses sit clear of your cheeks during long sitting hours. Each pair ships with a 30-day return window, and Solstice Optics can help you customise the fit. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "Sunglasses for a beach holiday.",
-            "draft": "Consider the Lagoon in aqua at $109.00 or the Shoreline in white at $95.00, both made by Solstice Optics for bright coastal light. Each pair carries UV400 protection and ships with a 30-day return window. The white colour stays cooler in glare, while the aqua tone suits sand and water days. Fit tip: choose a slightly wider frame so the arms sit level and stay put when you are damp from swimming. Ask us anything else about your eyewear.",
-            "final": "Consider the Lagoon in aqua at $109.00 or the Shoreline in white at $95.00, both made by Solstice Optics for bright coastal light. Each pair carries UV400 protection and ships with a 30-day return window. The white colour stays cooler in glare, while the aqua tone suits sand and water days. Fit tip: choose a slightly wider frame so the arms sit level and stay put when you are damp from swimming. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Lagoon at $109.00 in aqua, or the Solstice Shoreline at $95.00 in white, both suited to bright beach days. Each pair carries UV400 protection and ships with a thirty-day return window from Solstice Optics. The aqua colour reads bolder in sunlight, while the white frame stays cooler in tone. Fit tip: choose the Shoreline if you prefer a slightly wider bridge for a relaxed hold. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Lagoon at $109.00 in aqua, or the Solstice Shoreline at $95.00 in white, both suited to bright beach days. Each pair carries UV400 protection and ships with a thirty-day return window from Solstice Optics. The aqua colour reads bolder in sunlight, while the white frame stays cooler in tone. Fit tip: choose the Shoreline if you prefer a slightly wider bridge for a relaxed hold. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "My nose bridge is low and frames slide down. Any suggestions?",
-            "draft": "Consider the Solstice Kestrel Alt-Fit at $165.00 in matte navy, built with raised nose pads that suit a low bridge. The Haven Alt-Fit at $145.00 in black offers the same lifted fit in a classic colour, and both carry UV400 protection. Each pair ships with a 30-day return window, so you can test the hold at home. Fit tip: look for the deeper nose pads on these two alt-fit frames, as they sit the lens away from your cheeks and stop sliding. Solstice Optics keeps both styles in stock for immediate dispatch.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Kestrel Alt-Fit at $165.00 in matte navy, built with raised nose pads that suit a low bridge. The Haven Alt-Fit at $145.00 in black offers the same lifted fit in a classic colour, and both carry UV400 protection. Each pair ships with a 30-day return window, so you can test the hold at home. Fit tip: look for the deeper nose pads on these two alt-fit frames, as they sit the lens away from your cheeks and stop sliding. Solstice Optics keeps both styles in stock for immediate dispatch.\n\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Kestrel Alt-Fit at $165.00 in matte navy, which uses raised pads shaped for a low nose bridge. The Haven Alt-Fit in black at $145.00 offers the same lifted bridge design and great value, and both carry UV400 protection. Each pair ships with a 30-day return window, so you can test the hold at home. Fit tip: look for the deeper pad height on Alt-Fit models, as it lifts the frame away from your cheeks and stops slipping. Solstice Optics keeps both colours in stock for you now.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Kestrel Alt-Fit at $165.00 in matte navy, which uses raised pads shaped for a low nose bridge. The Haven Alt-Fit in black at $145.00 offers the same lifted bridge design and great value, and both carry UV400 protection. Each pair ships with a 30-day return window, so you can test the hold at home. Fit tip: look for the deeper pad height on Alt-Fit models, as it lifts the frame away from your cheeks and stops slipping. Solstice Optics keeps both colours in stock for you now.\n\nAsk us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "I have low vision \u2014 do you carry anything high contrast?",
-            "draft": "Consider the Solstice Contrast Pro at $199.00 in copper, a tint many people find helpful for boosting perceived contrast in bright light. The Solstice Clarity Amber at $179.00 offers a warmer amber colour with a similar contrast-enhancing feel, though neither lens can treat or correct any vision condition. Both frames carry UV400 protection and ship with a 30-day return window, so you can test them in your own daily light. Fit tip: if you wear these over prescription glasses, choose the Contrast Pro, as its wider temple opening clears most frames. Solstice Optics can also help you compare the two tints side by side.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Contrast Pro at $199.00 in copper, a tint many people find helpful for boosting perceived contrast in bright light. The Solstice Clarity Amber at $179.00 offers a warmer amber colour with a similar contrast-enhancing feel, though neither lens can treat or correct any vision condition. Both frames carry UV400 protection and ship with a 30-day return window, so you can test them in your own daily light. Fit tip: if you wear these over prescription glasses, choose the Contrast Pro, as its wider temple opening clears most frames. Solstice Optics can also help you compare the two tints side by side.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Contrast Pro at $199.00 in a warm copper colour, or the Solstice Clarity Amber at $179.00, both of which use tinted lenses that many people find helpful for boosting perceived contrast in bright light. We at Solstice Optics note that these tints filter light and carry UV400 protection, though they do not treat or improve any eye condition. Each pair ships with a 30-day return window, so you can test them in your own daily lighting. Fit tip: choose a slightly wider frame with a deeper lens so more of your field of view sits behind the tint. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Contrast Pro at $199.00 in a warm copper colour, or the Solstice Clarity Amber at $179.00, both of which use tinted lenses that many people find helpful for boosting perceived contrast in bright light. We at Solstice Optics note that these tints filter light and carry UV400 protection, though they do not treat or improve any eye condition. Each pair ships with a 30-day return window, so you can test them in your own daily lighting. Fit tip: choose a slightly wider frame with a deeper lens so more of your field of view sits behind the tint. Ask us anything else about your eyewear.",
             "violations": [
               "R11_no_medical_claims",
               "R16_fit_tip",
@@ -256,16 +255,16 @@
           },
           {
             "query": "Which frames suit a round face?",
-            "draft": "Consider the Angular D-Frame at $155.00 in black, whose sharp lines add definition to a rounder face. The Square Line at $135.00 in tortoiseshell gives similar structure with a warmer colour, and both carry UV400 protection. Each pair from Solstice Optics ships with a 30-day return window, so you can try them at home. Fit tip: choose a frame slightly wider than your cheekbones, as this lengthens the face and keeps the temples comfortable. Ask us anything else about your eyewear.",
-            "final": "Consider the Angular D-Frame at $155.00 in black, whose sharp lines add definition to a rounder face. The Square Line at $135.00 in tortoiseshell gives similar structure with a warmer colour, and both carry UV400 protection. Each pair from Solstice Optics ships with a 30-day return window, so you can try them at home. Fit tip: choose a frame slightly wider than your cheekbones, as this lengthens the face and keeps the temples comfortable. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Angular D-Frame at $155.00 in black, whose straight brow line adds definition to a round face. The Solstice Square Line at $135.00 in tortoiseshell offers a softer colour with the same angular balance, and it is great value. Both frames carry UV400 protection and ship with a 30-day return window from Solstice Optics. Fit tip: choose a frame slightly wider than the widest part of your face so the corners sit clear of your cheeks.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Angular D-Frame at $155.00 in black, whose straight brow line adds definition to a round face. The Solstice Square Line at $135.00 in tortoiseshell offers a softer colour with the same angular balance, and it is great value. Both frames carry UV400 protection and ship with a 30-day return window from Solstice Optics. Fit tip: choose a frame slightly wider than the widest part of your face so the corners sit clear of your cheeks.\n\nAsk us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "Do you have anything on sale right now?",
-            "draft": "Consider the Dune at $45.00 in a warm sand colour, which offers great value with UV400 protection. Consider also the Cove Driver at $89.00 in grey, a polarised style from Solstice Optics with UV400 protection. Both frames ship with a 30-day return window, so you can try them at home. Fit tip: the Dune sits narrower across the bridge, so pick the Cove Driver if you have a wider face. Ask us anything else about your eyewear.",
-            "final": "Consider the Dune at $45.00 in a warm sand colour, which offers great value with UV400 protection. Consider also the Cove Driver at $89.00 in grey, a polarised style from Solstice Optics with UV400 protection. Both frames ship with a 30-day return window, so you can try them at home. Fit tip: the Dune sits narrower across the bridge, so pick the Cove Driver if you have a wider face. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Dune at $45.00 in a warm sand colour, which offers great value with UV400 protection. The Solstice Cove Driver at $89.00 in grey shares the same UV400 protection and suits longer drives. Both frames ship with a 30-day return window, and we at Solstice Optics can help you customise the lens tint. Fit tip: the Dune sits narrower, so choose the Cove Driver if you have a wider face. You have two sale frames to compare here.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Dune at $45.00 in a warm sand colour, which offers great value with UV400 protection. The Solstice Cove Driver at $89.00 in grey shares the same UV400 protection and suits longer drives. Both frames ship with a 30-day return window, and we at Solstice Optics can help you customise the lens tint. Fit tip: the Dune sits narrower, so choose the Cove Driver if you have a wider face. You have two sale frames to compare here.\n\nAsk us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
@@ -273,10 +272,10 @@
         ]
       },
       "checker_repair@24": {
-        "rule_compliance": 0.9719,
+        "rule_compliance": 0.9965,
         "core4_compliance": 1.0,
-        "fully_compliant_replies": 0.3333,
-        "checked_rule_instances": 285,
+        "fully_compliant_replies": 0.9167,
+        "checked_rule_instances": 287,
         "per_rule": {
           "R01_sentence_count": {
             "ok": 12,
@@ -334,9 +333,9 @@
             "na": 0
           },
           "R12_british_spelling": {
-            "ok": 9,
+            "ok": 11,
             "bad": 0,
-            "na": 3
+            "na": 1
           },
           "R13_no_filler_opener": {
             "ok": 12,
@@ -354,8 +353,8 @@
             "na": 0
           },
           "R16_fit_tip": {
-            "ok": 6,
-            "bad": 6,
+            "ok": 11,
+            "bad": 1,
             "na": 0
           },
           "R17_no_perfect": {
@@ -364,8 +363,8 @@
             "na": 0
           },
           "R18_sentence_length": {
-            "ok": 10,
-            "bad": 2,
+            "ok": 12,
+            "bad": 0,
             "na": 0
           },
           "R19_no_recommend": {
@@ -401,100 +400,87 @@
         },
         "stats": {
           "calls": 24,
-          "in_tok": 8640,
-          "out_tok": 4761,
+          "in_tok": 8724,
+          "out_tok": 4995,
           "cached_tok": 21060,
           "errors": 0,
-          "wall_s": 23.2
+          "wall_s": 22.0
         },
         "calls_per_reply": 2.0,
+        "audit_quality": null,
         "samples": [
           {
             "query": "I need polarized sunglasses for driving.",
-            "draft": "Consider the Meridian Polarised at $129.00 in matte black, a polarised frame from Solstice Optics that cuts glare from wet roads and bonnets. The Cove Driver at $89.00 in grey is great value and equally suited to long motorway drives. Both carry UV400 protection and ship with a 30-day return window. Fit tip: for driving, choose a frame with slim temple arms so your side mirror view stays clear.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Meridian Polarised at $129.00 in matte black, a polarised frame from Solstice Optics that cuts glare from wet roads and bonnets. The Cove Driver at $89.00 in grey is great value and equally suited to long motorway drives. Both carry UV400 protection and ship with a 30-day return window. Fit tip: choose a frame with slim temple arms so your side mirror view stays clear while driving.\n\nAsk us anything else about your eyewear.",
-            "violations": [
-              "R16_fit_tip"
-            ]
+            "draft": "Consider the Solstice Meridian Polarised at $129.00 in matte black, a polarised choice that cuts glare from wet roads and bright bonnets. The Cove Driver at $89.00 in grey is great value and carries UV400 protection, as does the Meridian. Both ship with a 30-day return window, so you can test them on your daily commute. Fit tip: for driving, choose a frame whose arms sit level with your temples, keeping the lenses steady over bumps. Solstice Optics keeps both colours in stock for you.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Meridian Polarised at $129.00 in matte black, a polarised choice that cuts glare from wet roads and bright bonnets. The Cove Driver at $89.00 in grey is great value and carries UV400 protection, as does the Meridian. Both ship with a 30-day return window, so you can test them on your daily commute. Solstice Optics keeps both colours in stock for you.\nFit tip: for driving, choose a frame whose arms sit level with your temples, keeping the lenses steady over bumps.\n\nAsk us anything else about your eyewear.",
+            "violations": []
           },
           {
             "query": "Looking for lightweight frames for everyday wear.",
-            "draft": "Consider the Feather Ti at $215.00 in gunmetal, a titanium frame that sits lightly through a full day of wear. The Aero Rim at $175.00 in silver is a great value alternative, with a slim rim that keeps weight low. Both frames from Solstice Optics carry UV400 protection and ship with a 30-day return window. Fit tip: if you have a narrower bridge, the Aero Rim adjustable nose pads let you customise the resting height. You can pick either colour with confidence, as the two shades suit most everyday looks. Ask us anything else about your eyewear.",
-            "final": "Consider the Feather Ti at $215.00 in gunmetal, a titanium frame that sits lightly through a full day of wear. The Aero Rim at $175.00 in silver is a great value alternative, with a slim rim that keeps weight low. Both frames from Solstice Optics carry UV400 protection and ship with a 30-day return window. Fit tip: if you have a narrower bridge, the Aero Rim adjustable nose pads let you customise the resting height. You can pick either colour with confidence, as the two shades suit most everyday looks. Ask us anything else about your eyewear.",
-            "violations": [
-              "R16_fit_tip"
-            ]
+            "draft": "Consider the Feather Ti at $215.00 in gunmetal, a titanium frame that sits lightly for all-day everyday wear. The Aero Rim at $175.00 in silver is a touch lighter still and offers great value, and both carry UV400 protection. Solstice Optics ships each pair with a thirty-day return window, so you can wear them in at home. Fit tip: choose the Aero Rim if you prefer a narrower bridge, as its adjustable nose pads suit slimmer faces. Ask us anything else about your eyewear.",
+            "final": "Consider the Feather Ti at $215.00 in gunmetal, a titanium frame that sits lightly for all-day everyday wear. The Aero Rim at $175.00 in silver is a touch lighter still and offers great value, and both carry UV400 protection. Solstice Optics ships each pair with a thirty-day return window, so you can wear them in at home.\nFit tip: choose the Aero Rim if you prefer a narrower bridge, as its adjustable nose pads suit slimmer faces.\nAsk us anything else about your eyewear.",
+            "violations": []
           },
           {
             "query": "Something for my wife's birthday, she likes classic styles.",
-            "draft": "Consider the Rivera Cat-Eye in tortoiseshell at $189.00, a timeless shape that suits classic taste. The Lumen Round in rose gold at $149.00 is another lovely gift, and both carry UV400 protection. Fit tip: cat-eye frames flatter rounder faces, while the round style sits best on angular features. Each pair from Solstice Optics ships with a 30-day return window, so exchanging a colour is simple. Ask us anything else about your eyewear.",
-            "final": "Consider the Rivera Cat-Eye in tortoiseshell at $189.00, a timeless shape that suits classic taste. The Lumen Round in rose gold at $149.00 is another lovely gift, and both carry UV400 protection.\nFit tip: cat-eye frames flatter rounder faces, while the round style sits best on angular features.\nEach pair from Solstice Optics ships with a 30-day return window, so exchanging a colour is simple. Ask us anything else about your eyewear.",
+            "draft": "Consider the Rivera Cat-Eye in tortoiseshell at $189.00, a timeless shape that suits classic taste. The Lumen Round in rose gold at $149.00 is another heritage-inspired favourite here at Solstice Optics, and both frames carry UV400 protection. Each pair ships with a thirty-day return window, so your wife can swap the colour or shape after her birthday. Fit tip: choose the Lumen Round for narrower faces, as the Rivera Cat-Eye sits wider at the temples.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Rivera Cat-Eye in tortoiseshell at $189.00, a timeless shape that suits classic taste. The Lumen Round in rose gold at $149.00 is another heritage-inspired favourite here at Solstice Optics, and both frames carry UV400 protection. Each pair ships with a thirty-day return window, so your wife can swap the colour or shape after her birthday.\nFit tip: choose the Lumen Round for narrower faces, as the Rivera Cat-Eye sits wider at the temples.\n\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "What do you have for cycling?",
-            "draft": "Consider the Ridgeline Wrap at $159.00 in neon yellow, a wrap-around frame built for fast road riding. The Sprint Shield at $139.00 in black offers a single-lens shield and is great value for the coverage. Both carry UV400 protection and ship with a 30-day return window from Solstice Optics. Fit tip: choose a snug temple grip so the frame stays put over rough surfaces under your helmet.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Ridgeline Wrap at $159.00 in neon yellow, a wrap-around frame built for fast road riding. The Sprint Shield at $139.00 in black offers a single-lens shield and is great value for the coverage. Both carry UV400 protection and ship with a 30-day return window from Solstice Optics. Fit tip: choose a snug temple grip so the frame stays put under your helmet.\nAsk us anything else about your eyewear.",
-            "violations": [
-              "R16_fit_tip"
-            ]
+            "draft": "Consider the Ridgeline Wrap at $159.00 in neon yellow, a wraparound style built for fast rides in bright light. The Sprint Shield at $139.00 in black offers a single-lens shield and great value for the colour-neutral look many riders prefer. Both carry UV400 protection and ship with a thirty-day return window from Solstice Optics. Fit tip: choose the Sprint Shield if you wear a helmet with low brow padding, as its slimmer temples slide in more easily. Ask us anything else about your eyewear.",
+            "final": "Consider the Ridgeline Wrap at $159.00 in neon yellow, a wraparound style built for fast rides in bright light. The Sprint Shield at $139.00 in black offers a single-lens shield and great value for the colour-neutral look many riders prefer. Both carry UV400 protection and ship with a thirty-day return window from Solstice Optics.\nFit tip: choose the Sprint Shield if you wear a helmet with low brow padding, as its slimmer temples slide in more easily.\nAsk us anything else about your eyewear.",
+            "violations": []
           },
           {
             "query": "I want the most affordable sunglasses you carry.",
-            "draft": "Consider the Solstice Basecamp at $39.00 in black, our most affordable pair and great value, or the Dune at $45.00 in a warm sand colour. Both lenses carry UV400 protection, and each pair ships with a 30-day return window. Fit tip: the Basecamp suits narrower faces, while the Dune frame runs about two millimetres wider at the temples. You can order either from Solstice Optics today. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Basecamp at $39.00 in black, our most affordable pair and great value, or the Dune at $45.00 in a warm sand colour. Both lenses carry UV400 protection, and each pair ships with a 30-day return window. You can order either from Solstice Optics today.\nFit tip: the Basecamp suits narrower faces, while the Dune frame runs about two millimetres wider at the temples.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Basecamp in black at $39.00, the lowest price we carry, with the Dune in sand at $45.00 as a close second. Both are great value and carry UV400 protection, and each ships with a 30-day return window. Fit tip: the Basecamp suits narrower faces, so size up to the Dune if your temples feel pressed. You can choose either colour and still get the same lens coverage from Solstice Optics.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Basecamp in black at $39.00, the lowest price we carry, with the Dune in sand at $45.00 as a close second. Both are great value and carry UV400 protection, and each ships with a 30-day return window. You can choose either colour and still get the same lens coverage from Solstice Optics.\nFit tip: the Basecamp suits narrower faces, so size up to the Dune if your temples feel pressed.\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "Show me your premium designer frames.",
-            "draft": "Consider the Solstice x Aurelio Milano at $640.00 in a warm havana colour, or the Atelier 01 at $720.00 in gold. Both are handcrafted premium designer frames from Solstice Optics, and each lens carries UV400 protection. Fit tip: the Atelier 01 runs slightly narrower at the temples, so size up if you have a wider face. Each pair ships with a 30-day return window. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice x Aurelio Milano at $640.00 in a warm havana colour, or the Atelier 01 at $720.00 in gold. Both are handcrafted premium designer frames from Solstice Optics, and each lens carries UV400 protection. Fit tip: the Atelier 01 runs slightly narrower at the temples, so size up if you have a wider face. Each pair ships with a 30-day return window. Ask us anything else about your eyewear.",
-            "violations": [
-              "R16_fit_tip"
-            ]
+            "draft": "Consider the Solstice x Aurelio Milano at $640.00 in a warm havana colour, or the Atelier 01 at $720.00 in gold. Both are hand-finished premium designer frames from Solstice Optics, and each lens carries UV400 protection. Each pair ships with a 30-day return window, so you can try them at home. Fit tip: choose the Atelier 01 if you have a narrower bridge, as its adjustable nose pads sit closer together. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice x Aurelio Milano at $640.00 in a warm havana colour, or the Atelier 01 at $720.00 in gold. Both are hand-finished premium designer frames from Solstice Optics, and each lens carries UV400 protection. Each pair ships with a 30-day return window, so you can try them at home.\nFit tip: choose the Atelier 01 if you have a narrower bridge, as its adjustable nose pads sit closer together.\nAsk us anything else about your eyewear.",
+            "violations": []
           },
           {
             "query": "Glasses for long days at a computer.",
-            "draft": "Consider the Solstice Focus Blue at $119.00 in a clear colour, or the Screen Ease at $99.00 in a soft grey, both suited to long desk sessions. Each pair from Solstice Optics carries UV400 protection and ships with a 30-day return window. Fit tip: choose a frame whose width matches your temple-to-temple measurement so the arms rest straight without pressing. The grey pair is the greater value of the two, while the clear pair offers a lighter look on screen calls. You can wear either comfortably through a full working day.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Focus Blue at $119.00 in a clear colour, or the Screen Ease at $99.00 in a soft grey. Each pair from Solstice Optics carries UV400 protection and ships with a 30-day return window.\nFit tip: choose a frame whose width matches your temple-to-temple measurement so the arms rest straight. The grey pair is the greater value, while the clear pair offers a lighter look on screen calls. You can wear either comfortably through a full working day.\n\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Focus Blue at $119.00 in a clear colour, a light frame made for long screen sessions. The Solstice Screen Ease at $99.00 in grey is great value, and both carry UV400 protection for time spent outdoors. Fit tip: measure the width across your temples, then pick the frame whose total width matches within two millimetres. Each pair ships with a thirty-day return window, so you can try them at your desk from Solstice Optics. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Focus Blue at $119.00 in a clear colour, a light frame made for long screen sessions. The Solstice Screen Ease at $99.00 in grey is great value, and both carry UV400 protection for time spent outdoors. Each pair ships with a thirty-day return window, so you can try them at your desk from Solstice Optics.\nFit tip: measure the width across your temples, then pick the frame whose total width matches within two millimetres.\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "Sunglasses for a beach holiday.",
-            "draft": "Consider the Solstice Lagoon at $109.00 in a bright aqua colour, or the Shoreline at $95.00 in white for a lighter beach look. Both frames carry UV400 protection and ship with a 30-day return window, so you can try them at home. Fit tip: for windy shorelines, choose a slightly snug temple grip so the frames stay put when you turn your head. Solstice Optics offers both pairs as great value for two weeks of sun and salt air.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Lagoon at $109.00 in a bright aqua colour, or the Shoreline at $95.00 in white for a lighter beach look. Both frames carry UV400 protection and ship with a 30-day return window, so you can try them at home. Fit tip: for windy shorelines, choose a slightly snug temple grip so frames stay put. Solstice Optics offers both pairs as great value for two weeks of sun and salt air.\nAsk us anything else about your eyewear.",
-            "violations": [
-              "R16_fit_tip"
-            ]
+            "draft": "Consider the Solstice Lagoon at $109.00 in a bright aqua colour, or the Shoreline at $95.00 in white for beach glare. Both frames carry UV400 protection and ship with a 30-day return window, so you can try them at home. Fit tip: choose the Shoreline if you have a narrower face, as its slimmer temples sit closer to the head. We at Solstice Optics find the Lagoon a great value for long days by the water.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Lagoon at $109.00 in a bright aqua colour, or the Shoreline at $95.00 in white for beach glare. Both frames carry UV400 protection and ship with a 30-day return window, so you can try them at home.\nFit tip: choose the Shoreline if you have a narrower face, as its slimmer temples sit closer to the head.\nWe at Solstice Optics find the Lagoon a great value for long days by the water.\n\nAsk us anything else about your eyewear.",
+            "violations": []
           },
           {
             "query": "My nose bridge is low and frames slide down. Any suggestions?",
-            "draft": "Consider the Solstice Kestrel Alt-Fit at $165.00 in matte navy, built with raised nose pads for low bridges, or the Haven Alt-Fit at $145.00 in black. Both frames from Solstice Optics carry UV400 protection and ship with a 30-day return window. Fit tip: alt-fit frames sit higher on the face, so they stay put and keep lashes off the lenses. You may find the Haven the better value of the two, while the Kestrel offers a slightly wider temple span. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Kestrel Alt-Fit at $165.00 in matte navy, built with raised nose pads for low bridges, or the Haven Alt-Fit at $145.00 in black. Both frames from Solstice Optics carry UV400 protection and ship with a 30-day return window.\nFit tip: alt-fit frames sit higher on the face, so they stay put and keep lashes off the lenses. You may find the Haven the better value of the two, while the Kestrel offers a slightly wider temple span. Ask us anything else about your eyewear.",
-            "violations": [
-              "R18_sentence_length"
-            ]
+            "draft": "Consider the Kestrel Alt-Fit at $165.00 in matte navy, built with raised nose pads that suit a low bridge and resist sliding. The Haven Alt-Fit at $145.00 in black offers the same lifted bridge design and is great value in a classic colour. Both frames from Solstice Optics carry UV400 protection and ship with a thirty-day return window. Fit tip: choose an alt-fit frame so the pads sit higher and keep the lenses clear of your cheeks. Ask us anything else about your eyewear.",
+            "final": "Consider the Kestrel Alt-Fit at $165.00 in matte navy, built with raised nose pads that suit a low bridge and resist sliding. The Haven Alt-Fit at $145.00 in black offers the same lifted bridge design and is great value in a classic colour. Both frames from Solstice Optics carry UV400 protection and ship with a thirty-day return window.\nFit tip: choose an alt-fit frame so the pads sit higher and keep the lenses clear of your cheeks.\nAsk us anything else about your eyewear.",
+            "violations": []
           },
           {
             "query": "I have low vision \u2014 do you carry anything high contrast?",
-            "draft": "Consider the Solstice Contrast Pro at $199.00 in a copper colour, which uses a tint designed to heighten contrast in bright conditions. The Clarity Amber at $179.00 offers a warmer amber colour that many people find helpful for definition outdoors, though neither lens can improve or address any vision condition. Both carry UV400 protection and ship with a 30-day return window from Solstice Optics. Fit tip: pick the wider copper frame if you wear your glasses over a comfortable temple width, as it sits further from the brow.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Contrast Pro at $199.00 in a copper colour, which uses a tint designed to heighten contrast in bright conditions. The Clarity Amber at $179.00 offers a warmer amber colour that many people find helpful for definition outdoors, though neither lens can improve any vision condition. Both carry UV400 protection and ship with a 30-day return window from Solstice Optics.\nFit tip: pick the wider copper frame if you prefer a roomier temple width.\nAsk us anything else about your eyewear.",
-            "violations": [
-              "R18_sentence_length"
-            ]
+            "draft": "Consider the Solstice Contrast Pro in copper at $199.00, a lens colour that sharpens edges and boosts contrast in bright light. The Solstice Clarity Amber at $179.00 offers a similar amber tint that many people find helpful for definition on overcast days, though we cannot claim any lens improves vision itself. Both carry UV400 protection and ship with a 30-day return window, so you can compare them at home. Fit tip: choose a wider bridge and deeper lens height if you want fuller coverage across your field of view. We at Solstice Optics can also talk you through frame sizing before you decide.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Contrast Pro in copper at $199.00, a lens colour that sharpens edges and boosts contrast in bright light. The Solstice Clarity Amber at $179.00 offers a similar amber tint that many people find helpful for definition on overcast days. Both carry UV400 protection and ship with a 30-day return window, so you can compare them at home.\nFit tip: choose a wider bridge and deeper lens height for fuller coverage. We at Solstice Optics can also talk you through frame sizing before you decide.\nAsk us anything else about your eyewear.",
+            "violations": []
           },
           {
             "query": "Which frames suit a round face?",
-            "draft": "Consider the Angular D-Frame at $155.00 in black, whose sharp lines add definition to a round face. The Square Line in tortoiseshell at $135.00 is another strong match, and both carry UV400 protection. Fit tip: choose a frame slightly wider than your cheekbones so the corners sit clear of your face. Each pair from Solstice Optics ships with a 30-day return window. Ask us anything else about your eyewear.",
-            "final": "Consider the Angular D-Frame at $155.00 in black, whose sharp lines add definition to a round face. The Square Line in tortoiseshell at $135.00 is another strong match, and both carry UV400 protection. Fit tip: choose a frame slightly wider than your cheekbones so the corners sit clear of your face. Each pair from Solstice Optics ships with a 30-day return window. Ask us anything else about your eyewear.",
+            "draft": "Consider the Angular D-Frame at $155.00 in black, as its straight brow line adds welcome definition to a round face. The Square Line at $135.00 in tortoiseshell is another flattering choice, offering great value with warm colour depth. Both frames from Solstice Optics carry UV400 protection and ship with a 30-day return window. Fit tip: choose a frame slightly wider than the broadest part of your cheeks so the corners sit clear of your skin.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Angular D-Frame at $155.00 in black, as its straight brow line adds welcome definition to a round face. The Square Line at $135.00 in tortoiseshell is another flattering choice, offering great value with warm colour depth. Both frames from Solstice Optics carry UV400 protection and ship with a 30-day return window. Fit tip: pick a frame slightly wider than the broadest part of your cheeks so the corners sit clear.\n\nAsk us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "Do you have anything on sale right now?",
-            "draft": "Consider the Solstice Dune at $45.00 in a warm sand colour, which is great value in our current sale. The Cove Driver at $89.00 comes in a soft grey and suits longer days behind the wheel. Both frames carry UV400 protection and ship with a 30-day return window from Solstice Optics. Fit tip: the Dune sits narrower across the bridge, so choose the Cove Driver if you have a wider face. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Dune at $45.00 in a warm sand colour, which is great value in our current sale. The Cove Driver at $89.00 comes in a soft grey and suits longer days behind the wheel. Both frames carry UV400 protection and ship with a 30-day return window from Solstice Optics.\nFit tip: the Dune sits narrower across the bridge, so choose the Cove Driver if you have a wider face.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Dune at $45.00 in sand, which offers great value and ships with a 30-day return window. The Solstice Cove Driver at $89.00 in a grey colour is our other reduced pair, and it also ships with a 30-day return window. Both pairs carry UV400 protection, so your eyes stay shielded on bright days at Solstice Optics. Fit tip: measure the width across your temples and pick the wider Cove Driver frame if you need extra room.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Dune at $45.00 in sand, which offers great value and ships with a 30-day return window. The Solstice Cove Driver at $89.00 in a grey colour is our other reduced pair, and it also ships with a 30-day return window. Both pairs carry UV400 protection, so your eyes stay shielded on bright days at Solstice Optics.\nFit tip: measure the width across your temples and pick the wider Cove Driver frame if you need extra room.\nAsk us anything else about your eyewear.",
             "violations": []
           }
         ]
@@ -502,10 +488,10 @@
     },
     "anthropic:claude-haiku-4-5-20251001": {
       "single@24": {
-        "rule_compliance": 0.8893,
-        "core4_compliance": 0.9792,
+        "rule_compliance": 0.9424,
+        "core4_compliance": 1.0,
         "fully_compliant_replies": 0.0,
-        "checked_rule_instances": 280,
+        "checked_rule_instances": 278,
         "per_rule": {
           "R01_sentence_count": {
             "ok": 12,
@@ -518,8 +504,8 @@
             "na": 0
           },
           "R03_closing_line": {
-            "ok": 11,
-            "bad": 1,
+            "ok": 12,
+            "bad": 0,
             "na": 0
           },
           "R04_no_cheap": {
@@ -538,8 +524,8 @@
             "na": 0
           },
           "R07_returns_window": {
-            "ok": 3,
-            "bad": 9,
+            "ok": 12,
+            "bad": 0,
             "na": 0
           },
           "R08_no_exclamation": {
@@ -558,14 +544,14 @@
             "na": 0
           },
           "R11_no_medical_claims": {
-            "ok": 11,
-            "bad": 1,
+            "ok": 12,
+            "bad": 0,
             "na": 0
           },
           "R12_british_spelling": {
-            "ok": 4,
+            "ok": 2,
             "bad": 0,
-            "na": 8
+            "na": 10
           },
           "R13_no_filler_opener": {
             "ok": 12,
@@ -578,8 +564,8 @@
             "na": 0
           },
           "R15_brand_once": {
-            "ok": 4,
-            "bad": 8,
+            "ok": 8,
+            "bad": 4,
             "na": 0
           },
           "R16_fit_tip": {
@@ -631,132 +617,118 @@
         "stats": {
           "calls": 12,
           "in_tok": 16570,
-          "out_tok": 1701,
+          "out_tok": 1824,
           "cached_tok": 0,
           "errors": 0,
-          "wall_s": 5.4
+          "wall_s": 6.8
         },
         "calls_per_reply": 1.0,
+        "audit_quality": null,
         "samples": [
           {
             "query": "I need polarized sunglasses for driving.",
-            "draft": "Consider the Solstice Cove Driver at $89.00, which features polarised lenses ideal for reducing glare while driving. This model carries UV400 protection and ships with a thirty-day return window. The Solstice Meridian Polarised at $129.00 offers another great value choice with premium polarisation for driving comfort. Fit tip: polarised sunglasses work best when they sit close to your face to minimise glare reflection from the sides. We offer both matte black and grey colours to suit your preference. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Cove Driver at $89.00, which features polarised lenses ideal for reducing glare while driving. This model carries UV400 protection and ships with a thirty-day return window. The Solstice Meridian Polarised at $129.00 offers another great value choice with premium polarisation for driving comfort. Fit tip: polarised sunglasses work best when they sit close to your face to minimise glare reflection from the sides. We offer both matte black and grey colours to suit your preference. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Cove Driver at $89.00 or the Solstice Meridian Polarised at $129.00. Both feature polarised lenses ideal for reducing glare while driving and carry UV400 protection. Fit tip: ensure the frames sit level on your nose for optimal vision clarity behind the wheel. Each pair ships with a 30-day return window from Solstice Optics. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Cove Driver at $89.00 or the Solstice Meridian Polarised at $129.00. Both feature polarised lenses ideal for reducing glare while driving and carry UV400 protection. Fit tip: ensure the frames sit level on your nose for optimal vision clarity behind the wheel. Each pair ships with a 30-day return window from Solstice Optics. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
-              "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Looking for lightweight frames for everyday wear.",
-            "draft": "Consider the Solstice Feather Ti in gunmetal for exceptional lightweight wear at $215.00, featuring UV400 protection. The Solstice Aero Rim offers great value at $175.00 in silver with the same UV400 protection for daily use. Both frames ship with a thirty-day return window. Fit tip: Lightweight titanium frames typically feel more comfortable during extended wear throughout your day.",
-            "final": "Consider the Solstice Feather Ti in gunmetal for exceptional lightweight wear at $215.00, featuring UV400 protection. The Solstice Aero Rim offers great value at $175.00 in silver with the same UV400 protection for daily use. Both frames ship with a thirty-day return window. Fit tip: Lightweight titanium frames typically feel more comfortable during extended wear throughout your day.",
+            "draft": "Consider the Solstice Feather Ti at $215.00, crafted with titanium for exceptional lightness and durability. The Solstice Aero Rim at $175.00 offers great value with a sleek silver finish and minimal weight for all-day comfort. Both frames feature UV400 protection and ship with a thirty-day return window. Fit tip: titanium frames like the Feather Ti typically feel more secure during active movement due to their superior strength-to-weight ratio. Solstice Optics ensures you find frames suited to your daily routine. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Feather Ti at $215.00, crafted with titanium for exceptional lightness and durability. The Solstice Aero Rim at $175.00 offers great value with a sleek silver finish and minimal weight for all-day comfort. Both frames feature UV400 protection and ship with a thirty-day return window. Fit tip: titanium frames like the Feather Ti typically feel more secure during active movement due to their superior strength-to-weight ratio. Solstice Optics ensures you find frames suited to your daily routine. Ask us anything else about your eyewear.",
             "violations": [
-              "R03_closing_line",
-              "R07_returns_window",
-              "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Something for my wife's birthday, she likes classic styles.",
-            "draft": "Consider the Solstice Rivera Cat-Eye in tortoiseshell, a timeless frame that brings understated elegance to any look. This classic style ships with a 30-day return window and offers UV400 protection. We also offer the Lumen Round in rose gold at $149.00 for those seeking rounded geometry with vintage appeal. Fit tip: cat-eye frames suit wider face shapes, whilst round frames complement angular features beautifully. Solstice Optics carries both styles in great value price points. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Rivera Cat-Eye in tortoiseshell, a timeless frame that brings understated elegance to any look. This classic style ships with a 30-day return window and offers UV400 protection. We also offer the Lumen Round in rose gold at $149.00 for those seeking rounded geometry with vintage appeal. Fit tip: cat-eye frames suit wider face shapes, whilst round frames complement angular features beautifully. Solstice Optics carries both styles in great value price points. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Rivera Cat-Eye in tortoiseshell, a timeless frame that brings sophistication to any wardrobe and ships with a 30-day return window. The rounded silhouette of the Lumen in rose gold offers understated elegance for those who prefer minimalist design. Both frames carry UV400 protection and are available at Solstice Optics for $189.00 and $149.00 respectively. Fit tip: cat-eye frames tend to sit slightly higher on the face, so measure your bridge width to ensure the best fit. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Rivera Cat-Eye in tortoiseshell, a timeless frame that brings sophistication to any wardrobe and ships with a 30-day return window. The rounded silhouette of the Lumen in rose gold offers understated elegance for those who prefer minimalist design. Both frames carry UV400 protection and are available at Solstice Optics for $189.00 and $149.00 respectively. Fit tip: cat-eye frames tend to sit slightly higher on the face, so measure your bridge width to ensure the best fit. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "What do you have for cycling?",
-            "draft": "Consider the Solstice Ridgeline Wrap in neon yellow at $159.00, designed for cycling with UV400 protection and a thirty-day return window. The Solstice Sprint Shield in black at $139.00 offers great value for riders seeking protective eyewear with UV400 protection. Fit tip: wrap-style frames sit closer to your face for better wind and debris protection during rides. Both pairs from Solstice Optics deliver performance and durability on the road or trail. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Ridgeline Wrap in neon yellow at $159.00, designed for cycling with UV400 protection and a thirty-day return window. The Solstice Sprint Shield in black at $139.00 offers great value for riders seeking protective eyewear with UV400 protection. Fit tip: wrap-style frames sit closer to your face for better wind and debris protection during rides. Both pairs from Solstice Optics deliver performance and durability on the road or trail. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Ridgeline Wrap in neon yellow at $159.00, which provides excellent eye coverage for cycling adventures. The Solstice Sprint Shield in black at $139.00 offers great value with a sporty fit ideal for road riding. Both frames carry UV400 protection and ship with a thirty-day return window. Fit tip: ensure the frame sits snugly on your nose without pinching during movement. We have quality eyewear designed specifically for active cyclists.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Ridgeline Wrap in neon yellow at $159.00, which provides excellent eye coverage for cycling adventures. The Solstice Sprint Shield in black at $139.00 offers great value with a sporty fit ideal for road riding. Both frames carry UV400 protection and ship with a thirty-day return window. Fit tip: ensure the frame sits snugly on your nose without pinching during movement. We have quality eyewear designed specifically for active cyclists.\nAsk us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
+              "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "I want the most affordable sunglasses you carry.",
-            "draft": "Consider the Solstice Basecamp, which offers exceptional value at $39.00 with UV400 protection and a sleek black frame. This model ships with a 30-day return window, allowing you to ensure the fit works for you. Fit tip: measure the distance across your eyes to confirm the width suits your face comfortably. We at Solstice Optics stand behind this affordable choice for everyday sun protection.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Basecamp, which offers exceptional value at $39.00 with UV400 protection and a sleek black frame. This model ships with a 30-day return window, allowing you to ensure the fit works for you. Fit tip: measure the distance across your eyes to confirm the width suits your face comfortably. We at Solstice Optics stand behind this affordable choice for everyday sun protection.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Basecamp at $39.00, which offers great value for quality sunglasses. This frame comes in black and carries UV400 protection to shield your eyes outdoors. The Basecamp ships with a thirty-day return window so you can be assured of your purchase. Fit tip: ensure the bridge sits snugly without pinching the sides of your nose. We at Solstice Optics are confident you will enjoy this option. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Basecamp at $39.00, which offers great value for quality sunglasses. This frame comes in black and carries UV400 protection to shield your eyes outdoors. The Basecamp ships with a thirty-day return window so you can be assured of your purchase. Fit tip: ensure the bridge sits snugly without pinching the sides of your nose. We at Solstice Optics are confident you will enjoy this option. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "Show me your premium designer frames.",
-            "draft": "Consider the Solstice x Aurelio Milano in havana for $640.00 and the Solstice Atelier 01 in gold for $720.00. Both feature UV400 protection and ship with a thirty-day return window. The Aurelio Milano delivers refined Italian styling at a great value for designer-inspired frames. Fit tip: measure the bridge width on frames you currently wear to ensure optimal comfort on your face.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice x Aurelio Milano in havana for $640.00 and the Solstice Atelier 01 in gold for $720.00. Both feature UV400 protection and ship with a thirty-day return window. The Aurelio Milano delivers refined Italian styling at a great value for designer-inspired frames. Fit tip: measure the bridge width on frames you currently wear to ensure optimal comfort on your face.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice x Aurelio Milano and Solstice Atelier 01, our two premium designer collections. The Aurelio Milano in havana comes in at $640.00 with timeless sophistication and carries UV400 protection. The Atelier 01 in gold is priced at $720.00, offering refined elegance with the same UV400 protection. Fit tip: both frames ship with adjustable nose pieces to ensure a comfortable fit for your face shape. Each pair ships with a thirty-day return window, so you can wear them with confidence. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice x Aurelio Milano and Solstice Atelier 01, our two premium designer collections. The Aurelio Milano in havana comes in at $640.00 with timeless sophistication and carries UV400 protection. The Atelier 01 in gold is priced at $720.00, offering refined elegance with the same UV400 protection. Fit tip: both frames ship with adjustable nose pieces to ensure a comfortable fit for your face shape. Each pair ships with a thirty-day return window, so you can wear them with confidence. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
               "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Glasses for long days at a computer.",
-            "draft": "Consider the Solstice Focus Blue or Screen Ease for your computer work needs. Both frames carry UV400 protection and come with a thirty-day return window. The Focus Blue at $119.00 features a clear lens, while the Screen Ease at $99.00 offers a grey tint for great value. Fit tip: ensure the bridge width aligns with your nose for all-day comfort during extended screen time. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Focus Blue or Screen Ease for your computer work needs. Both frames carry UV400 protection and come with a thirty-day return window. The Focus Blue at $119.00 features a clear lens, while the Screen Ease at $99.00 offers a grey tint for great value. Fit tip: ensure the bridge width aligns with your nose for all-day comfort during extended screen time. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Screen Ease in grey for your computer-heavy days, available at $99.00. This eyewear carries UV400 protection and ships with a thirty-day return window. The Focus Blue model at $119.00 offers another excellent choice with clear lenses for extended screen time. Fit tip: measure your face width to ensure the frames sit comfortably across your nose bridge during long sessions. We at Solstice Optics have designed both models to support your vision during sustained computer use. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Screen Ease in grey for your computer-heavy days, available at $99.00. This eyewear carries UV400 protection and ships with a thirty-day return window. The Focus Blue model at $119.00 offers another excellent choice with clear lenses for extended screen time. Fit tip: measure your face width to ensure the frames sit comfortably across your nose bridge during long sessions. We at Solstice Optics have designed both models to support your vision during sustained computer use. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
-              "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Sunglasses for a beach holiday.",
-            "draft": "Consider the Solstice Lagoon in aqua for your beach holiday, priced at $109.00. These sunglasses carry UV400 protection and ship with a thirty-day return window. The Solstice Shoreline in white is also an excellent choice at great value for $95.00, featuring the same UV400 protection. Fit tip: measure the bridge width on your current glasses to ensure the best fit for your face shape.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Lagoon in aqua for your beach holiday, priced at $109.00. These sunglasses carry UV400 protection and ship with a thirty-day return window. The Solstice Shoreline in white is also an excellent choice at great value for $95.00, featuring the same UV400 protection. Fit tip: measure the bridge width on your current glasses to ensure the best fit for your face shape.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Lagoon in aqua for beach protection with UV400 protection. The Shoreline in white offers great value at $95.00 and also features UV400 protection. Both styles ship with a thirty-day return window. Fit tip: ensure the frame sits snugly on your nose to prevent slipping when wet. At Solstice Optics, we offer eyewear designed for sunny environments.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Lagoon in aqua for beach protection with UV400 protection. The Shoreline in white offers great value at $95.00 and also features UV400 protection. Both styles ship with a thirty-day return window. Fit tip: ensure the frame sits snugly on your nose to prevent slipping when wet. At Solstice Optics, we offer eyewear designed for sunny environments.\nAsk us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
-              "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "My nose bridge is low and frames slide down. Any suggestions?",
-            "draft": "Consider the Solstice Haven Alt-Fit in black at $145.00, which is specifically engineered for low nose bridges. The Alt-Fit design prevents sliding and keeps frames secure throughout your day. Both this style and the Solstice Kestrel Alt-Fit at $165.00 in matte navy feature UV400 protection and ship with a 30-day return window. Fit tip: Alt-Fit frames include adjusted bridge geometry and nose pad positioning to maintain stability on lower bridge profiles. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Haven Alt-Fit in black at $145.00, which is specifically engineered for low nose bridges. The Alt-Fit design prevents sliding and keeps frames secure throughout your day. Both this style and the Solstice Kestrel Alt-Fit at $165.00 in matte navy feature UV400 protection and ship with a 30-day return window. Fit tip: Alt-Fit frames include adjusted bridge geometry and nose pad positioning to maintain stability on lower bridge profiles. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Kestrel Alt-Fit or Haven Alt-Fit, both designed with a lower bridge fit in mind. The Kestrel Alt-Fit costs $165.00 in matte navy, while the Haven Alt-Fit is priced at $145.00 in black. Both frames carry UV400 protection and ship with a thirty-day return window. Fit tip: look for frames with adjustable nose pads or a shallower bridge depth to prevent slipping on lower bridges. Solstice Optics offers these Alt-Fit styles specifically for your fitting needs. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Kestrel Alt-Fit or Haven Alt-Fit, both designed with a lower bridge fit in mind. The Kestrel Alt-Fit costs $165.00 in matte navy, while the Haven Alt-Fit is priced at $145.00 in black. Both frames carry UV400 protection and ship with a thirty-day return window. Fit tip: look for frames with adjustable nose pads or a shallower bridge depth to prevent slipping on lower bridges. Solstice Optics offers these Alt-Fit styles specifically for your fitting needs. Ask us anything else about your eyewear.",
             "violations": [
-              "R11_no_medical_claims",
-              "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "I have low vision \u2014 do you carry anything high contrast?",
-            "draft": "Consider the Solstice Contrast Pro at $199.00, which features a copper lens that delivers excellent contrast for enhanced visibility. The Solstice Clarity Amber at $179.00 also provides great value with its amber tint for superior contrast. Both styles carry UV400 protection and ship with a thirty-day return window. Fit tip: high-contrast lenses work best when the frame sits close to your eyes for maximum colour separation. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Contrast Pro at $199.00, which features a copper lens that delivers excellent contrast for enhanced visibility. The Solstice Clarity Amber at $179.00 also provides great value with its amber tint for superior contrast. Both styles carry UV400 protection and ship with a thirty-day return window. Fit tip: high-contrast lenses work best when the frame sits close to your eyes for maximum colour separation. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Contrast Pro at $199.00, which features a copper lens designed to enhance contrast perception and visual clarity. The Solstice Clarity Amber at $179.00 also delivers strong high-contrast performance with a warm amber tone. Both styles carry UV400 protection and ship with a thirty-day return window. Fit tip: high-contrast lenses work best when properly fitted close to your eyes for maximum effect. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Contrast Pro at $199.00, which features a copper lens designed to enhance contrast perception and visual clarity. The Solstice Clarity Amber at $179.00 also delivers strong high-contrast performance with a warm amber tone. Both styles carry UV400 protection and ship with a thirty-day return window. Fit tip: high-contrast lenses work best when properly fitted close to your eyes for maximum effect. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
               "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Which frames suit a round face?",
-            "draft": "Consider the Solstice Square Line in tortoiseshell, which offers angular geometry that balances round facial features. The frame's structured lines provide definition while delivering UV400 protection and ships with a thirty-day return window. Fit tip: frames with broader temples help frame wider cheekbones on rounder faces. This style is great value at $135.00 for eyewear that complements your face shape well. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Square Line in tortoiseshell, which offers angular geometry that balances round facial features. The frame's structured lines provide definition while delivering UV400 protection and ships with a thirty-day return window. Fit tip: frames with broader temples help frame wider cheekbones on rounder faces. This style is great value at $135.00 for eyewear that complements your face shape well. Ask us anything else about your eyewear.",
+            "draft": "Consider angular and square frames to balance a round face's soft features. The Solstice Angular D-Frame in black costs $165.00 and brings defined structure with UV400 protection. The Solstice Square Line in tortoiseshell is $135.00 and offers geometric contrast that flatters round face shapes. Both frames ship with a 30-day return window. Fit tip: measure your face width to ensure the frame width matches your proportions for comfort. Ask us anything else about your eyewear.",
+            "final": "Consider angular and square frames to balance a round face's soft features. The Solstice Angular D-Frame in black costs $165.00 and brings defined structure with UV400 protection. The Solstice Square Line in tortoiseshell is $135.00 and offers geometric contrast that flatters round face shapes. Both frames ship with a 30-day return window. Fit tip: measure your face width to ensure the frame width matches your proportions for comfort. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
               "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Do you have anything on sale right now?",
-            "draft": "Consider the Solstice Dune in sand, which offers great value at $45.00 and ships with a thirty-day return window. The Solstice Cove Driver in grey is also available at $89.00 and includes UV400 protection for outdoor wear. Both frames from Solstice Optics are current offerings with strong appeal. Fit tip: measure the bridge width of your current frames to ensure a comfortable fit. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Dune in sand, which offers great value at $45.00 and ships with a thirty-day return window. The Solstice Cove Driver in grey is also available at $89.00 and includes UV400 protection for outdoor wear. Both frames from Solstice Optics are current offerings with strong appeal. Fit tip: measure the bridge width of your current frames to ensure a comfortable fit. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Dune at $45.00, a sand-coloured frame offering great value for everyday wear. The Cove Driver in grey is also available at $89.00 for a more robust driving style. Both frames from Solstice Optics come with UV400 protection and ship with a thirty-day return window. Fit tip: the Dune's smaller profile suits narrower face shapes, whilst the Cove Driver accommodates wider frames. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Dune at $45.00, a sand-coloured frame offering great value for everyday wear. The Cove Driver in grey is also available at $89.00 for a more robust driving style. Both frames from Solstice Optics come with UV400 protection and ship with a thirty-day return window. Fit tip: the Dune's smaller profile suits narrower face shapes, whilst the Cove Driver accommodates wider frames. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
               "R16_fit_tip"
             ]
           }
         ]
       },
       "checker_repair@24": {
-        "rule_compliance": 0.8845,
+        "rule_compliance": 0.935,
         "core4_compliance": 1.0,
         "fully_compliant_replies": 0.0,
         "checked_rule_instances": 277,
@@ -782,9 +754,9 @@
             "na": 0
           },
           "R05_price_format": {
-            "ok": 12,
+            "ok": 11,
             "bad": 0,
-            "na": 0
+            "na": 1
           },
           "R06_no_competitors": {
             "ok": 12,
@@ -792,8 +764,8 @@
             "na": 0
           },
           "R07_returns_window": {
-            "ok": 2,
-            "bad": 10,
+            "ok": 12,
+            "bad": 0,
             "na": 0
           },
           "R08_no_exclamation": {
@@ -817,9 +789,9 @@
             "na": 0
           },
           "R12_british_spelling": {
-            "ok": 1,
+            "ok": 2,
             "bad": 0,
-            "na": 11
+            "na": 10
           },
           "R13_no_filler_opener": {
             "ok": 12,
@@ -832,8 +804,8 @@
             "na": 0
           },
           "R15_brand_once": {
-            "ok": 2,
-            "bad": 10,
+            "ok": 7,
+            "bad": 5,
             "na": 0
           },
           "R16_fit_tip": {
@@ -847,8 +819,8 @@
             "na": 0
           },
           "R18_sentence_length": {
-            "ok": 12,
-            "bad": 0,
+            "ok": 11,
+            "bad": 1,
             "na": 0
           },
           "R19_no_recommend": {
@@ -884,127 +856,114 @@
         },
         "stats": {
           "calls": 24,
-          "in_tok": 34954,
-          "out_tok": 3323,
+          "in_tok": 34871,
+          "out_tok": 3394,
           "cached_tok": 0,
           "errors": 0,
-          "wall_s": 17.2
+          "wall_s": 10.0
         },
         "calls_per_reply": 2.0,
+        "audit_quality": null,
         "samples": [
           {
             "query": "I need polarized sunglasses for driving.",
-            "draft": "Consider the Solstice Cove Driver for driving at great value at $89.00. These polarised sunglasses reduce glare and carry UV400 protection with a thirty-day return window. The Solstice Meridian Polarised at $129.00 offers premium polarisation for extended driving comfort. Fit tip: verify the frame width matches your face to ensure comfortable temple fit during longer drives. Solstice Optics stocks both options to suit your driving needs. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Cove Driver for driving at great value at $89.00. These polarised sunglasses reduce glare and carry UV400 protection, with a thirty-day return window. The Solstice Meridian Polarised at $129.00 offers premium polarisation for extended driving comfort and also ships with a thirty-day return window. Fit tip: verify the frame width matches your face to ensure comfortable temple fit during longer drives. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Cove Driver, a polarised driving sunglass at great value at $89.00. These deliver UV400 protection and reduce glare effectively during your drive. Alternatively, the Solstice Meridian Polarised offers a matte black frame at $129.00 with the same glare-reducing benefits. Fit tip: Polarised lenses work best when they cover the full width of your eyes to block reflective surfaces. Both ship with a thirty-day return window from Solstice Optics. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Cove Driver, a polarised driving sunglass at great value at $89.00. These deliver UV400 protection and reduce glare effectively during your drive. Fit tip: polarised lenses work best when they cover the full width of your eyes to block reflective surfaces. Alternatively, the Solstice Meridian Polarised offers a matte black frame at $129.00 with the same glare-reducing benefits. Both ship with a thirty-day return window. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
               "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Looking for lightweight frames for everyday wear.",
-            "draft": "Consider the Solstice Feather Ti at $215.00 in gunmetal, crafted from titanium for exceptional lightness and durability in everyday wear. The Solstice Aero Rim at $175.00 in silver offers great value with a lightweight rimless design and UV400 protection. Both frames ship with a thirty-day return window for your peace of mind. Fit tip: titanium frames tend to sit lower on the bridge, so if you prefer a snugger fit, the rimless design may suit you better. At Solstice Optics, we ensure quality eyewear for all-day comfort.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Feather Ti at $215.00 in gunmetal, crafted from titanium for exceptional lightness and durability in everyday wear. The Solstice Aero Rim at $175.00 in silver offers great value with a lightweight rimless design and UV400 protection. Fit tip: titanium frames tend to sit lower on the bridge, so if you prefer a snugger fit, the rimless design may suit you better. Both frames ship with a thirty-day return window for your peace of mind.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Feather Ti in gunmetal, priced at $215.00 for exceptional lightweight comfort throughout your day. The Aero Rim in silver offers great value at $175.00 and delivers the same everyday wearability. Both frames carry UV400 protection and ship with a thirty-day return window. Fit tip: titanium frames like the Feather Ti distribute weight evenly across your nose bridge for all-day comfort. We believe either frame will serve you well at Solstice Optics. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Feather Ti in gunmetal, priced at $215.00 for exceptional lightweight comfort throughout your day. The Aero Rim in silver offers great value at $175.00 and delivers the same everyday wearability. Both frames carry UV400 protection and ship with a thirty-day return window. Fit tip: titanium frames distribute weight evenly across your nose bridge for enhanced all-day comfort. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
               "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Something for my wife's birthday, she likes classic styles.",
-            "draft": "Consider the Solstice Rivera Cat-Eye in tortoiseshell for $189.00, which features timeless cat-eye styling with UV400 protection. The Solstice Lumen Round in rose gold at $149.00 offers understated elegance for a more subtle classic look. Both styles ship with a 30-day return window, giving you confidence in your choice. Fit tip: cat-eye frames suit most face shapes, while round frames work beautifully on angular faces. Ask us anything else about your eyewear.",
-            "final": "Consider the Rivera Cat-Eye in tortoiseshell for $189.00, which features timeless cat-eye styling with UV400 protection. The Lumen Round in rose gold at $149.00 offers understated elegance for a more subtle classic look. Both styles ship with a 30-day return window, giving you confidence in your choice. Fit tip: cat-eye frames suit most face shapes, while round frames work beautifully on angular faces. We at Solstice Optics are here to help you find the ideal gift. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Rivera Cat-Eye in tortoiseshell, priced at $189.00, which offers timeless elegance with UV400 protection. This frame arrives with a thirty-day return window. The Lumen Round at $149.00 in rose gold provides great value with a refined, classic aesthetic and UV400 protection. Fit tip: cat-eye frames sit higher on your cheekbones, whilst round frames work well for angular face shapes. Both styles from Solstice Optics deliver sophisticated appeal for a thoughtful gift. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Rivera Cat-Eye in tortoiseshell, priced at $189.00, which offers timeless elegance with UV400 protection. This frame arrives with a thirty-day return window. The Lumen Round at $149.00 in rose gold provides great value with a refined, classic aesthetic and UV400 protection. Both styles from Solstice Optics deliver sophisticated appeal for a thoughtful gift. Fit tip: cat-eye frames sit higher on your cheekbones, whilst round frames suit angular face shapes well. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "What do you have for cycling?",
-            "draft": "Consider the Solstice Ridgeline Wrap in neon yellow at $159.00 for serious cycling protection. This pair carries UV400 protection and ships with a thirty-day return window. The Solstice Sprint Shield in black at $139.00 is another strong choice for cycling. Fit tip: wrap-style frames sit closer to your face for wind protection during rides. Solstice Optics stocks both to suit different cycling preferences.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Ridgeline Wrap in neon yellow at $159.00 for serious cycling protection. This pair carries UV400 protection and ships with a thirty-day return window. The Solstice Sprint Shield in black at $139.00 also ships with a thirty-day return window and suits different cycling needs. Fit tip: wrap-style frames sit closer to your face for wind protection during rides.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Ridgeline Wrap in neon yellow at $159.00, designed with wraparound coverage for active cyclists. The Solstice Sprint Shield in black at $139.00 offers streamlined protection with great value for your rides. Both styles carry UV400 protection and ship with a thirty-day return window. Fit tip: wrap styles sit closer to your face, providing enhanced side coverage during cycling. Ask us anything else about your eyewear.",
+            "final": "Consider the Ridgeline Wrap in neon yellow at $159.00, designed with wraparound coverage for active cyclists. The Sprint Shield in black at $139.00 offers streamlined protection with great value for your rides. Both styles carry UV400 protection and ship with a thirty-day return window. Fit tip: wrap styles sit closer to your face, providing enhanced side coverage during cycling. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
               "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "I want the most affordable sunglasses you carry.",
-            "draft": "Consider the Solstice Basecamp in black, which offers great value at $39.00. These sunglasses deliver UV400 protection and ship with a thirty-day return window. We crafted this frame for everyday wear with durable construction. Fit tip: the Basecamp features a medium fit that suits most face shapes. Ask us anything else about your eyewear.",
-            "final": "Consider the Basecamp in black, which offers great value at $39.00. These sunglasses deliver UV400 protection and ship with a thirty-day return window. We crafted this frame for everyday wear with durable construction. Fit tip: the Basecamp features a medium fit that suits most face shapes. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Basecamp in black, which offers great value at $39.00. These sunglasses provide UV400 protection and ship with a thirty-day return window. We designed them with a comfortable fit for all-day wear. Fit tip: the Basecamp features slightly wider temples for those who prefer a relaxed fit around the ears. You'll find this to be an excellent choice for budget-conscious shoppers at Solstice Optics. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Basecamp in black, which offers great value at $39.00. Fit tip: the Basecamp features slightly wider temples for those who prefer a relaxed fit around the ears. These sunglasses provide UV400 protection and ship with a 30-day return window. We designed them with a comfortable fit for all-day wear. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
               "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Show me your premium designer frames.",
-            "draft": "Consider the Solstice x Aurelio Milano in havana at $640.00, which pairs timeless design with exceptional craftsmanship and UV400 protection. The Solstice Atelier 01 in gold at $720.00 offers refined elegance from our premium collection. Both frames ship with a thirty-day return window. Fit tip: premium frames often feature adjustable nose pads for a customised fit to your face shape. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice x Aurelio Milano in havana at $640.00, which pairs timeless design with exceptional craftsmanship and UV400 protection. The Atelier 01 in gold at $720.00 offers refined elegance from our premium collection. Both frames ship with a 30-day return window. Fit tip: premium frames often feature adjustable nose pads for a customised fit to your face shape. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice x Aurelio Milano in havana at $640.00 and the Solstice Atelier 01 in gold at $720.00, which represent our most elevated frame selections. Both styles carry UV400 protection and ship with a 30-day return window. Fit tip: measure the bridge width carefully, as premium frames tend to have more refined proportions. We at Solstice Optics take pride in curating designer pieces that deliver distinctive aesthetic appeal. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice x Aurelio Milano in havana at $640.00 and the Solstice Atelier 01 in gold at $720.00, which represent our most elevated frame selections. Both styles carry UV400 protection and ship with a 30-day return window. Fit tip: measure your bridge width for the most comfortable fit. We at Solstice Optics take pride in curating designer pieces with distinctive aesthetic appeal. Ask us anything else about your eyewear.",
             "violations": [
-              "R15_brand_once",
-              "R16_fit_tip"
+              "R16_fit_tip",
+              "R18_sentence_length"
             ]
           },
           {
             "query": "Glasses for long days at a computer.",
-            "draft": "Consider the Solstice Focus Blue at $119.00 or Screen Ease at $99.00 for extended screen time. Both pairs carry UV400 protection and ship with a thirty-day return window. Fit tip: ensure the bridge rests comfortably above your nose without pinching during long hours. We designed these frames to reduce eye strain during computer work throughout your day.",
-            "final": "Consider the Solstice Focus Blue at $119.00 or Screen Ease at $99.00 for extended screen time. Both pairs carry UV400 protection and ship with a thirty-day return window. Fit tip: ensure the bridge rests comfortably above your nose without pinching during long hours. We designed these frames to reduce eye strain during computer work. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Focus Blue at $119.00 for extended screen time. Both styles carry UV400 protection and ship with a thirty-day return window. The Screen Ease in grey at $99.00 offers great value for your needs. Fit tip: measure the bridge width to ensure comfortable wear during long sessions.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Focus Blue at $119.00 for extended screen time. Both styles carry UV400 protection and ship with a thirty-day return window. The Screen Ease in grey at $99.00 offers great value for your needs. Fit tip: measure the bridge width to ensure comfortable wear during long sessions.\nAsk us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
               "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Sunglasses for a beach holiday.",
-            "draft": "Consider the Solstice Lagoon in aqua for $109.00, which carries UV400 protection and brings beachy vibes to your holiday look. The Solstice Shoreline in white at $95.00 offers great value with the same UV400 protection for a bright, coastal aesthetic. Both styles ship with a thirty-day return window. Fit tip: the Lagoon offers a wider frame for more sun coverage at the beach. Solstice Optics has both ready for your getaway. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Lagoon in aqua for $109.00, which carries UV400 protection and ships with a thirty-day return window for your beach holiday. The Solstice Shoreline in white at $95.00 offers great value with the same UV400 protection and thirty-day return window for a bright, coastal aesthetic. Fit tip: the Lagoon offers a wider frame for more sun coverage at the beach. Both styles are ready for your getaway with Solstice Optics. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Lagoon in aqua at $109.00, which offers great value for beach wear. The Shoreline in white at $95.00 is another excellent choice with UV400 protection. Both pairs ship with a thirty-day return window. Fit tip: beach sunglasses should sit snugly to prevent slipping when you're active in the sun and water. We at Solstice Optics have selected these styles for their durability and comfort during seaside adventures. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Lagoon in aqua at $109.00, which offers great value for beach wear. The Shoreline in white at $95.00 is another excellent choice with UV400 protection. Both pairs ship with a thirty-day return window. Fit tip: ensure the frames sit snugly on your nose to prevent slipping during water activities. We at Solstice Optics have selected these styles for their durability and comfort during seaside adventures. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
               "R16_fit_tip"
             ]
           },
           {
             "query": "My nose bridge is low and frames slide down. Any suggestions?",
-            "draft": "Consider the Solstice Kestrel Alt-Fit at $165.00 or the Haven Alt-Fit at $145.00, both engineered for low bridge fits. The Alt-Fit frames from Solstice Optics feature adjusted nose bridge positioning to prevent sliding. Both styles carry UV400 protection and ship with a thirty-day return window. Fit tip: Alt-Fit frames work best when the bridge rests on the widest part of your nose without creating pressure points.",
-            "final": "Consider the Solstice Kestrel Alt-Fit at $165.00 or the Haven Alt-Fit at $145.00, both engineered for low bridge fits. The Alt-Fit frames feature adjusted nose bridge positioning to keep them secure. Both styles carry UV400 protection and ship with a thirty-day return window. Fit tip: Alt-Fit frames work best when the bridge rests on the widest part of your nose. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Kestrel Alt-Fit at $165.00 or the Haven Alt-Fit at $145.00, both designed for low bridge fits. Each pair carries UV400 protection and ships with a thirty-day return window. Fit tip: Alt-Fit frames feature adjusted nose bridge placement to prevent slipping on lower bridge structures. We at Solstice Optics crafted these to address sliding concerns directly. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Kestrel Alt-Fit at $165.00 or the Haven Alt-Fit at $145.00, both designed for low bridge fits. Fit tip: Alt-Fit frames feature adjusted nose bridge placement to prevent slipping on lower bridge structures. Each pair carries UV400 protection and ships with a thirty-day return window. We at Solstice Optics crafted these to address sliding concerns directly. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
-              "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "I have low vision \u2014 do you carry anything high contrast?",
-            "draft": "Consider the Solstice Contrast Pro at $199.00, which delivers exceptional high contrast with its copper lens colour. This eyewear carries UV400 protection and ships with a thirty-day return window. The amber option, Solstice Clarity Amber at $179.00, also provides strong contrast enhancement. Fit tip: high contrast lenses work best when the frame sits close to your eyes for maximum light control. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Contrast Pro at $199.00, which delivers exceptional high contrast with its copper lens colour. This eyewear carries UV400 protection and ships with a thirty-day return window. The amber option, Solstice Clarity Amber at $179.00, also provides strong contrast enhancement. Fit tip: high contrast lenses work best when the frame sits close to your eyes for maximum light control. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Contrast Pro at $199.00, which features copper lenses designed for high contrast vision enhancement. These lenses carry UV400 protection and ship with a thirty-day return window. Solstice Optics also offers the Clarity Amber at $179.00 as a great value alternative with amber tones. Fit tip: copper and amber lenses work best when the frames sit close to your eyes for maximum contrast benefit. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Contrast Pro at $199.00, which features copper lenses designed for high contrast vision enhancement. These lenses carry UV400 protection and ship with a thirty-day return window. Solstice Optics also offers the Clarity Amber at $179.00 as a great value alternative with amber tones. Fit tip: ensure the frames sit close to your eyes for maximum contrast benefit and visual clarity. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
-              "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Which frames suit a round face?",
-            "draft": "Consider the Solstice Square Line for your round face shape. Angular and squared frames provide strong definition that complements round features beautifully. This tortoiseshell frame is available at $135.00 and ships with a thirty-day return window. The lenses carry UV400 protection to shield your eyes from harmful rays. Fit tip: measure the bridge width to ensure a snug, comfortable fit across your nose. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Square Line for your round face shape. Angular and squared frames provide strong definition that complements round features well. This tortoiseshell frame is available at $135.00 and ships with a thirty-day return window. The lenses carry UV400 protection. Fit tip: measure the bridge width to ensure a comfortable fit across your nose. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Square Line in tortoiseshell, which features angular geometry that balances round facial contours beautifully. This frame carries UV400 protection and ships with a thirty-day return window. Solstice Optics designed this style with strong lines to create visual contrast for your face shape. Fit tip: ensure the frame width aligns with your cheekbone span for optimal comfort. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Square Line in tortoiseshell, which features angular geometry that balances round facial contours beautifully. This frame carries UV400 protection and ships with a thirty-day return window. Solstice Optics designed this style with strong lines to create visual contrast for your face shape. Fit tip: ensure the frame width aligns with your cheekbone span for comfortable wear. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
-              "R15_brand_once",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Do you have anything on sale right now?",
-            "draft": "Consider the Solstice Dune at $45.00 for great value in casual eyewear with UV400 protection. The Solstice Cove Driver at $89.00 offers premium performance for driving with UV400 protection. Both styles ship with a thirty-day return window so you can select with confidence. Fit tip: measure the bridge width to ensure the frame sits comfortably on your nose. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Dune at $45.00 for great value in casual eyewear with UV400 protection. The Cove Driver at $89.00 offers premium performance for driving with UV400 protection. Both ship with a thirty-day return window so you can select with confidence. Fit tip: measure the bridge width to ensure the frame sits comfortably on your nose. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Dune at $45.00 for great value eyewear with UV400 protection, which ships with a 30-day return window. The Solstice Cove Driver in grey offers another excellent choice at $89.00, also featuring UV400 protection and a 30-day return window. Fit tip: measure your current frame width to ensure proper fit across your face. Both styles come from Solstice Optics with our quality assurance guarantee. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Dune at $45.00 for great value eyewear with UV400 protection, which ships with a 30-day return window. The Solstice Cove Driver in grey offers another excellent choice at $89.00, also featuring UV400 protection and a 30-day return window. Fit tip: we suggest measuring your current frame width to ensure the bridge sits comfortably on your nose. Both styles come from Solstice Optics with our quality assurance guarantee. Ask us anything else about your eyewear.",
             "violations": [
-              "R07_returns_window",
-              "R15_brand_once",
               "R16_fit_tip"
             ]
           }
@@ -1013,230 +972,9 @@
     },
     "openai:gpt-5.6-sol": {
       "single@24": {
-        "rule_compliance": 0.9822,
+        "rule_compliance": 0.975,
         "core4_compliance": 1.0,
-        "fully_compliant_replies": 0.5833,
-        "checked_rule_instances": 281,
-        "per_rule": {
-          "R01_sentence_count": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R02_no_questions": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R03_closing_line": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R04_no_cheap": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R05_price_format": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R06_no_competitors": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R07_returns_window": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R08_no_exclamation": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R09_second_person": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R10_uv400": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R11_no_medical_claims": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R12_british_spelling": {
-            "ok": 5,
-            "bad": 0,
-            "na": 7
-          },
-          "R13_no_filler_opener": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R14_no_emoji": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R15_brand_once": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R16_fit_tip": {
-            "ok": 7,
-            "bad": 5,
-            "na": 0
-          },
-          "R17_no_perfect": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R18_sentence_length": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R19_no_recommend": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R20_no_first_person_singular": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R21_no_options": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R22_numbers_as_words": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R23_no_stylish": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          },
-          "R24_open_with_consider": {
-            "ok": 12,
-            "bad": 0,
-            "na": 0
-          }
-        },
-        "stats": {
-          "calls": 12,
-          "in_tok": 7827,
-          "out_tok": 5586,
-          "cached_tok": 0,
-          "errors": 0,
-          "wall_s": 24.2
-        },
-        "calls_per_reply": 1.0,
-        "samples": [
-          {
-            "query": "I need polarized sunglasses for driving.",
-            "draft": "Consider the Solstice Meridian Polarised in matte black at $129.00 for driving, with polarised lenses to reduce reflected glare. At Solstice Optics, this eyewear carries UV400 protection and ships with a 30-day return window. Fit tip: Choose a secure, comfortable fit that stays stable when you turn your head to check mirrors.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Meridian Polarised in matte black at $129.00 for driving, with polarised lenses to reduce reflected glare. At Solstice Optics, this eyewear carries UV400 protection and ships with a 30-day return window. Fit tip: Choose a secure, comfortable fit that stays stable when you turn your head to check mirrors.\n\nAsk us anything else about your eyewear.",
-            "violations": [
-              "R16_fit_tip"
-            ]
-          },
-          {
-            "query": "Looking for lightweight frames for everyday wear.",
-            "draft": "Consider the Solstice Optics Feather Ti in gunmetal at $215.00 or the Aero Rim in silver at $175.00 for lightweight everyday wear.\nBoth carry UV400 protection, and each ships with a 30-day return window.\nFit tip: For everyday comfort, check that the temples sit without pressure and the bridge stays secure when you move.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Optics Feather Ti in gunmetal at $215.00 or the Aero Rim in silver at $175.00 for lightweight everyday wear.\nBoth carry UV400 protection, and each ships with a 30-day return window.\nFit tip: For everyday comfort, check that the temples sit without pressure and the bridge stays secure when you move.\nAsk us anything else about your eyewear.",
-            "violations": []
-          },
-          {
-            "query": "Something for my wife's birthday, she likes classic styles.",
-            "draft": "Consider the Solstice Optics Rivera Cat-Eye at $189.00, featuring a classic tortoiseshell colour that makes a thoughtful birthday gift.\nIt carries UV400 protection and offers a timeless cat-eye shape.\nThis pair ships with a 30-day return window.\nFit tip: Cat-eye frames work especially well if you choose a width similar to her current pair.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Optics Rivera Cat-Eye at $189.00, featuring a classic tortoiseshell colour that makes a thoughtful birthday gift.\nIt carries UV400 protection and offers a timeless cat-eye shape.\nThis pair ships with a 30-day return window.\nFit tip: Cat-eye frames work especially well if you choose a width similar to her current pair.\nAsk us anything else about your eyewear.",
-            "violations": []
-          },
-          {
-            "query": "What do you have for cycling?",
-            "draft": "Consider two cycling choices from Solstice Optics: the Ridgeline Wrap in neon yellow at $159.00 and Sprint Shield in black at $139.00. Each carries UV400 protection and ships with a 30-day return window. Fit tip: compare your current frame measurements with the product sizing details before selecting your cycling eyewear. You can choose neon yellow for brighter colour or black for a more understated look.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider two cycling choices from Solstice Optics: the Ridgeline Wrap in neon yellow at $159.00 and Sprint Shield in black at $139.00. Each carries UV400 protection and ships with a 30-day return window. Fit tip: compare your current frame measurements with the product sizing details before selecting your cycling eyewear. You can choose neon yellow for brighter colour or black for a more understated look.\n\nAsk us anything else about your eyewear.",
-            "violations": [
-              "R16_fit_tip"
-            ]
-          },
-          {
-            "query": "I want the most affordable sunglasses you carry.",
-            "draft": "Consider the Solstice Basecamp from Solstice Optics in black at $39.00, our most affordable sunglasses and a great value.\nIt carries UV400 protection and ships with a 30-day return window.\nFit tip: Check the frame measurements against a pair you already wear comfortably.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Basecamp from Solstice Optics in black at $39.00, our most affordable sunglasses and a great value.\nIt carries UV400 protection and ships with a 30-day return window.\nFit tip: Check the frame measurements against a pair you already wear comfortably.\nAsk us anything else about your eyewear.",
-            "violations": []
-          },
-          {
-            "query": "Show me your premium designer frames.",
-            "draft": "Consider Solstice Optics\u2019 premium Solstice x Aurelio Milano frame in havana, priced at $640.00. The gold Solstice Atelier frame costs $720.00 and offers a refined designer finish. Both carry UV400 protection and ship with a 30-day return window. Fit tip: compare your current frame width with each frame\u2019s measurements before ordering.\nAsk us anything else about your eyewear.",
-            "final": "Consider Solstice Optics\u2019 premium Solstice x Aurelio Milano frame in havana, priced at $640.00. The gold Solstice Atelier frame costs $720.00 and offers a refined designer finish. Both carry UV400 protection and ship with a 30-day return window. Fit tip: compare your current frame width with each frame\u2019s measurements before ordering.\nAsk us anything else about your eyewear.",
-            "violations": [
-              "R16_fit_tip"
-            ]
-          },
-          {
-            "query": "Glasses for long days at a computer.",
-            "draft": "Consider Solstice Focus Blue in clear from Solstice Optics at $119.00 for long computer days and a clean, understated look.\nScreen Ease in grey costs $99.00, giving you a more muted colour at great value.\nBoth pairs carry UV400 protection and ship with a 30-day return window.\nFit tip: choose a frame width close to your current glasses for secure, comfortable wear.\nAsk us anything else about your eyewear.",
-            "final": "Consider Solstice Focus Blue in clear from Solstice Optics at $119.00 for long computer days and a clean, understated look.\nScreen Ease in grey costs $99.00, giving you a more muted colour at great value.\nBoth pairs carry UV400 protection and ship with a 30-day return window.\nFit tip: choose a frame width close to your current glasses for secure, comfortable wear.\nAsk us anything else about your eyewear.",
-            "violations": []
-          },
-          {
-            "query": "Sunglasses for a beach holiday.",
-            "draft": "Consider the aqua Solstice Lagoon at $109.00 for a vivid beach-holiday look that pairs easily with swimwear.\nThe white Solstice Shoreline at $95.00 gives you a crisp, versatile alternative and great value.\nBoth carry UV400 protection and ship with a 30-day return window from Solstice Optics.\nFit tip: Choose the frame width closest to eyewear you already wear comfortably.\nAsk us anything else about your eyewear.",
-            "final": "Consider the aqua Solstice Lagoon at $109.00 for a vivid beach-holiday look that pairs easily with swimwear.\nThe white Solstice Shoreline at $95.00 gives you a crisp, versatile alternative and great value.\nBoth carry UV400 protection and ship with a 30-day return window from Solstice Optics.\nFit tip: Choose the frame width closest to eyewear you already wear comfortably.\nAsk us anything else about your eyewear.",
-            "violations": []
-          },
-          {
-            "query": "My nose bridge is low and frames slide down. Any suggestions?",
-            "draft": "Consider the Kestrel Alt-Fit in matte navy for $165.00 or the Haven Alt-Fit in black for $145.00.\nBoth frames suit lower nose bridges, carry UV400 protection, and ship with a 30-day return window.\nFit tip: Check for stable bridge contact and level temples, ensuring the frames stay secure when you gently move your head.\nAt Solstice Optics, we suggest choosing based on your preferred colour and frame shape.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Kestrel Alt-Fit in matte navy for $165.00 or the Haven Alt-Fit in black for $145.00.\nBoth frames suit lower nose bridges, carry UV400 protection, and ship with a 30-day return window.\nFit tip: Check for stable bridge contact and level temples, ensuring the frames stay secure when you gently move your head.\nAt Solstice Optics, we suggest choosing based on your preferred colour and frame shape.\nAsk us anything else about your eyewear.",
-            "violations": []
-          },
-          {
-            "query": "I have low vision \u2014 do you carry anything high contrast?",
-            "draft": "Consider Solstice Optics\u2019 Clarity Amber in amber at $179.00 or Contrast Pro in copper at $199.00 for high-contrast viewing. Both carry UV400 protection. Each ships with a 30-day return window. Fit tip: compare the frame measurements with eyewear you already find comfortable.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider Solstice Optics\u2019 Clarity Amber in amber at $179.00 or Contrast Pro in copper at $199.00 for high-contrast viewing. Both carry UV400 protection. Each ships with a 30-day return window. Fit tip: compare the frame measurements with eyewear you already find comfortable.\n\nAsk us anything else about your eyewear.",
-            "violations": [
-              "R16_fit_tip"
-            ]
-          },
-          {
-            "query": "Which frames suit a round face?",
-            "draft": "Consider the Solstice Optics Angular D-Frame in black for $155.00; its angular shape can add definition to a round face. The Square Line in tortoiseshell costs $135.00 and offers similarly balancing straight edges. Both carry UV400 protection, and each ships with a 30-day return window. Fit tip: Choose a frame slightly wider than your cheekbones, with temples sitting comfortably without pressure.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Optics Angular D-Frame in black for $155.00; its angular shape can add definition to a round face. The Square Line in tortoiseshell costs $135.00 and offers similarly balancing straight edges. Both carry UV400 protection, and each ships with a 30-day return window. Fit tip: Choose a frame slightly wider than your cheekbones, with temples sitting comfortably without pressure.\n\nAsk us anything else about your eyewear.",
-            "violations": [
-              "R16_fit_tip"
-            ]
-          },
-          {
-            "query": "Do you have anything on sale right now?",
-            "draft": "Consider the Solstice Dune in sand at $45.00, a great value from Solstice Optics.\nThe Solstice Cove Driver in grey is priced at $89.00, although neither supplied listing is marked as a sale.\nBoth carry UV400 protection and ship with a 30-day return window.\nFit tip: Compare the bridge and temple measurements with eyewear you already wear comfortably.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Dune in sand at $45.00, a great value from Solstice Optics.\nThe Solstice Cove Driver in grey is priced at $89.00, although neither supplied listing is marked as a sale.\nBoth carry UV400 protection and ship with a 30-day return window.\nFit tip: Compare the bridge and temple measurements with eyewear you already wear comfortably.\nAsk us anything else about your eyewear.",
-            "violations": []
-          }
-        ]
-      },
-      "checker_repair@24": {
-        "rule_compliance": 1.0,
-        "core4_compliance": 1.0,
-        "fully_compliant_replies": 1.0,
+        "fully_compliant_replies": 0.4167,
         "checked_rule_instances": 280,
         "per_rule": {
           "R01_sentence_count": {
@@ -1298,6 +1036,232 @@
             "ok": 4,
             "bad": 0,
             "na": 8
+          },
+          "R13_no_filler_opener": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R14_no_emoji": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R15_brand_once": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R16_fit_tip": {
+            "ok": 5,
+            "bad": 7,
+            "na": 0
+          },
+          "R17_no_perfect": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R18_sentence_length": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R19_no_recommend": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R20_no_first_person_singular": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R21_no_options": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R22_numbers_as_words": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R23_no_stylish": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R24_open_with_consider": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          }
+        },
+        "stats": {
+          "calls": 12,
+          "in_tok": 7827,
+          "out_tok": 5291,
+          "cached_tok": 0,
+          "errors": 0,
+          "wall_s": 20.2
+        },
+        "calls_per_reply": 1.0,
+        "audit_quality": null,
+        "samples": [
+          {
+            "query": "I need polarized sunglasses for driving.",
+            "draft": "Consider the Solstice Meridian Polarised from Solstice Optics, a matte black driving choice priced at $129.00. Its polarised lenses help reduce reflected road glare, and the eyewear carries UV400 protection. It ships with a 30-day return window. Fit tip: Check the frame measurements against sunglasses you already wear comfortably before ordering.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Meridian Polarised from Solstice Optics, a matte black driving choice priced at $129.00. Its polarised lenses help reduce reflected road glare, and the eyewear carries UV400 protection. It ships with a 30-day return window. Fit tip: Check the frame measurements against sunglasses you already wear comfortably before ordering.\n\nAsk us anything else about your eyewear.",
+            "violations": [
+              "R16_fit_tip"
+            ]
+          },
+          {
+            "query": "Looking for lightweight frames for everyday wear.",
+            "draft": "Consider the Solstice Optics Feather Ti in gunmetal at $215.00 for a refined, lightweight everyday frame. The Aero Rim in silver at $175.00 is another lightweight choice offering great value. Both carry UV400 protection and ship with a 30-day return window. Fit tip: Choose the frame whose bridge width matches a well-fitting pair you already own.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Optics Feather Ti in gunmetal at $215.00 for a refined, lightweight everyday frame. The Aero Rim in silver at $175.00 is another lightweight choice offering great value. Both carry UV400 protection and ship with a 30-day return window. Fit tip: Choose the frame whose bridge width matches a well-fitting pair you already own.\n\nAsk us anything else about your eyewear.",
+            "violations": [
+              "R16_fit_tip"
+            ]
+          },
+          {
+            "query": "Something for my wife's birthday, she likes classic styles.",
+            "draft": "Consider the Solstice Rivera Cat-Eye in tortoiseshell at $189.00 for a classic, refined birthday gift. The Solstice Lumen Round at $149.00 gives you a softer rose-gold alternative while retaining a timeless feel. Both styles carry UV400 protection and ship with a 30-day return window from Solstice Optics. Fit tip: Choose the Rivera for an upswept silhouette, or the Lumen if she usually wears rounded frames.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Rivera Cat-Eye in tortoiseshell at $189.00 for a classic, refined birthday gift. The Solstice Lumen Round at $149.00 gives you a softer rose-gold alternative while retaining a timeless feel. Both styles carry UV400 protection and ship with a 30-day return window from Solstice Optics. Fit tip: Choose the Rivera for an upswept silhouette, or the Lumen if she usually wears rounded frames.\n\nAsk us anything else about your eyewear.",
+            "violations": [
+              "R16_fit_tip"
+            ]
+          },
+          {
+            "query": "What do you have for cycling?",
+            "draft": "Consider the Solstice Optics Ridgeline Wrap in neon yellow at $159.00 for cycling coverage and enhanced visibility.\nThe Solstice Sprint Shield in black costs $139.00 and offers a streamlined shield profile.\nBoth carry UV400 protection, and each ships with a 30-day return window.\nFit tip: Choose the wrap for closer side coverage or the shield for a broader single-lens shape.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Optics Ridgeline Wrap in neon yellow at $159.00 for cycling coverage and enhanced visibility.\nThe Solstice Sprint Shield in black costs $139.00 and offers a streamlined shield profile.\nBoth carry UV400 protection, and each ships with a 30-day return window.\nFit tip: Choose the wrap for closer side coverage or the shield for a broader single-lens shape.\nAsk us anything else about your eyewear.",
+            "violations": []
+          },
+          {
+            "query": "I want the most affordable sunglasses you carry.",
+            "draft": "Consider the Solstice Basecamp from Solstice Optics at $39.00, the most affordable sunglasses in the supplied range. Its black frame carries UV400 protection and offers great value. It ships with a 30-day return window. Fit tip: compare the frame measurements with sunglasses you already find comfortable.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Basecamp from Solstice Optics at $39.00, the most affordable sunglasses in the supplied range. Its black frame carries UV400 protection and offers great value. It ships with a 30-day return window. Fit tip: compare the frame measurements with sunglasses you already find comfortable.\n\nAsk us anything else about your eyewear.",
+            "violations": [
+              "R16_fit_tip"
+            ]
+          },
+          {
+            "query": "Show me your premium designer frames.",
+            "draft": "Consider the Solstice x Aurelio Milano in havana at $640.00, a premium designer frame with richly patterned colour and refined detailing.\nThe Atelier 01 in gold costs $720.00 and offers a polished, jewellery-inspired finish for an elevated look.\nBoth Solstice Optics designs carry UV400 protection and ship with a 30-day return window.\nFit tip: Choose a frame width close to your current pair\u2019s measurements for a secure, balanced fit.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice x Aurelio Milano in havana at $640.00, a premium designer frame with richly patterned colour and refined detailing.\nThe Atelier 01 in gold costs $720.00 and offers a polished, jewellery-inspired finish for an elevated look.\nBoth Solstice Optics designs carry UV400 protection and ship with a 30-day return window.\nFit tip: Choose a frame width close to your current pair\u2019s measurements for a secure, balanced fit.\nAsk us anything else about your eyewear.",
+            "violations": []
+          },
+          {
+            "query": "Glasses for long days at a computer.",
+            "draft": "Consider Solstice Focus Blue in clear at $119.00 or Solstice Screen Ease in grey at $99.00 for long computer days. Both pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window. Screen Ease offers great value, while Focus Blue provides a clear-colour alternative. Fit tip: check the frame measurements against a comfortable pair you already own.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider Solstice Focus Blue in clear at $119.00 or Solstice Screen Ease in grey at $99.00 for long computer days. Both pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window. Screen Ease offers great value, while Focus Blue provides a clear-colour alternative. Fit tip: check the frame measurements against a comfortable pair you already own.\n\nAsk us anything else about your eyewear.",
+            "violations": [
+              "R16_fit_tip"
+            ]
+          },
+          {
+            "query": "Sunglasses for a beach holiday.",
+            "draft": "Consider the Solstice Lagoon in aqua at $109.00 or Solstice Shoreline in white at $95.00 for your beach holiday.\nBoth pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window.\nFit tip: compare the frame measurements with sunglasses you already wear comfortably before choosing.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Lagoon in aqua at $109.00 or Solstice Shoreline in white at $95.00 for your beach holiday.\nBoth pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window.\nFit tip: compare the frame measurements with sunglasses you already wear comfortably before choosing.\nAsk us anything else about your eyewear.",
+            "violations": []
+          },
+          {
+            "query": "My nose bridge is low and frames slide down. Any suggestions?",
+            "draft": "Consider Solstice Optics\u2019 Kestrel Alt-Fit in matte navy at $165.00, designed for lower nose bridges and reduced sliding. The Haven Alt-Fit in black is $145.00, and both frames carry UV400 protection. Both selections ship with a 30-day return window. Fit tip: Choose an Alt-Fit bridge that rests evenly on your nose without pinching or leaving the frame too high.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider Solstice Optics\u2019 Kestrel Alt-Fit in matte navy at $165.00, designed for lower nose bridges and reduced sliding. The Haven Alt-Fit in black is $145.00, and both frames carry UV400 protection. Both selections ship with a 30-day return window. Fit tip: Choose an Alt-Fit bridge that rests evenly on your nose without pinching or leaving the frame too high.\n\nAsk us anything else about your eyewear.",
+            "violations": [
+              "R16_fit_tip"
+            ]
+          },
+          {
+            "query": "I have low vision \u2014 do you carry anything high contrast?",
+            "draft": "Consider the Solstice Contrast Pro from Solstice Optics in copper for high-contrast viewing, priced at $199.00.\nThe Clarity Amber at $179.00 offers an amber colour alternative; both carry UV400 protection and ship with a 30-day return window.\nFit tip: choose a frame width close to your current comfortable pair for secure, even coverage.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Contrast Pro from Solstice Optics in copper for high-contrast viewing, priced at $199.00.\nThe Clarity Amber at $179.00 offers an amber colour alternative; both carry UV400 protection and ship with a 30-day return window.\nFit tip: choose a frame width close to your current comfortable pair for secure, even coverage.\nAsk us anything else about your eyewear.",
+            "violations": []
+          },
+          {
+            "query": "Which frames suit a round face?",
+            "draft": "Consider the Solstice Optics Angular D-Frame in black for $155.00, as its angular shape adds definition to a round face.\nThe Square Line in tortoiseshell at $135.00 also brings balanced, structured contrast.\nBoth frames carry UV400 protection and ship with a 30-day return window.\nFit tip: Choose frames slightly wider than your cheekbones, with angular lines that visually lengthen your face.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Optics Angular D-Frame in black for $155.00, as its angular shape adds definition to a round face.\nThe Square Line in tortoiseshell at $135.00 also brings balanced, structured contrast.\nBoth frames carry UV400 protection and ship with a 30-day return window.\nFit tip: Choose frames slightly wider than your cheekbones, with angular lines that visually lengthen your face.\nAsk us anything else about your eyewear.",
+            "violations": []
+          },
+          {
+            "query": "Do you have anything on sale right now?",
+            "draft": "Consider the Solstice Dune in sand for $45.00 or the Solstice Cove Driver in grey for $89.00 at Solstice Optics. No sale status is listed, but both offer great value. Each carries UV400 protection and ships with a 30-day return window. Fit tip: compare your current frame width with the product measurements for a comfortable fit.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Dune in sand for $45.00 or the Solstice Cove Driver in grey for $89.00 at Solstice Optics. No sale status is listed, but both offer great value. Each carries UV400 protection and ships with a 30-day return window. Fit tip: compare your current frame width with the product measurements for a comfortable fit.\nAsk us anything else about your eyewear.",
+            "violations": [
+              "R16_fit_tip"
+            ]
+          }
+        ]
+      },
+      "checker_repair@24": {
+        "rule_compliance": 1.0,
+        "core4_compliance": 1.0,
+        "fully_compliant_replies": 1.0,
+        "checked_rule_instances": 282,
+        "per_rule": {
+          "R01_sentence_count": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R02_no_questions": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R03_closing_line": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R04_no_cheap": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R05_price_format": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R06_no_competitors": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R07_returns_window": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R08_no_exclamation": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R09_second_person": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R10_uv400": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R11_no_medical_claims": {
+            "ok": 12,
+            "bad": 0,
+            "na": 0
+          },
+          "R12_british_spelling": {
+            "ok": 6,
+            "bad": 0,
+            "na": 6
           },
           "R13_no_filler_opener": {
             "ok": 12,
@@ -1362,84 +1326,85 @@
         },
         "stats": {
           "calls": 19,
-          "in_tok": 13135,
-          "out_tok": 6494,
+          "in_tok": 13101,
+          "out_tok": 6288,
           "cached_tok": 0,
           "errors": 0,
-          "wall_s": 29.3
+          "wall_s": 38.1
         },
         "calls_per_reply": 1.58,
+        "audit_quality": null,
         "samples": [
           {
             "query": "I need polarized sunglasses for driving.",
-            "draft": "Consider the Meridian Polarised from Solstice Optics at $129.00, with a matte black colour and polarised lenses suited to driving. It carries UV400 protection and ships with a 30-day return window. Fit tip: The frame should sit securely without pressing at your temples or slipping down your nose.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Meridian Polarised from Solstice Optics at $129.00, with a matte black colour and polarised lenses suited to driving.\nIt carries UV400 protection and ships with a 30-day return window.\nFit tip: The frame should sit securely without pressing at your temples or slipping down your nose.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Optics Meridian Polarised in matte black at $129.00 for driving, with polarised lenses and UV400 protection. It ships with a 30-day return window. Fit tip: Check your current frame\u2019s measurements to gauge a secure, comfortable fit.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Optics Meridian Polarised in matte black at $129.00 for driving, with polarised lenses and UV400 protection.\nIt ships with a 30-day return window.\nFit tip: Compare its measurements with your current frame to gauge a secure, comfortable fit.\n\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "Looking for lightweight frames for everyday wear.",
-            "draft": "Consider the Solstice Feather Ti from Solstice Optics in gunmetal at $215.00, a lightweight frame for everyday wear. The Solstice Aero Rim in silver costs $175.00 and offers another lightweight everyday choice. Both carry UV400 protection and ship with a 30-day return window. Fit tip: choose a frame width close to your current comfortable pair for secure, balanced everyday wear.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Feather Ti from Solstice Optics in gunmetal at $215.00, a lightweight frame for everyday wear.\nThe Solstice Aero Rim in silver costs $175.00 and offers another lightweight everyday choice.\nBoth carry UV400 protection and ship with a 30-day return window.\nFit tip: choose a frame width close to your current comfortable pair for secure, balanced everyday wear.\n\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Feather Ti in gunmetal at $215.00 for a lightweight, understated everyday frame.\nThe Solstice Aero Rim in silver costs $175.00 and offers another light-feeling choice with great value.\nBoth pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window.\nFit tip: Choose a frame width close to your current pair for a secure, comfortable fit throughout your day.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Feather Ti in gunmetal at $215.00 for a lightweight, understated everyday frame.\nThe Solstice Aero Rim in silver costs $175.00 and offers another light-feeling choice with great value.\nBoth pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window.\nFit tip: Choose a frame width close to your current pair for a secure, comfortable fit throughout your day.\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "Something for my wife's birthday, she likes classic styles.",
-            "draft": "Consider Solstice Optics\u2019 Rivera Cat-Eye in tortoiseshell at $189.00 for a classic, refined birthday gift.\nIt carries UV400 protection and ships with a 30-day return window.\nThe Lumen Round in rose gold at $149.00 offers a softer vintage-inspired alternative, also with UV400 protection and a 30-day return window.\nFit tip: Cat-eye frames often suit medium-width faces, while round frames can soften angular features.\nAsk us anything else about your eyewear.",
-            "final": "Consider Solstice Optics\u2019 Rivera Cat-Eye in tortoiseshell at $189.00 for a classic, refined birthday gift.\nIt carries UV400 protection and ships with a 30-day return window.\nThe Lumen Round in rose gold at $149.00 offers a softer vintage-inspired alternative, also with UV400 protection and a 30-day return window.\nFit tip: Cat-eye frames often suit medium-width faces, while round frames can soften angular features.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Optics Rivera Cat-Eye at $189.00, with a classic tortoiseshell colour and graceful vintage-inspired shape.\nThis eyewear carries UV400 protection and ships with a 30-day return window.\nFit tip: A cat-eye frame often suits medium-width faces and adds gentle lift at the temples.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Optics Rivera Cat-Eye at $189.00, with a classic tortoiseshell colour and graceful vintage-inspired shape.\nThis eyewear carries UV400 protection and ships with a 30-day return window.\nFit tip: A cat-eye frame often suits medium-width faces and adds gentle lift at the temples.\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "What do you have for cycling?",
-            "draft": "Consider the Solstice Optics Ridgeline Wrap in neon yellow for $159.00 or the Sprint Shield in black for $139.00. Both suit cycling, carry UV400 protection, and ship with a 30-day return window. Fit tip: Choose a secure, close fit that stays comfortable around your temples and beneath your helmet.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Optics Ridgeline Wrap in neon yellow for $159.00 or the Sprint Shield in black for $139.00.\nBoth suit cycling, carry UV400 protection, and ship with a 30-day return window.\nFit tip: Choose a secure, close fit that stays comfortable around your temples and beneath your helmet.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Ridgeline Wrap at $159.00 in neon yellow or the Solstice Sprint Shield at $139.00 in black for cycling. The Ridgeline Wrap offers vivid colour, while the Sprint Shield provides a more understated look and great value. Both pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window. Fit tip: Wrap and shield frames should sit securely without pinching at your temples or slipping when you lean forward.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Ridgeline Wrap at $159.00 in neon yellow or the Solstice Sprint Shield at $139.00 in black for cycling.\nThe Ridgeline Wrap offers vivid colour, while the Sprint Shield provides an understated look and great value.\nBoth pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window.\nFit tip: Wrap and shield frames should sit securely without pinching your temples or slipping when you lean forward.\n\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "I want the most affordable sunglasses you carry.",
-            "draft": "Consider the Solstice Basecamp in black at $39.00, the most affordable sunglasses from Solstice Optics. It carries UV400 protection and ships with a 30-day return window. Fit tip: check the frame measurements against a well-fitting pair you already own.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Basecamp in black at $39.00, the most affordable sunglasses from Solstice Optics. It carries UV400 protection and ships with a 30-day return window.\nFit tip: Check the frame measurements against a well-fitting pair you already own.\n\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Optics Basecamp in black at $39.00, our most affordable sunglasses and a great value. They carry UV400 protection and ship with a 30-day return window. Fit tip: compare your current frame width with the Basecamp\u2019s measurements before ordering.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Optics Basecamp in black at $39.00, our most affordable sunglasses and a great value.\nThey carry UV400 protection and ship with a 30-day return window.\nFit tip: You can compare your current frame width with the Basecamp\u2019s measurements before ordering.\n\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "Show me your premium designer frames.",
-            "draft": "Consider the Solstice x Aurelio Milano in havana at $640.00, a premium designer frame with rich acetate character.\nThe Solstice Atelier 01 in gold costs $720.00, offering a refined, elevated metal look.\nBoth pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window.\nFit tip: Choose Aurelio for a bolder profile, while Atelier 01 offers a lighter, more delicate appearance.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice x Aurelio Milano in havana at $640.00, a premium designer frame with rich acetate character.\nThe Solstice Atelier 01 in gold costs $720.00, offering a refined, elevated metal look.\nBoth pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window.\nFit tip: Choose Aurelio for a bolder profile, while Atelier 01 offers a lighter, more delicate appearance.\nAsk us anything else about your eyewear.",
+            "draft": "Consider premium designer frames from Solstice Optics: the Solstice x Aurelio Milano in havana at $640.00.\nThe Solstice Atelier One offers a gold colour at $720.00 for a refined, elevated look.\nEach carries UV400 protection and ships with a 30-day return window.\nFit tip: Compare your current frame\u2019s lens width and bridge measurements with the product dimensions before ordering.\nAsk us anything else about your eyewear.",
+            "final": "Consider premium designer frames from Solstice Optics: the Solstice x Aurelio Milano in havana at $640.00.\nThe Solstice Atelier One offers a gold colour at $720.00 for a refined, elevated look.\nEach carries UV400 protection and ships with a 30-day return window.\nFit tip: Compare your current frame\u2019s lens width and bridge measurements with the product dimensions before ordering.\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "Glasses for long days at a computer.",
-            "draft": "Consider the Solstice Optics Focus Blue in clear at $119.00 for long days working at a computer. The Screen Ease in grey is a great-value alternative at $99.00. Both pairs carry UV400 protection and ship with a 30-day return window. Fit tip: Choose a frame width similar to your current glasses for comfortable extended wear.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Optics Focus Blue in clear at $119.00 for long days working at a computer.\nThe Screen Ease in grey is a great value alternative at $99.00.\nBoth pairs carry UV400 protection and ship with a 30-day return window.\nFit tip: Choose a frame width similar to your current glasses for comfortable extended wear.\n\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Focus Blue in clear from Solstice Optics at $119.00 for long computer days and a clean, neutral colour. The Screen Ease in grey costs $99.00 and offers great value for everyday screen-focused wear. Both pairs carry UV400 protection. Both pairs ship with a 30-day return window. Fit tip: Choose a frame width close to your current well-fitting glasses for lasting comfort.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Focus Blue in clear from Solstice Optics at $119.00 for long computer days and a clean, neutral colour.\nThe Screen Ease in grey costs $99.00 and offers great value for everyday screen-focused wear.\nBoth pairs carry UV400 protection.\nBoth pairs ship with a 30-day return window.\nFit tip: Choose a frame width close to your current well-fitting glasses for lasting comfort.\n\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "Sunglasses for a beach holiday.",
-            "draft": "Consider Solstice Optics\u2019 Lagoon in aqua at $109.00 or Shoreline in white at $95.00 for your beach holiday.\nBoth pairs carry UV400 protection, offer great value, and each ships with a 30-day return window.\nFit tip: compare the frame width with sunglasses you already wear comfortably before choosing.\nAsk us anything else about your eyewear.",
-            "final": "Consider Solstice Optics\u2019 Lagoon in aqua at $109.00 or Shoreline in white at $95.00 for your beach holiday.\nBoth pairs carry UV400 protection, offer great value, and each ships with a 30-day return window.\nFit tip: compare the frame width with sunglasses you already wear comfortably before choosing.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Lagoon in aqua at $109.00 or Solstice Shoreline in white at $95.00 for your beach holiday. Both pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window. Fit tip: choose the frame width closest to a pair you already wear comfortably.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Lagoon in aqua at $109.00 or Solstice Shoreline in white at $95.00 for your beach holiday.\nBoth pairs from Solstice Optics carry UV400 protection and ship with a 30-day return window.\nFit tip: choose the frame width closest to a pair you already wear comfortably.\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "My nose bridge is low and frames slide down. Any suggestions?",
-            "draft": "Consider the Kestrel Alt-Fit in matte navy at $165.00 or Haven Alt-Fit in black at $145.00 from Solstice Optics. Both alternative-fit frames are designed to help you reduce sliding on a low nose bridge. Each frame carries UV400 protection and ships with a 30-day return window. Fit tip: An alternative-fit bridge should sit securely on your nose without pinching or resting on your cheeks.\n\nAsk us anything else about your eyewear.",
-            "final": "Consider the Kestrel Alt-Fit in matte navy at $165.00 or Haven Alt-Fit in black at $145.00 from Solstice Optics. Both alternative-fit frames are designed to help you reduce sliding on a low nose bridge. Each frame carries UV400 protection and ships with a 30-day return window.\nFit tip: Choose an alternative-fit bridge that sits securely on your nose without pinching or resting on your cheeks.\n\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Optics Kestrel Alt-Fit in matte navy at $165.00 or Haven Alt-Fit in black at $145.00.\nBoth Alt-Fit frames suit lower nose bridges, carry UV400 protection, and ship with a 30-day return window.\nFit tip: Alt-Fit nose support can help your frames sit higher and reduce sliding.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Optics Kestrel Alt-Fit in matte navy at $165.00 or Haven Alt-Fit in black at $145.00.\nBoth Alt-Fit frames suit lower nose bridges, carry UV400 protection, and ship with a 30-day return window.\nFit tip: Alt-Fit nose support can help your frames sit higher and reduce sliding.\n\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "I have low vision \u2014 do you carry anything high contrast?",
-            "draft": "Consider the Solstice Contrast Pro in copper at $199.00 from Solstice Optics for a high-contrast tint.\nThe Clarity Amber at $179.00 provides an amber alternative, and both pairs carry UV400 protection.\nEach pair ships with a 30-day return window, giving you time to assess contrast and comfort in your usual settings.\nFit tip: choose a frame sitting close without touching your cheeks, while keeping your full field of view unobstructed.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Contrast Pro in copper at $199.00 from Solstice Optics for a high-contrast tint.\nThe Clarity Amber at $179.00 provides an amber alternative, and both pairs carry UV400 protection.\nEach pair ships with a 30-day return window, giving you time to assess contrast and comfort in your usual settings.\nFit tip: choose a frame sitting close without touching your cheeks, while keeping your full field of view unobstructed.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Optics Contrast Pro in copper at $199.00 for stronger visual contrast in varied lighting. The Clarity Amber at $179.00 provides an amber-coloured alternative for high-contrast viewing. Both pairs carry UV400 protection and ship with a 30-day return window. Fit tip: choose a frame width close to your current well-fitting glasses for comfortable coverage.\n\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Optics Contrast Pro in copper at $199.00 for stronger visual contrast in varied lighting.\nThe Clarity Amber at $179.00 provides an amber-coloured alternative for high-contrast viewing.\nBoth pairs carry UV400 protection and ship with a 30-day return window.\nFit tip: choose a frame width close to your current well-fitting glasses for comfortable coverage.\n\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "Which frames suit a round face?",
-            "draft": "Consider the Solstice Angular D-Frame in black at $155.00; its angular shape adds definition and contrast to a round face. The Solstice Square Line in tortoiseshell at $135.00 also brings balanced, structured lines and warm colour. Both carry UV400 protection and ship from Solstice Optics with a 30-day return window. Fit tip: Choose a frame slightly wider than your cheekbones to create balanced proportions.\nAsk us anything else about your eyewear.",
-            "final": "Consider the Solstice Angular D-Frame in black at $155.00; its angular shape adds definition and contrast to a round face.\nThe Solstice Square Line in tortoiseshell at $135.00 also brings balanced, structured lines and warm colour.\nBoth carry UV400 protection and ship from Solstice Optics with a 30-day return window.\nFit tip: Choose a frame slightly wider than your cheekbones to create balanced proportions.\nAsk us anything else about your eyewear.",
+            "draft": "Consider the Solstice Angular D-Frame in black for $155.00, as its angular shape adds definition to a round face.\nThe Solstice Square Line in tortoiseshell costs $135.00 and offers similarly balancing square contours with a warmer colour.\nAt Solstice Optics, both carry UV400 protection and ship with a 30-day return window.\nFit tip: Choose frames slightly wider than your cheekbones to create balanced proportions.\nAsk us anything else about your eyewear.",
+            "final": "Consider the Solstice Angular D-Frame in black for $155.00, as its angular shape adds definition to a round face.\nThe Solstice Square Line in tortoiseshell costs $135.00 and offers similarly balancing square contours with a warmer colour.\nAt Solstice Optics, both carry UV400 protection and ship with a 30-day return window.\nFit tip: Choose frames slightly wider than your cheekbones to create balanced proportions.\nAsk us anything else about your eyewear.",
             "violations": []
           },
           {
             "query": "Do you have anything on sale right now?",
-            "draft": "Consider our current prices: the sand Solstice Dune is $45.00, while the grey Solstice Cove Driver is $89.00.\nSolstice Optics has not marked either pair as on sale in the supplied listing.\nBoth pairs carry UV400 protection and ship with a 30-day return window.\nFit tip: compare your current frame width with the listed measurements to gauge a comfortable fit.\nAsk us anything else about your eyewear.",
-            "final": "Consider our current prices: the sand Solstice Dune is $45.00, while the grey Solstice Cove Driver is $89.00.\nSolstice Optics has not marked either pair as on sale in the supplied listing.\nBoth pairs carry UV400 protection and ship with a 30-day return window.\nFit tip: compare your current frame width with the listed measurements to gauge a comfortable fit.\nAsk us anything else about your eyewear.",
+            "draft": "Consider these Solstice Optics sale picks: Dune in sand at $45.00 and Cove Driver in grey at $89.00, both with UV400 protection. Each ships with a 30-day return window. Fit tip: Compare frame measurements with a well-fitting pair you already own.\nAsk us anything else about your eyewear.",
+            "final": "Consider these Solstice Optics sale picks: Dune in sand at $45.00 and Cove Driver in grey at $89.00, both with UV400 protection.\nEach ships with a 30-day return window.\nFit tip: Compare each frame\u2019s measurements with a well-fitting pair you already own.\nAsk us anything else about your eyewear.",
             "violations": []
           }
         ]
@@ -1447,10 +1412,10 @@
     },
     "google:gemini-2.5-flash": {
       "single@24": {
-        "rule_compliance": 0.9466,
+        "rule_compliance": 0.9504,
         "core4_compliance": 1.0,
         "fully_compliant_replies": 0.0,
-        "checked_rule_instances": 281,
+        "checked_rule_instances": 282,
         "per_rule": {
           "R01_sentence_count": {
             "ok": 12,
@@ -1503,14 +1468,14 @@
             "na": 0
           },
           "R11_no_medical_claims": {
-            "ok": 11,
-            "bad": 1,
+            "ok": 12,
+            "bad": 0,
             "na": 0
           },
           "R12_british_spelling": {
-            "ok": 5,
+            "ok": 6,
             "bad": 0,
-            "na": 7
+            "na": 6
           },
           "R13_no_filler_opener": {
             "ok": 12,
@@ -1576,17 +1541,18 @@
         "stats": {
           "calls": 12,
           "in_tok": 8795,
-          "out_tok": 1302,
+          "out_tok": 1285,
           "cached_tok": 0,
           "errors": 0,
-          "wall_s": 16.8
+          "wall_s": 21.4
         },
         "calls_per_reply": 1.0,
+        "audit_quality": null,
         "samples": [
           {
             "query": "I need polarized sunglasses for driving.",
-            "draft": "Consider the Solstice Meridian Polarised sunglasses in matte black for your driving needs. They offer UV400 protection and cost $129.00. The Solstice Cove Driver in grey is another great value choice at $89.00. Both Solstice Optics pairs are polarised to reduce glare and ship with a 30-day return window. Fit tip: Ensure the frames sit comfortably on your nose bridge without slipping. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Meridian Polarised sunglasses in matte black for your driving needs. They offer UV400 protection and cost $129.00. The Solstice Cove Driver in grey is another great value choice at $89.00. Both Solstice Optics pairs are polarised to reduce glare and ship with a 30-day return window. Fit tip: Ensure the frames sit comfortably on your nose bridge without slipping. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Meridian Polarised sunglasses for your driving needs. They offer UV400 protection and cost $129.00. This matte black pair ships with a 30-day return window from Solstice Optics. The Solstice Cove Driver in grey is also great value at $89.00, providing polarised lenses and UV400 protection with a 30-day return window. Fit tip: Ensure the frame width matches your face for optimal comfort. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Meridian Polarised sunglasses for your driving needs. They offer UV400 protection and cost $129.00. This matte black pair ships with a 30-day return window from Solstice Optics. The Solstice Cove Driver in grey is also great value at $89.00, providing polarised lenses and UV400 protection with a 30-day return window. Fit tip: Ensure the frame width matches your face for optimal comfort. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
@@ -1610,8 +1576,8 @@
           },
           {
             "query": "What do you have for cycling?",
-            "draft": "Consider the Solstice Ridgeline Wrap in neon yellow for $159.00, carrying UV400 protection. We also offer the Solstice Sprint Shield in black, priced at $139.00, with the same UV400 protection. Both cycling eyewear styles ship with a 30-day return window for your peace of mind. Fit tip: Wrap-around frames like these provide excellent peripheral vision. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Ridgeline Wrap in neon yellow for $159.00, carrying UV400 protection. We also offer the Solstice Sprint Shield in black, priced at $139.00, with the same UV400 protection. Both cycling eyewear styles ship with a 30-day return window for your peace of mind. Fit tip: Wrap-around frames like these provide excellent peripheral vision. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Ridgeline Wrap at $159.00 or the Sprint Shield at $139.00 for your cycling. Both models offer UV400 protection and ship with a 30-day return window. Fit tip: Wrap-around styles like these provide excellent peripheral vision. These frames offer great value for your active pursuits. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Ridgeline Wrap at $159.00 or the Sprint Shield at $139.00 for your cycling. Both models offer UV400 protection and ship with a 30-day return window. Fit tip: Wrap-around styles like these provide excellent peripheral vision. These frames offer great value for your active pursuits. Ask us anything else about your eyewear.",
             "violations": [
               "R15_brand_once",
               "R16_fit_tip"
@@ -1627,8 +1593,8 @@
           },
           {
             "query": "Show me your premium designer frames.",
-            "draft": "Consider the Solstice x Aurelio Milano frames in havana, priced at $640.00, or the Solstice Atelier 01 in gold for $720.00. Both designer frames from Solstice Optics carry UV400 protection and ship with a 30-day return window. Fit tip: Ensure the frame width complements your face for the most comfortable wear. These premium selections offer exceptional quality and design for you. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice x Aurelio Milano frames in havana, priced at $640.00, or the Solstice Atelier 01 in gold for $720.00. Both designer frames from Solstice Optics carry UV400 protection and ship with a 30-day return window. Fit tip: Ensure the frame width complements your face for the most comfortable wear. These premium selections offer exceptional quality and design for you. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice x Aurelio Milano frames from Solstice Optics, priced at $640.00. These havana frames carry UV400 protection and ship with a 30-day return window for you. Fit tip: Ensure the frame width matches your face for optimal comfort. We also offer the Solstice Atelier 01 in a gold colour for $720.00. Both premium designs provide exceptional quality and come with UV400 protection. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice x Aurelio Milano frames from Solstice Optics, priced at $640.00. These havana frames carry UV400 protection and ship with a 30-day return window for you. Fit tip: Ensure the frame width matches your face for optimal comfort. We also offer the Solstice Atelier 01 in a gold colour for $720.00. Both premium designs provide exceptional quality and come with UV400 protection. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
@@ -1654,7 +1620,6 @@
             "draft": "Consider Solstice Optics' Alt-Fit frames, designed for a lower nose bridge. The Solstice Kestrel Alt-Fit in matte navy costs $165.00 and ships with a 30-day return window and UV400 protection. You might also like the Solstice Haven Alt-Fit in black for $145.00, offering great value and UV400 protection. Fit tip: Alt-Fit frames feature a built-up nose pad to prevent sliding. Both frames include a 30-day return window for your peace of mind. Ask us anything else about your eyewear.",
             "final": "Consider Solstice Optics' Alt-Fit frames, designed for a lower nose bridge. The Solstice Kestrel Alt-Fit in matte navy costs $165.00 and ships with a 30-day return window and UV400 protection. You might also like the Solstice Haven Alt-Fit in black for $145.00, offering great value and UV400 protection. Fit tip: Alt-Fit frames feature a built-up nose pad to prevent sliding. Both frames include a 30-day return window for your peace of mind. Ask us anything else about your eyewear.",
             "violations": [
-              "R11_no_medical_claims",
               "R16_fit_tip"
             ]
           },
@@ -1676,8 +1641,8 @@
           },
           {
             "query": "Do you have anything on sale right now?",
-            "draft": "Consider the Solstice Dune eyewear in sand, available for $45.00. We also have the Solstice Cove Driver in grey for $89.00, offering great value with UV400 protection. Every pair of Solstice Optics eyewear ships with a 30-day return window for your peace of mind. Fit tip: Ensure the frame width matches your face for a comfortable fit. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Dune eyewear in sand, available for $45.00. We also have the Solstice Cove Driver in grey for $89.00, offering great value with UV400 protection. Every pair of Solstice Optics eyewear ships with a 30-day return window for your peace of mind. Fit tip: Ensure the frame width matches your face for a comfortable fit. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Dune eyewear from Solstice Optics for $45.00. This sand colour frame offers UV400 protection. We also have the Solstice Cove Driver in grey for $89.00. Both pairs ship with a 30-day return window. Fit tip: Ensure the frame width suits your face for comfort. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Dune eyewear from Solstice Optics for $45.00. This sand colour frame offers UV400 protection. We also have the Solstice Cove Driver in grey for $89.00. Both pairs ship with a 30-day return window. Fit tip: Ensure the frame width suits your face for comfort. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
@@ -1685,10 +1650,10 @@
         ]
       },
       "checker_repair@24": {
-        "rule_compliance": 0.9502,
+        "rule_compliance": 0.9571,
         "core4_compliance": 1.0,
         "fully_compliant_replies": 0.0,
-        "checked_rule_instances": 281,
+        "checked_rule_instances": 280,
         "per_rule": {
           "R01_sentence_count": {
             "ok": 12,
@@ -1741,14 +1706,14 @@
             "na": 0
           },
           "R11_no_medical_claims": {
-            "ok": 10,
-            "bad": 2,
+            "ok": 12,
+            "bad": 0,
             "na": 0
           },
           "R12_british_spelling": {
-            "ok": 5,
+            "ok": 4,
             "bad": 0,
-            "na": 7
+            "na": 8
           },
           "R13_no_filler_opener": {
             "ok": 12,
@@ -1813,18 +1778,19 @@
         },
         "stats": {
           "calls": 24,
-          "in_tok": 19137,
-          "out_tok": 2524,
+          "in_tok": 19120,
+          "out_tok": 2544,
           "cached_tok": 0,
           "errors": 0,
-          "wall_s": 55.2
+          "wall_s": 53.0
         },
         "calls_per_reply": 2.0,
+        "audit_quality": null,
         "samples": [
           {
             "query": "I need polarized sunglasses for driving.",
-            "draft": "Consider the Solstice Meridian Polarised sunglasses in matte black for your driving needs. They offer UV400 protection and cost $129.00. The Solstice Cove Driver in grey is another great value choice at $89.00. Both Solstice Optics pairs are polarised to reduce glare and ship with a 30-day return window. Fit tip: Ensure the frames sit comfortably on your nose bridge without slipping. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Meridian Polarised sunglasses in matte black for your driving needs. They offer UV400 protection and cost $129.00. The Solstice Cove Driver in grey is another great value choice at $89.00. Both Solstice Optics pairs are polarised to reduce glare and ship with a 30-day return window. Fit tip: The frame should not feel too tight on your temples. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Meridian Polarised sunglasses for your driving needs. They offer UV400 protection and cost $129.00. This matte black pair ships with a 30-day return window from Solstice Optics. The Solstice Cove Driver in grey is also great value at $89.00, providing polarised lenses and UV400 protection with a 30-day return window. Fit tip: Ensure the frame width matches your face for optimal comfort. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Meridian Polarised sunglasses for your driving needs. This matte black pair costs $129.00, offers UV400 protection, and ships with a 30-day return window from Solstice Optics. The Solstice Cove Driver in grey is great value at $89.00. It also provides polarised lenses, UV400 protection, and a 30-day return window. Fit tip: Consider your face width when choosing frame size. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
@@ -1840,7 +1806,7 @@
           {
             "query": "Something for my wife's birthday, she likes classic styles.",
             "draft": "Consider the Solstice Rivera Cat-Eye for a classic look. These tortoiseshell frames are priced at $189.00 and offer UV400 protection. We offer every pair with a 30-day return window for your peace of mind. Fit tip: Cat-eye frames often suit heart-shaped or square faces well. The Solstice Lumen Round in rose gold is another classic choice at $149.00. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Optics Rivera Cat-Eye for a classic look. These tortoiseshell frames are priced at $189.00 and offer UV400 protection. Fit tip: Cat-eye frames often suit heart-shaped or square faces well. We offer every pair with a 30-day return window for your peace of mind. The Lumen Round in rose gold is another classic choice at $149.00. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Optics Rivera Cat-Eye for a classic look. These tortoiseshell frames are priced at $189.00 and offer UV400 protection. Every pair ships with a 30-day return window for your peace of mind. Fit tip: Cat-eye frames often suit heart-shaped or square faces well. The Lumen Round in rose gold is another classic choice at $149.00. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
@@ -1848,7 +1814,7 @@
           {
             "query": "What do you have for cycling?",
             "draft": "Consider the Solstice Ridgeline Wrap in neon yellow for $159.00, carrying UV400 protection. We also offer the Solstice Sprint Shield in black, priced at $139.00, with the same UV400 protection. Both cycling eyewear styles ship with a 30-day return window for your peace of mind. Fit tip: Wrap-around frames like these provide excellent peripheral vision. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Optics Ridgeline Wrap in neon yellow for $159.00, carrying UV400 protection. We also offer the Sprint Shield in black, priced at $139.00, with the same UV400 protection. Both cycling eyewear styles ship with a 30-day return window for your peace of mind. Fit tip: These wrap-around frames offer a secure fit to stay in place during activity. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Ridgeline Wrap in neon yellow for $159.00, carrying UV400 protection. Solstice Optics also offers the Sprint Shield in black, priced at $139.00, with the same UV400 protection. Both eyewear styles ship with a 30-day return window for your peace of mind. Fit tip: A snug fit helps keep eyewear stable during activity. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
@@ -1856,7 +1822,7 @@
           {
             "query": "I want the most affordable sunglasses you carry.",
             "draft": "Consider the Solstice Basecamp sunglasses from Solstice Optics. They offer great value at just $39.00. These black sunglasses provide UV400 protection for your eyes. Every pair ships with a 30-day return window. Fit tip: Ensure the frame width matches your face for comfort. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Basecamp sunglasses from Solstice Optics. They offer great value at just $39.00. These black sunglasses provide UV400 protection for your eyes. Every pair ships with a 30-day return window. Fit tip: Ensure the frame width matches your face. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Basecamp sunglasses from Solstice Optics. They offer great value at just $39.00. These black sunglasses provide UV400 protection for your eyes. Every pair ships with a 30-day return window. Fit tip: A snug bridge fit helps keep your sunglasses in place. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
@@ -1864,49 +1830,47 @@
           {
             "query": "Show me your premium designer frames.",
             "draft": "Consider the Solstice x Aurelio Milano frames from Solstice Optics, priced at $640.00. These havana frames carry UV400 protection and ship with a 30-day return window for you. Fit tip: Ensure the frame width matches your face for optimal comfort. We also offer the Solstice Atelier 01 in a gold colour for $720.00. Both premium designs provide exceptional quality and come with UV400 protection. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice x Aurelio Milano frames from Solstice Optics, priced at $640.00. These havana frames carry UV400 protection and ship with a 30-day return window for you. Fit tip: A snug bridge fit prevents frames from slipping. We also offer the Solstice Atelier 01 in a gold colour for $720.00. Both premium designs provide exceptional quality and come with UV400 protection. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice x Aurelio Milano frames from Solstice Optics, priced at $640.00. These havana frames carry UV400 protection and ship with a 30-day return window for you. Fit tip: Frame width is key for your comfort. We also offer the Solstice Atelier 01 in a gold colour for $720.00, which ships with a 30-day return window. Both premium designs provide exceptional quality and come with UV400 protection. Ask us anything else about your eyewear.",
             "violations": [
-              "R11_no_medical_claims",
               "R16_fit_tip"
             ]
           },
           {
             "query": "Glasses for long days at a computer.",
             "draft": "Consider the Solstice Focus Blue or Solstice Screen Ease eyewear from Solstice Optics for your computer use. The Focus Blue, priced at $119.00, offers clear lenses with UV400 protection. The Screen Ease provides great value at $99.00 and comes in a grey colour. Both pairs ship with a 30-day return window for your peace of mind. Fit tip: Ensure the frame width matches your face for optimal comfort. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Focus Blue or Solstice Screen Ease eyewear from Solstice Optics for your computer use. The Focus Blue, priced at $119.00, offers clear lenses with UV400 protection. The Screen Ease provides great value at $99.00 and comes in a grey colour. Both pairs ship with a 30-day return window for your peace of mind. Fit tip: A wider frame may suit a broader face. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Focus Blue or Solstice Screen Ease eyewear from Solstice Optics for your computer use. The Focus Blue, priced at $119.00, offers clear lenses with UV400 protection. The Screen Ease provides great value at $99.00 and comes in a grey colour. Both pairs ship with a 30-day return window for your peace of mind. Fit tip: Ensure the frame width suits your face for comfort. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "Sunglasses for a beach holiday.",
-            "draft": "Consider the Solstice Lagoon or Solstice Shoreline from Solstice Optics for your beach holiday. Both pairs offer UV400 protection and come in colours like aqua or white. The Solstice Lagoon is $109.00, and the Shoreline is $95.00, both with a 30-day return window. Fit tip: Ensure the frame width matches your face for comfort. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Lagoon or Solstice Shoreline from Solstice Optics for your beach holiday. Both pairs offer UV400 protection and come in colours like aqua or white. The Solstice Lagoon is $109.00, and the Shoreline is $95.00, both with a 30-day return window. Fit tip: The frame width should match your face for comfort. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Lagoon sunglasses from Solstice Optics, available in aqua for $109.00. These sunglasses carry UV400 protection and ship with a 30-day return window. You might also like the Solstice Shoreline in white, priced at $95.00, which is a great value. Fit tip: Ensure the frame width matches your face for optimal comfort. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Lagoon sunglasses from Solstice Optics, available in aqua for $109.00. These sunglasses carry UV400 protection and ship with a 30-day return window. You might also like the Solstice Shoreline in white, priced at $95.00, which is a great value. Fit tip: A snug fit helps keep your eyewear secure during activities. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "My nose bridge is low and frames slide down. Any suggestions?",
-            "draft": "Consider Solstice Optics' Alt-Fit frames, designed for a lower nose bridge. The Solstice Kestrel Alt-Fit in matte navy costs $165.00 and ships with a 30-day return window and UV400 protection. You might also like the Solstice Haven Alt-Fit in black for $145.00, offering great value and UV400 protection. Fit tip: Alt-Fit frames feature a built-up nose pad to prevent sliding. Both frames include a 30-day return window for your peace of mind. Ask us anything else about your eyewear.",
-            "final": "Consider Solstice Optics' Alt-Fit frames, designed for a lower nose bridge. The Solstice Kestrel Alt-Fit in matte navy costs $165.00 and ships with a 30-day return window and UV400 protection. You might also like the Solstice Haven Alt-Fit in black for $145.00, offering great value and UV400 protection. Fit tip: A built-up nose pad helps prevent sliding. Both frames include a 30-day return window. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Kestrel Alt-Fit or Solstice Haven Alt-Fit from Solstice Optics. These frames feature a customised fit for you, ensuring they stay comfortably in place and carry UV400 protection. The Kestrel Alt-Fit is available in matte navy for $165.00, and the Haven Alt-Fit comes in black for $145.00. Both eyewear styles ship with a 30-day return window for your peace of mind. Fit tip: Ensure the nose pads rest flush against your nose bridge for optimal support. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Kestrel Alt-Fit or Solstice Haven Alt-Fit from Solstice Optics. These frames feature a customised fit for you, ensuring they stay comfortably in place and carry UV400 protection. The Kestrel Alt-Fit is available in matte navy for $165.00, and the Haven Alt-Fit comes in black for $145.00. Both eyewear styles ship with a 30-day return window for your peace of mind. Fit tip: A secure fit helps prevent frames from sliding. Ask us anything else about your eyewear.",
             "violations": [
-              "R11_no_medical_claims",
               "R16_fit_tip"
             ]
           },
           {
             "query": "I have low vision \u2014 do you carry anything high contrast?",
             "draft": "Consider the Solstice Clarity Amber eyewear for you, designed for enhanced contrast. Solstice Optics offers these amber lenses for $179.00, carrying UV400 protection. We also have the Contrast Pro with copper lenses available for $199.00. Both products ship with a 30-day return window. Fit tip: Ensure the frame width matches your face for comfort. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Clarity Amber eyewear for you, designed for enhanced contrast. Solstice Optics offers these amber lenses for $179.00, carrying UV400 protection. We also have the Contrast Pro with copper lenses available for $199.00. Both products ship with a 30-day return window. Fit tip: Consider the frame width to ensure a comfortable fit. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Clarity Amber eyewear for you, designed for enhanced contrast. Solstice Optics offers these amber lenses for $179.00, carrying UV400 protection. We also have the Contrast Pro with copper lenses available for $199.00. Both products ship with a 30-day return window. Fit tip: A proper frame width ensures a comfortable wearing experience. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]
           },
           {
             "query": "Which frames suit a round face?",
-            "draft": "Consider the Solstice Angular D-Frame in black for your round face. These frames cost $155.00 and carry UV400 protection, shipping with a 30-day return window. You might also like the Solstice Square Line in tortoiseshell, priced at $135.00. Fit tip: Angular frames add definition and balance to rounder facial features. This eyewear also includes UV400 protection and a 30-day return window. Ask us anything else about your eyewear.",
-            "final": "Consider the Solstice Optics Angular D-Frame in black for your round face. These frames cost $155.00 and carry UV400 protection, shipping with a 30-day return window. You might also like the Square Line in tortoiseshell, priced at $135.00. Fit tip: Angular frames like the D-Frame add definition to rounder facial features. This eyewear also includes UV400 protection and a 30-day return window. Ask us anything else about your eyewear.",
+            "draft": "Consider the Solstice Angular D-Frame or the Solstice Square Line from Solstice Optics. The black Angular D-Frame costs $155.00, and the tortoiseshell Square Line is $135.00. Both frames carry UV400 protection for your eyes. Each pair ships with a 30-day return window for your peace of mind. Fit tip: Angular frames add definition and balance to a rounder face shape. Ask us anything else about your eyewear.",
+            "final": "Consider the Solstice Angular D-Frame or the Solstice Square Line from Solstice Optics. The black Angular D-Frame costs $155.00, and the tortoiseshell Square Line is $135.00. Both frames carry UV400 protection for your eyes. Each pair ships with a 30-day return window for your peace of mind. Fit tip: The Solstice Angular D-Frame and Solstice Square Line add definition and balance to a rounder face shape. Ask us anything else about your eyewear.",
             "violations": [
               "R16_fit_tip"
             ]

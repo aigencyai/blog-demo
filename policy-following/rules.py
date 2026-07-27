@@ -56,9 +56,12 @@ RULES = [
      "Never mention a competing retailer by name.",
      lambda t: not any(c in t.lower() for c in COMPETITORS)),
 
+    # Accepts the spelled-out form: a reply saying "a thirty-day return window"
+    # states the required fact exactly as plainly as "30-day" does, and the rule
+    # asks the model to state a fact, not to pick a numeral.
     ("R07_returns_window",
      "Whenever you recommend a product, state that it ships with a 30-day return window.",
-     lambda t: bool(re.search(r'30[-\s]day', t, re.I))),
+     lambda t: bool(re.search(r'(30|thirty)[-\s]day', t, re.I))),
 
     ("R08_no_exclamation",
      "Never use an exclamation mark.",
@@ -75,10 +78,17 @@ RULES = [
      'State that the eyewear carries "UV400 protection".',
      lambda t: "uv400" in t.lower().replace(" ", "")),
 
+    # A blanket ban on these verbs is wrong: "nose pads that prevent slipping" is
+    # not a medical claim, and flagging it penalised a compliant reply. The verb
+    # now has to be aimed at something medical, within a short window.
     ("R11_no_medical_claims",
      "Never say eyewear can cure, treat, prevent or heal any medical condition.",
-     lambda t: not re.search(r'\b(cure|cures|treat|treats|prevent|prevents|heal|heals)\b',
-                             t, re.I)),
+     lambda t: not re.search(
+         r'\b(cure|cures|treat|treats|prevent|prevents|heal|heals)\b'
+         r'(?:\W+\w+){0,4}?\W+'
+         r'(condition|disease|symptom|symptoms|illness|ailment|strain|headache|headaches|'
+         r'migraine|migraines|myopia|astigmatism|cataract|cataracts|glaucoma|dry eye|'
+         r'eye damage|retinal|vision loss|blindness|fatigue)', t, re.I)),
 
     ("R12_british_spelling",
      'Use British spelling throughout: "colour", "grey", "customise".',
