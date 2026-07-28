@@ -29,6 +29,27 @@ def _body(text):
     return text.replace(CLOSING, " ")
 
 
+# Two things a naive keyword ban gets wrong, both of which flag compliant replies:
+# the verb may be aimed at something that is not a medical condition ("prevent
+# slipping"), and it may be negated ("they do not treat any vision condition").
+# A claim only counts when the verb targets something medical AND is not negated.
+_MEDICAL = (r'(condition|conditions|disease|symptom|symptoms|illness|ailment|strain|'
+            r'headache|headaches|migraine|migraines|myopia|astigmatism|cataract|'
+            r'cataracts|glaucoma|dry eye|eye damage|retinal|vision loss|blindness|fatigue)')
+_CLAIM = re.compile(r'\b(cure|cures|treat|treats|prevent|prevents|heal|heals)\b'
+                    r'(?:\W+\w+){0,4}?\W+' + _MEDICAL, re.I)
+_NEG = re.compile(r"(\bnot\b|n't|\bnever\b|\bcannot\b|\bno\b|\bnothing\b|\bnone\b|"
+                  r"\bneither\b|\bnor\b|\bunable\b|\bwithout\b|\bdon'?t\b|\bdoes\s?n'?t\b|"
+                  r"rather than|instead of)\W+(\w+\W+){0,6}$", re.I)
+
+
+def _medical_claim(text):
+    for m in _CLAIM.finditer(text):
+        if not _NEG.search(text[:m.start()]):
+            return True
+    return False
+
+
 RULES = [
     ("R01_sentence_count",
      "Your reply must be between 3 and 5 sentences long, not counting the closing line.",
@@ -78,17 +99,9 @@ RULES = [
      'State that the eyewear carries "UV400 protection".',
      lambda t: "uv400" in t.lower().replace(" ", "")),
 
-    # A blanket ban on these verbs is wrong: "nose pads that prevent slipping" is
-    # not a medical claim, and flagging it penalised a compliant reply. The verb
-    # now has to be aimed at something medical, within a short window.
     ("R11_no_medical_claims",
      "Never say eyewear can cure, treat, prevent or heal any medical condition.",
-     lambda t: not re.search(
-         r'\b(cure|cures|treat|treats|prevent|prevents|heal|heals)\b'
-         r'(?:\W+\w+){0,4}?\W+'
-         r'(condition|disease|symptom|symptoms|illness|ailment|strain|headache|headaches|'
-         r'migraine|migraines|myopia|astigmatism|cataract|cataracts|glaucoma|dry eye|'
-         r'eye damage|retinal|vision loss|blindness|fatigue)', t, re.I)),
+     lambda t: not _medical_claim(t)),
 
     ("R12_british_spelling",
      'Use British spelling throughout: "colour", "grey", "customise".',

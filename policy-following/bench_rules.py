@@ -91,11 +91,14 @@ def _audit_vs_checker(drafts, flagged, rids):
     repair pass is never told about, so it survives to the final reply.
     """
     tp = fp = fn = 0
+    detail = []
     for draft, flag in zip(drafts, flagged):
         real = {k for k, v in check_all(draft, rids).items() if v is False}
         got = set(flag)
         tp += len(real & got); fp += len(got - real); fn += len(real - got)
-    return {"auditor_caught": tp, "auditor_missed": fn, "auditor_false_alarms": fp,
+        detail.append({"real_violations": sorted(real), "auditor_flagged": sorted(got)})
+    return {"per_reply": detail,
+            "auditor_caught": tp, "auditor_missed": fn, "auditor_false_alarms": fp,
             "auditor_recall": round(tp / (tp + fn), 4) if tp + fn else None,
             "auditor_precision": round(tp / (tp + fp), 4) if tp + fp else None}
 
@@ -136,6 +139,24 @@ async def run_arm(prov, arm, rids, scenarios, concurrency):
         audit_quality = _audit_vs_checker(texts, viols, rids)
         reps = await gather_limited([
             repair(prov, rids, s, t, v) for s, t, v in zip(scenarios, texts, viols)],
+            concurrency)
+        for _, r in reps:
+            acc(r)
+        finals = [t for t, _ in reps]
+    elif arm == "self_check":
+        # The distinction from audit_repair: the draft is placed in the ASSISTANT
+        # role and the model is asked to check "that reply" — it is reviewing its
+        # own turn, not an anonymous block of text handed to a fresh call.
+        audits = await gather_limited([
+            prov.call(gen_system(rids), user_turn(*s_), AUDIT_SCHEMA, True, assistant_draft=t)
+            for s_, t in zip(scenarios, texts)], concurrency)
+        for r in audits:
+            acc(r)
+        viols = [[v for v in ((a.data or {}).get("violated_rule_ids") or []) if v in rids]
+                 if isinstance(a.data, dict) else [] for a in audits]
+        audit_quality = _audit_vs_checker(texts, viols, rids)
+        reps = await gather_limited([
+            repair(prov, rids, s_, t, v) for s_, t, v in zip(scenarios, texts, viols)],
             concurrency)
         for _, r in reps:
             acc(r)

@@ -70,7 +70,8 @@ conditions) survives a single prompt, across four models and four hosted APIs.
 | `bench_gating.py` | Gating strategies: one prompt (free list / forced boolean), sharded, one-call-per-policy, contrastive |
 | `bench_scaling.py` | Policy-count scaling (25→100) and position sensitivity within the list |
 | `bench_hard.py` | The hard tier under the same gating strategies |
-| `bench_rules.py` | Response-rule compliance as rule count grows, plus self-audit / checker-repair / checker-loop arms |
+| `bench_rules.py` | Response-rule compliance as rule count grows, plus `self_check` (model reviews its own turn), `audit_repair`, `split_audit`, `checker_repair`, `checker_loop` |
+| `rescore_rules.py` | Re-scores stored replies against current checkers with no new API calls |
 | `bench_retrieval_gate.py` | Embedding prefilter over the policy list — recall ceiling vs LLM calls saved |
 | `bench_judge.py` | Is LLM-as-judge reliable? Independent-judge recall vs self-audit, inter-judge and self-consistency agreement on uncheckable semantic rules |
 | `verify_policy.py` | Recomputes every headline number from the result JSON; exits non-zero on drift |
@@ -88,8 +89,10 @@ conditions) survives a single prompt, across four models and four hosted APIs.
 - 24 response rules: per-rule compliance stays **93–98%**, but essentially **0 of 12** replies satisfied
   every rule at once for 3 of 4 models from 16 rules on — until a code checker + repair loop reached **100%**
   for opus and gpt-5.6-sol (and still 0% for haiku/gemini-flash, which can't execute the repair).
-- Self-audit recall on real violations: **0.00–0.46**. An independent judge: **0.66–0.71**. Code
-  checking a verifiable property: **1.00**.
+- Asked to review its OWN turn (draft in the assistant role), a model caught **0.00–0.07** of its
+  real violations — and every model did *worse* on its own text than on identical text handed to a
+  fresh call (0.00–0.22). An independent judge reaches **0.66–0.71**; code reaches **1.00**.
+- Auditor flagged-sets are persisted per reply, so every recall figure recomputes from the JSON.
 - Two of our own checkers were wrong and were corrected (accepting "thirty-day" for a 30-day window;
   not treating "prevent slipping" as a medical claim). All results here are from the fixed versions —
   each checker now has probes for a compliant paraphrase, a compliant disclaimer and a real violation.

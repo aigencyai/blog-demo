@@ -45,17 +45,24 @@ class AnthropicProvider:
         self.model = model
         self.client = AsyncAnthropic(api_key=secret("ANTHROPIC_API_KEY"), max_retries=5)
 
-    async def call(self, system, user, schema, cache_system=False):
+    async def call(self, system, user, schema, cache_system=False, assistant_draft=None):
         sys_block = [{"type": "text", "text": system}]
         if cache_system:
             sys_block[0]["cache_control"] = {"type": "ephemeral"}
+        msgs = [{"role": "user", "content": user}]
+        if assistant_draft is not None:
+            # Put the draft in the ASSISTANT role: the model is now being asked
+            # about something it "said", not about an anonymous piece of text.
+            msgs = [{"role": "user", "content": user},
+                    {"role": "assistant", "content": assistant_draft},
+                    {"role": "user", "content": "Now check that reply against the rules above."}]
         t0 = time.perf_counter()
         try:
             r = await self.client.messages.create(
                 model=self.model,
                 max_tokens=2048,
                 system=sys_block,
-                messages=[{"role": "user", "content": user}],
+                messages=msgs,
                 tools=[{"name": "record", "description": "Record the decision.",
                         "input_schema": schema}],
                 tool_choice={"type": "tool", "name": "record"},
@@ -82,13 +89,18 @@ class OpenAIProvider:
         self.model = model
         self.client = AsyncOpenAI(api_key=secret("OPENAI_API_KEY"), max_retries=5)
 
-    async def call(self, system, user, schema, cache_system=False):
+    async def call(self, system, user, schema, cache_system=False, assistant_draft=None):
+        inp = user
+        if assistant_draft is not None:
+            inp = [{"role": "user", "content": user},
+                   {"role": "assistant", "content": assistant_draft},
+                   {"role": "user", "content": "Now check that reply against the rules above."}]
         t0 = time.perf_counter()
         try:
             r = await self.client.responses.create(
                 model=self.model,
                 instructions=system,
-                input=user,
+                input=inp,
                 text={"format": {"type": "json_schema", "name": "record",
                                  "schema": schema, "strict": True}},
                 max_output_tokens=4096,
@@ -118,12 +130,17 @@ class GeminiProvider:
         self.model = model
         self.client = genai.Client(api_key=secret("GEMINI_API_KEY"))
 
-    async def call(self, system, user, schema, cache_system=False):
+    async def call(self, system, user, schema, cache_system=False, assistant_draft=None):
+        contents = user
+        if assistant_draft is not None:
+            contents = [{"role": "user", "parts": [{"text": user}]},
+                        {"role": "model", "parts": [{"text": assistant_draft}]},
+                        {"role": "user", "parts": [{"text": "Now check that reply against the rules above."}]}]
         t0 = time.perf_counter()
         try:
             r = await self.client.aio.models.generate_content(
                 model=self.model,
-                contents=user,
+                contents=contents,
                 config={
                     "system_instruction": system,
                     "response_mime_type": "application/json",

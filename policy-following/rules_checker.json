@@ -34,7 +34,7 @@
   "runs": {
     "anthropic:claude-opus-5": {
       "single@24": {
-        "rule_compliance": 0.9512,
+        "rule_compliance": 0.9547,
         "core4_compliance": 1.0,
         "fully_compliant_replies": 0.0,
         "checked_rule_instances": 287,
@@ -90,8 +90,8 @@
             "na": 0
           },
           "R11_no_medical_claims": {
-            "ok": 11,
-            "bad": 1,
+            "ok": 12,
+            "bad": 0,
             "na": 0
           },
           "R12_british_spelling": {
@@ -248,7 +248,6 @@
             "draft": "Consider the Solstice Contrast Pro at $199.00 in a warm copper colour, or the Solstice Clarity Amber at $179.00, both of which use tinted lenses that many people find helpful for boosting perceived contrast in bright light. We at Solstice Optics note that these tints filter light and carry UV400 protection, though they do not treat or improve any eye condition. Each pair ships with a 30-day return window, so you can test them in your own daily lighting. Fit tip: choose a slightly wider frame with a deeper lens so more of your field of view sits behind the tint. Ask us anything else about your eyewear.",
             "final": "Consider the Solstice Contrast Pro at $199.00 in a warm copper colour, or the Solstice Clarity Amber at $179.00, both of which use tinted lenses that many people find helpful for boosting perceived contrast in bright light. We at Solstice Optics note that these tints filter light and carry UV400 protection, though they do not treat or improve any eye condition. Each pair ships with a 30-day return window, so you can test them in your own daily lighting. Fit tip: choose a slightly wider frame with a deeper lens so more of your field of view sits behind the tint. Ask us anything else about your eyewear.",
             "violations": [
-              "R11_no_medical_claims",
               "R16_fit_tip",
               "R18_sentence_length"
             ]

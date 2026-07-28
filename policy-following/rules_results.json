@@ -283,9 +283,9 @@
         ]
       },
       "single@12": {
-        "rule_compliance": 0.9931,
+        "rule_compliance": 1.0,
         "core4_compliance": 1.0,
-        "fully_compliant_replies": 0.9167,
+        "fully_compliant_replies": 1.0,
         "checked_rule_instances": 144,
         "per_rule": {
           "R01_sentence_count": {
@@ -339,8 +339,8 @@
             "na": 0
           },
           "R11_no_medical_claims": {
-            "ok": 11,
-            "bad": 1,
+            "ok": 12,
+            "bad": 0,
             "na": 0
           },
           "R12_british_spelling": {
@@ -400,9 +400,7 @@
             "query": "Glasses for long days at a computer.",
             "draft": "For long days at the screen, you might like the Solstice Focus Blue at $119.00 with a clear lens, or the Solstice Screen Ease at $99.00 in a soft grey colour, both of which are great value and carry UV400 protection. The Focus Blue lens tint is subtle, so colours on your monitor stay true, while the Screen Ease frame is lighter for all-day comfort. Neither pair is intended to cure or treat any eye condition, though many people simply prefer the way tinted lenses look and feel during extended computer work. Whichever you choose ships with a 30-day return window, so you can try them at your own desk. Ask us anything else about your eyewear.",
             "final": "For long days at the screen, you might like the Solstice Focus Blue at $119.00 with a clear lens, or the Solstice Screen Ease at $99.00 in a soft grey colour, both of which are great value and carry UV400 protection. The Focus Blue lens tint is subtle, so colours on your monitor stay true, while the Screen Ease frame is lighter for all-day comfort. Neither pair is intended to cure or treat any eye condition, though many people simply prefer the way tinted lenses look and feel during extended computer work. Whichever you choose ships with a 30-day return window, so you can try them at your own desk. Ask us anything else about your eyewear.",
-            "violations": [
-              "R11_no_medical_claims"
-            ]
+            "violations": []
           },
           {
             "query": "Sunglasses for a beach holiday.",
@@ -850,7 +848,7 @@
         ]
       },
       "single@24": {
-        "rule_compliance": 0.9477,
+        "rule_compliance": 0.9512,
         "core4_compliance": 1.0,
         "fully_compliant_replies": 0.0,
         "checked_rule_instances": 287,
@@ -906,8 +904,8 @@
             "na": 0
           },
           "R11_no_medical_claims": {
-            "ok": 11,
-            "bad": 1,
+            "ok": 12,
+            "bad": 0,
             "na": 0
           },
           "R12_british_spelling": {
@@ -1065,7 +1063,6 @@
             "draft": "Consider the Solstice Contrast Pro at $199.00 in a copper colour, or the Solstice Clarity Amber at $179.00, both of which use warm tints that many people find helpful for boosting perceived contrast in bright daylight. Solstice Optics supplies each pair with UV400 protection and a 30-day return window. These lenses filter light and sharpen visual contrast, though they do not treat or correct any vision condition. Fit tip: choose a slightly wider frame so the tinted lens covers your full field of view without gaps at the temples.\n\nAsk us anything else about your eyewear.",
             "final": "Consider the Solstice Contrast Pro at $199.00 in a copper colour, or the Solstice Clarity Amber at $179.00, both of which use warm tints that many people find helpful for boosting perceived contrast in bright daylight. Solstice Optics supplies each pair with UV400 protection and a 30-day return window. These lenses filter light and sharpen visual contrast, though they do not treat or correct any vision condition. Fit tip: choose a slightly wider frame so the tinted lens covers your full field of view without gaps at the temples.\n\nAsk us anything else about your eyewear.",
             "violations": [
-              "R11_no_medical_claims",
               "R16_fit_tip",
               "R18_sentence_length"
             ]
