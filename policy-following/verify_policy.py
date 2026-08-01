@@ -192,5 +192,28 @@ check("easy distractor screen fires", len(ds["fires"]), 0)
 dh = load("distractor_screen_hard.json")
 check("hard distractor screen fires", len(dh["fires"]), 2)
 
+# --- cross-model audit ---------------------------------------------------------
+ca = load("cross_audit_results.json")
+print("\nCROSS-MODEL AUDIT (who catches whose broken rules):")
+S = lambda s: s.split(":")[1].split("-2025")[0].replace("-sol", "")
+for author in ("anthropic:claude-haiku-4-5-20251001", "google:gemini-2.5-flash"):
+    for aud, row in ca["pairs"].items():
+        s = row.get(author)
+        if s:
+            print(f"  {S(author):18} reviewed by {S(aud):18} "
+                  f"caught {s['caught']:2d}/{s['real_violations']} "
+                  f"({s['false_alarms']} false alarms)"
+                  f"{'  <- itself' if aud == author else ''}")
+# claim: the BEST outside reviewer beats self-review for every author that made
+# mistakes. Deliberately not "any other model beats self" -- Haiku found 2 of
+# Gemini's 12, well under Gemini's own 9, and the post says so explicitly.
+for author in ("anthropic:claude-haiku-4-5-20251001", "google:gemini-2.5-flash"):
+    own = ca["pairs"][author][author]["caught"]
+    best = max(r[author]["caught"] for a, r in ca["pairs"].items()
+               if a != author and author in r)
+    if best <= own:
+        fails.append(f"{author} cross-audit claim (best outside {best} vs own {own})")
+
+
 print("\n" + ("ALL CHECKS PASSED" if not fails else f"FAILURES: {fails}"))
 sys.exit(1 if fails else 0)
