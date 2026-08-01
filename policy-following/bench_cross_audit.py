@@ -90,6 +90,13 @@ async def main():
                        if isinstance(r.data, dict) else [] for r in res]
             s = score(data["truth"], flagged)
             s["errors"] = sum(1 for r in res if r.error)
+            # Reviewing is input-heavy and output-light: the rulebook and one
+            # draft go in, a short list of ids comes out. Generation is the
+            # reverse. Recorded per pair so the two can be priced against each
+            # other rather than assumed comparable.
+            n = len(res)
+            s["in_tok_per_reply"] = round(sum(r.in_tok for r in res) / n)
+            s["out_tok_per_reply"] = round(sum(r.out_tok for r in res) / n)
             out["pairs"][auditor_spec][author_spec] = s
             same = "SELF " if auditor_spec == author_spec else "cross"
             print(f"  {same} auditor={auditor_spec.split(':')[1][:22]:24s} "
