@@ -127,22 +127,26 @@ check("gpt-5.6-sol checker_repair@24 fully-compliant == 1.0",
       gpt["checker_repair@24"]["fully_compliant_replies"], 1.0)
 
 ra = load("rules_audit.json")
-print("\nLLM AUDITOR vs DETERMINISTIC CHECKER (on identical drafts):")
+print("\nLLM AUDITOR vs DETERMINISTIC CHECKER:")
 for spec, runs in ra["runs"].items():
     for arm, v in runs.items():
         q = v.get("audit_quality")
         if q and q["auditor_recall"] is not None:
             print(f"  {spec.split(':')[1][:24]:26} {arm:16} auditor recall "
-                  f"{q['auditor_recall']:.3f} (missed {q['auditor_missed']})")
-# claim: whole-list self-audit recall stays low for every model
+                  f"{q['auditor_recall']:.3f} (missed {q['auditor_missed']}, "
+                  f"{q['auditor_false_alarms']} false alarms)")
+# claim: a model grading its OWN turn (draft in the assistant role) finds at most
+# a quarter of its real violations. The contrast is audit_repair, where the same
+# model grades an anonymous reply and recall jumps to ~0.7 — so the variable is
+# authorship, not capability. Only self_check is asserted; audit_repair is the
+# control and is expected to be HIGHER.
 for spec, runs in ra["runs"].items():
-    q = runs.get("audit_repair@24", {}).get("audit_quality")
+    q = runs.get("self_check@24", {}).get("audit_quality")
     if q and q["auditor_recall"] is not None and q["auditor_recall"] > 0.25:
-        fails.append(f"{spec} audit recall claim")
+        fails.append(f"{spec} self-audit recall claim ({q['auditor_recall']})")
 
-rl = load("rules_loop.json")
 print("\nCHECKER-REPAIR LOOP (<=3 rounds):")
-for spec, runs in rl["runs"].items():
+for spec, runs in r["runs"].items():
     v = runs.get("checker_loop@24")
     if v:
         print(f"  {spec.split(':')[1][:24]:26} fully {v['fully_compliant_replies']:.3f} "

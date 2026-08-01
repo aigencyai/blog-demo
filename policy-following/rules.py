@@ -120,8 +120,15 @@ RULES = [
      'Mention "Solstice Optics" exactly once.',
      lambda t: len(re.findall(r'solstice optics', t, re.I)) == 1),
 
+    # Reworded after a reader pointed out the ambiguity: "include one line that
+    # begins with" can be read as "include a sentence starting with", and models
+    # plainly read it that way. The checker always required a real line break, so
+    # the old wording scored them against an interpretation the text did not
+    # state. The requirement itself is a normal brand-formatting ask, so it stays,
+    # but now it says so.
     ("R16_fit_tip",
-     'Include one line that begins with "Fit tip:" giving a fit or sizing pointer.',
+     'Put the fit advice on its own line, starting that line with "Fit tip:". '
+     'It must begin a new line, not continue a sentence.',
      lambda t: bool(re.search(r'^\s*fit tip:', t, re.I | re.M))),
 
     ("R17_no_perfect",
